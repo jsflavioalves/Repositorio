@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Décimo Segundo VueJs Condicional IF</title>
+</head>
+
+<body>
+    <div class="jumbotron" id=visao>
+        <div v-if="status == 'true'">
+            <h2 class="display-4">Agora você me vê</h2>
+        </div>
+        <div v-else>
+            <h2 class="display-4">Agora você não me vê</h2>
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary" v-on:click="onClick">Clicar</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var permissao = new Vue({
+            el: '#visao',
+            data: {
+                status: 'true'
+            },
+            methods: {
+                onClick: function() {
+                    if (this.status == 'false') {
+                        this.status = "true";
+                    } else {
+                        this.status = "false";
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

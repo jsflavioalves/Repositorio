@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Décimo Quarto VueJs Botão Contador</title>
+</head>
+
+<body>
+    <div id="example-1">
+        <button class="btn btn-primary" v-on:click="counter += 1">Adiciona 1</button>
+        <br>
+        <br>
+        <button class="btn btn-secondary" v-on:click="counter -= 2">Diminui 2</button>
+        <p>Quantas vezes o botão acima foi clicado: {{ counter }}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var example1 = new Vue({
+            el: '#example-1',
+            data: {
+                counter: 0
+            }
+        })
+    </script>
+</body>
+
+</html>

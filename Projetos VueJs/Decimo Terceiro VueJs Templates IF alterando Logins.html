@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Décimo Terceiro VueJs Templates IF alterando Logins</title>
+</head>
+
+<body>
+    <div class="jumbotron" id=visao>
+        <template v-if="loginType == 'nomeusuario'">
+            <label>Usuário</label>
+            <input placeholder="Informe o nome de usuário" key="username-input">
+        </template>
+        <template v-else>
+            <label>E-mail</label>
+            <input placeholder="Informe o endereço de e-mail" key="email-input">
+        </template>
+        <button type="button" class="btn btn-primary" v-on:click="onClick">Clicar</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var permissao = new Vue({
+            el: '#visao',
+            data: {
+                loginType: 'nomeusuario'
+            },
+            methods: {
+                onClick: function() {
+                    if (this.loginType == 'nomeusuario') {
+                        this.loginType = "loginemail";
+                    } else {
+                        this.loginType = "nomeusuario";
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

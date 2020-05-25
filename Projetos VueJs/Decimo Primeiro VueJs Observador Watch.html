@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Décimo Primeiro VueJs observador Watch</title>
+</head>
+
+<body>
+
+    <div id="watch-example">
+        <p>
+            Faça uma pergunta do tipo sim/não:
+            <input v-model="question">
+        </p>
+        <p>{{ answer }}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Como já existe um rico ecossistema de bibliotecas para Ajax     -->
+    <!-- e de coleções de métodos utilitários com propósitos gerais, o   -->
+    <!-- núcleo Vue permanece pequeno não os reinventando. Isto também   -->
+    <!-- dá a você liberdade de usar apenas o que estiver familiarizado. -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+    <script>
+        var watchExampleVM = new Vue({
+            el: '#watch-example',
+            data: {
+                question: '',
+                answer: 'Eu não posso responder até que você faça uma pergunta!'
+            },
+            watch: {
+                // sempre que a pergunta mudar, essa função será executada
+                question: function(newQuestion, oldQuestion) {
+                    this.answer = 'Esperando você parar de escrever...'
+                    this.debouncedGetAnswer()
+                }
+            },
+            created: function() {
+                // _.debounce é uma função fornecida pelo lodash para limitar
+                // a frequência que uma operação complexa pode ser executada.
+                // Neste caso, queremos limitar a frequência com que acessamos
+                // a yesno.wtf/api, esperando que o usuário termine completamente
+                // a digitação antes de realizar a chamada Ajax. Para aprender
+                // mais sobre a função _.debounce (e sua prima _.throttle),
+                // visite: https://lodash.com/docs#debounce
+                this.debouncedGetAnswer = _.debounce(this.getAnswer, 500)
+            },
+            methods: {
+                getAnswer: function() {
+                    if (this.question.indexOf('?') === -1) {
+                        this.answer = 'Perguntas geralmente têm uma interrogação. ;-)'
+                        return
+                    }
+                    this.answer = 'Pensando...'
+                    var vm = this
+                    axios.get('https://yesno.wtf/api')
+                        .then(function(response) {
+                            vm.answer = response.data.answer === 'yes' ? 'Sim.' :
+                                response.data.answer === 'no' ? 'Não.' : 'Talvez!'
+                        })
+                        .catch(function(error) {
+                            vm.answer = 'Erro! Não pode executar a API. ' + error
+                        })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
