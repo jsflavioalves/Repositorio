@@ -1,0 +1,8 @@
+"ci_aluno";"id_curso";"nr_tipo";"nm_aluno";"nr_codigo_sus";"nr_cpf";"nr_cns";"nr_cnes";"nr_cbo";"ds_email";"fl_sexo";"cd_localidade";"cd_profissao";"dt_nascimento";"ds_escolaridade";"ds_numero";"ds_telefone1";"ds_telefone2";"dt_data"
+"5";"EAD 2018.2";"1";"GUSTAVO GONDIN MACHADO";"4010795";"70573590125";"708501343178377";"3658007";"225142";"gustavo.g.m@outlook.com";"1";"1125";"11";"01/01/2018";"Superior Completo";"13215646";"(00) 00000-00000";;"24/9/2018 08:17:38.982041"
+"6";"web2018.102";"2";"Cleyson";;"02250689318";;;;"cleyson87@yahoo.com.br";"1";"1347";"42";"16/07/1987";"Superior Completo";"455";"(88) 88888-88888";;"13/12/2018 10:26:15.090912"
+"7";"9999";"2";"JOSÉ FLÁVIO VASCONCELOS ALVES";;"45767661391";;;;"jsflavioalves@gmail.com";"1";"1722";"179";"26/01/1972";"Superior Completo";"2166038";"(85) 99664-2814";;"12/8/2019 15:03:08.937473"
+"8";"web2018.102";"2";"JOSÉ FLÁVIO VASCONCELOS ALVES";;"45767661391";;;;"jsflavioalves@gmail.com";"1";"1722";"179";"26/01/1972";"Superior Completo";"2166038";"(85) 99664-2814";"(85) 99980-3922";"12/8/2019 15:06:22.501926"
+"9";"EAD2017.2A";"2";"JOSÉ FLÁVIO VASCONCELOS ALVES";;"45767661391";;;;"jsflavioalves@gmail.com";"1";"1722";"179";"26/01/1972";"Superior Completo";"2166038";"(85) 99664-2814";"(85) 99980-3922";"14/8/2019 15:41:31.017089"
+"10";"9999";"2";"USUARIO TESTE";;"84383711758";;;;"flavio@faculdadescearenses.edu.br";"1";"1145";"39";"27/01/1980";"Superior Completo";"122313";"(85) 98666-2662";;"19/8/2019 15:37:03.810759"
+"11";"EAD2017.2C";"2";"USUARIO TESTE";;"84383711758";;;;"flavio@faculdadescearenses.edu.br";"1";"1145";"39";"27/01/1980";"Superior Completo";"122313";"(85) 98666-2662";;"19/8/2019 15:39:12.653057"

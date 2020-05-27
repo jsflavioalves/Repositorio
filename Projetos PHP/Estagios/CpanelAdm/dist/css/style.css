@@ -1,0 +1,14 @@
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>form {
+    color: #444444;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+}
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>form, .navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>form, .navbar-nav>.tasks-menu>.dropdown-menu>li .menu>li>form {
+    display: block;
+    white-space: nowrap;
+    border-bottom: 1px solid #f4f4f4;
+}
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>form:hover,.navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>form:hover,.navbar-nav>.tasks-menu>.dropdown-menu>li .menu>li>form:hover{
+	background:#f4f4f4;text-decoration:none
+}

@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SaidaWeb">
+    <output-path>$PROJECT_DIR$/out/artifacts/SaidaWeb</output-path>
+    <root id="archive" name="SaidaWeb.war" />
+  </artifact>
+</component>

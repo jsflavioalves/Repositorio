@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5337e78a-fe4b-44f2-8694-c3111e7234de">
+	<property name="ireport.zoom" value="1.4641000000000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\localhost\\www\\financeiro\\reports\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tipo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="periodo" class="java.lang.String"/>
+	<parameter name="periodo_descr" class="java.lang.String"/>
+	<parameter name="especialista" class="java.lang.String"/>
+	<parameter name="sql_extra1" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[($P{especialista} == null ? "and tt.cd_profissional_especialista is not null" : "and tt.cd_profissional_especialista = " + $P{especialista})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sql_extra2" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[($P{periodo} == null ? "" : "and tt.dt_resposta between " + $P{periodo})]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 	upper(tu_esp.nm_usuario) as nm_usuario_especialista,
+	te.nm_especialidade,
+	count(*) as num
+from tb_teleconsulta tt
+inner join tb_especialidade te on(tt.cd_especialidade=te.ci_especialidade)
+left join tb_usuario tu_esp on(tt.cd_profissional_especialista=tu_esp.ci_usuario)
+where tt.tp_tipo = $P{tipo}::integer
+  and tt.tp_status = 4
+  $P!{sql_extra1}
+  $P!{sql_extra2}
+group by 1,2
+order by 1 asc]]>
+	</queryString>
+	<field name="nm_usuario_especialista" class="java.lang.String"/>
+	<field name="nm_especialidade" class="java.lang.String"/>
+	<field name="num" class="java.lang.Integer"/>
+	<variable name="variable1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{num}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="43" splitType="Stretch">
+			<image>
+				<reportElement uuid="78103155-50d4-4585-80a8-db7e7f090a69" x="0" y="0" width="150" height="38"/>
+				<imageExpression><![CDATA["./../assets/logo_nuteds.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="33affdd7-c2a9-410c-b9a9-01dbed37490d" x="150" y="0" width="231" height="17"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Teleconsultorias - Sumário Especialista]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c931ce62-8d0c-4bab-b1e5-a69d190fa0a3" x="150" y="18" width="231" height="15"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="11" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{tipo} == "1" ? "EXAME" : "OPNIÃO FORMATIVA")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="18da43c8-8709-44c2-9682-186b2b253b4d" x="431" y="6" width="91" height="13"/>
+				<textElement markup="none">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Todos]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="70414365-a49a-4ee2-9f1f-222add5035cf" x="432" y="24" width="123" height="13"/>
+				<textElement markup="none">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{periodo} == null ? "-" : $P{periodo_descr})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="385" y="6" width="42" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Município:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="388" y="24" width="39" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Período:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="5" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="acdefff7-b7fb-40a8-997a-6c60e73ac119" x="0" y="14" width="555" height="14" backcolor="#CCCCCC"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="0" y="14" width="266" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Especialista]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="266" y="14" width="201" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Especialidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="467" y="14" width="88" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="0" y="0" width="266" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_usuario_especialista}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="266" y="0" width="201" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_especialidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="467" y="0" width="88" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{num}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement uuid="1cadf7a3-474c-42b7-a29d-e7cdb290268b" x="378" y="0" width="177" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="954caac5-06cf-41d1-a2ee-d43b996e8d30" mode="Transparent" x="0" y="0" width="126" height="15"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="37" splitType="Stretch">
+			<line>
+				<reportElement uuid="a4649e80-ed99-4f91-902f-3fcd5a586ceb" x="0" y="4" width="555" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="ae5276c9-e9f4-4861-bddb-13a1aa645eed" x="0" y="13" width="77" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Total Especialistas:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ec9790cf-ed7d-4c62-9aee-a04b3c244383" x="84" y="13" width="100" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9563804e-99e6-42e9-8a0e-0712c8328754" x="467" y="13" width="88" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{variable1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="ae5276c9-e9f4-4861-bddb-13a1aa645eed" x="342" y="13" width="118" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Total Teleconsultas:]]></text>
+			</staticText>
+		</band>
+	</summary>
+	<noData>
+		<band height="50">
+			<staticText>
+				<reportElement uuid="041205ae-74c9-4941-82bd-2ab03e4cc24e" x="0" y="18" width="555" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nenhum registro para o relatório.]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

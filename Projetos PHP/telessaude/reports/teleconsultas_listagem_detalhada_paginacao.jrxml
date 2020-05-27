@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5337e78a-fe4b-44f2-8694-c3111e7234de">
+	<property name="ireport.zoom" value="1.6105100000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\localhost\\www\\financeiro\\reports\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="localidade" class="java.lang.String"/>
+	<parameter name="periodo" class="java.lang.String"/>
+	<parameter name="periodo_descr" class="java.lang.String"/>
+	<parameter name="tipo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="status" class="java.lang.String"/>
+	<parameter name="especialidade" class="java.lang.String"/>
+	<parameter name="programa" class="java.lang.String"/>
+	<parameter name="sql_extra" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[($P{localidade} == null ? "" : "and tt.cd_localidade = " + $P{localidade})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sql_extra1" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[($P{periodo} == null ? "" : "and tt.dt_solicitacao between " + $P{periodo})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sql_extra2" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[($P{status} == null ? "" : "and tt.tp_status = " + $P{status})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sql_extra3" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[($P{especialidade} == null ? "" : "and tt.cd_especialidade = " + $P{especialidade})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sql_extra4" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[($P{programa} == null ? "" : "and tt.cd_programa = " + $P{programa})]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 	tt.ci_teleconsulta,
+	tt.cd_localidade,
+	tl.sg_estado || ' - ' || tl.ds_localidade as ds_localidade,
+	tt.cd_especialidade,
+	te.nm_especialidade,
+	tt.tp_status,
+	case tt.tp_status	when 1 then 'Aguardando'
+			when 2 then 'Em análise'
+			when 3 then 'Respondido'
+			when 4 then 'Finalizado'
+	end as nm_status,
+	tu_sol.ci_usuario || ' - ' || tu_sol.nm_usuario as nm_usuario_solicitante,
+	tu_esp.ci_usuario || ' - ' || tu_esp.nm_usuario as nm_usuario_especialista,
+	tt.dt_solicitacao,
+	tt.dt_resposta
+from tb_teleconsulta tt
+inner join tb_localidade tl on(tt.cd_localidade=tl.ci_localidade)
+inner join tb_especialidade te on(tt.cd_especialidade=te.ci_especialidade)
+inner join tb_usuario tu_sol on(tt.cd_profissional_solicitante=tu_sol.ci_usuario)
+left join tb_usuario tu_esp on(tt.cd_profissional_especialista=tu_esp.ci_usuario)
+where tt.tp_tipo = $P{tipo}::integer $P!{sql_extra} $P!{sql_extra1} $P!{sql_extra2} $P!{sql_extra3}
+order by tt.tp_status, tt.dt_solicitacao asc
+--order by tl.sg_estado || ' - ' || tl.ds_localidade, te.nm_especialidade, tt.tp_status asc]]>
+	</queryString>
+	<field name="ci_teleconsulta" class="java.lang.Integer"/>
+	<field name="cd_localidade" class="java.lang.Integer"/>
+	<field name="ds_localidade" class="java.lang.String"/>
+	<field name="cd_especialidade" class="java.lang.Integer"/>
+	<field name="nm_especialidade" class="java.lang.String"/>
+	<field name="tp_status" class="java.lang.Integer"/>
+	<field name="nm_status" class="java.lang.String"/>
+	<field name="nm_usuario_solicitante" class="java.lang.String"/>
+	<field name="nm_usuario_especialista" class="java.lang.String"/>
+	<field name="dt_solicitacao" class="java.sql.Timestamp"/>
+	<field name="dt_resposta" class="java.sql.Timestamp"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="43" splitType="Stretch">
+			<image>
+				<reportElement uuid="78103155-50d4-4585-80a8-db7e7f090a69" x="0" y="0" width="150" height="38"/>
+				<imageExpression><![CDATA["./../assets/logo_nuteds.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="33affdd7-c2a9-410c-b9a9-01dbed37490d" x="150" y="0" width="490" height="17"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Teleconsultas - Listagem Detalhada]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c931ce62-8d0c-4bab-b1e5-a69d190fa0a3" x="150" y="18" width="490" height="15"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="11" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{tipo} == "1" ? "EXAME" : "OPNIÃO FORMATIVA")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="70414365-a49a-4ee2-9f1f-222add5035cf" x="640" y="13" width="162" height="13"/>
+				<textElement markup="none">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{localidade} == null ? "Todos" : $F{ds_localidade})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="70414365-a49a-4ee2-9f1f-222add5035cf" x="679" y="27" width="123" height="13"/>
+				<textElement markup="none">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{periodo} == null ? "-" : $P{periodo_descr})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="640" y="0" width="90" height="13"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Município:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="640" y="27" width="39" height="13"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Período:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="5" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="17" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="0" y="0" width="130" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Município]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="130" y="0" width="100" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Especialidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="230" y="0" width="55" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="285" y="0" width="145" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Solicitante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="430" y="0" width="145" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Especialista]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="575" y="0" width="85" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Solicitação em]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="660" y="0" width="85" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Finalizado em]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="745" y="0" width="57" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Cód.]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="0" y="0" width="130" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ds_localidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="130" y="0" width="100" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_especialidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="230" y="0" width="55" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="285" y="0" width="145" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_usuario_solicitante}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="430" y="0" width="145" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_usuario_especialista}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="575" y="0" width="85" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format($F{dt_solicitacao})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="660" y="0" width="85" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format($F{dt_resposta})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="745" y="0" width="57" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ci_teleconsulta}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement uuid="1cadf7a3-474c-42b7-a29d-e7cdb290268b" x="625" y="0" width="177" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="954caac5-06cf-41d1-a2ee-d43b996e8d30" mode="Transparent" x="0" y="0" width="126" height="15"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="34" splitType="Stretch">
+			<line>
+				<reportElement uuid="a4649e80-ed99-4f91-902f-3fcd5a586ceb" x="0" y="4" width="802" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="ae5276c9-e9f4-4861-bddb-13a1aa645eed" x="575" y="10" width="118" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Total de Teleconsultas:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ec9790cf-ed7d-4c62-9aee-a04b3c244383" x="702" y="10" width="100" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+	<noData>
+		<band height="50">
+			<staticText>
+				<reportElement uuid="041205ae-74c9-4941-82bd-2ab03e4cc24e" x="0" y="18" width="802" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nenhum registro para o relatório.]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

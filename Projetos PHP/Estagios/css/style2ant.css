@@ -1,0 +1,13 @@
+# Empty CSS file for your own CSS
+.content .sidebar {
+	padding:0;
+	float:left;
+	width:260px;
+}
+.content .sidebar .gadget {
+	margin:0 0 12px;
+	padding:6px 20px 24px;
+}
+.content .sidebar h2 {
+	color:#212121;
+}

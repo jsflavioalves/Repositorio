@@ -1,0 +1,5 @@
+Diferenças da documentação e código fornecido
+http://integra.telessaude.ufrn.br/php/
+
+	Quadro2
+	addSolicitacoesProfissional()

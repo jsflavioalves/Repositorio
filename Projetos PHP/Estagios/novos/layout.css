@@ -1,0 +1,60 @@
+img {
+	border: currentColor;
+}
+.ot_news {
+	width: 100%; float: left;
+}
+.ot_news .ot_items {
+	width: 100%; float: left;
+}
+.ot_news .ot_viewall {
+	width: 100%; float: left;
+}
+.ot_news .spaces {
+	width: 100%; float: left;
+}
+.ot_news .ot_items {
+	padding-bottom: 10px; margin-bottom: 10px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+.ot_news .last-item {
+	border: currentColor; padding-bottom: 0px;
+}
+.ot_news .ot_viewall {
+	text-align: right;
+}
+.ot_news .spaces {
+	height: 10px;
+}
+.ot_thumbs {
+	padding: 2px; border: 1px solid rgb(231, 231, 231); overflow: hidden; margin-right: 12px; float: left;
+}
+.ot_articles {
+	
+}
+.ot_articles .ot_title {
+	
+}
+.ot_title a.title {
+	font-weight: bold;
+}
+p.createddate {
+	margin: 0px; padding: 2px 0px;
+}
+span.ot_date {
+	color: rgb(153, 153, 153); font-size: 12px;
+}
+.ot_readmore {
+	text-align: right; margin-top: 5px;
+}
+a.ot-mini-news {
+	padding: 0px !important; color: rgb(153, 153, 153) !important; font-size: 11px !important; text-decoration: none; float: right;
+}
+div.ot-mini-news a:hover {
+	text-decoration: underline;
+}
+div.ot-mini-news a:active {
+	text-decoration: underline;
+}
+div.ot-mini-news a:focus {
+	text-decoration: underline;
+}

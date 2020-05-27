@@ -1,0 +1,131 @@
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  body {
+    margin-top: 50px;
+  }
+  
+  #wrapper {
+    padding-left: 0;
+  }
+  
+  #page-wrapper {
+    width: 100%;
+    padding: 5px 15px;
+  }
+  
+  .marginBottom {
+      margin-bottom:.7em !important;
+  }
+  
+  .login-box {background:white; border-radius: 10px; border:1px solid #CCC;}
+  
+  .header-task {
+      background:url(../grey.png) repeat-x; border-bottom:1px solid #e7e7e7; padding:10px 0 10px 0
+  }
+  
+  .body-login {
+      background:url(../grey.png) repeat;
+  }
+  
+  .side-nav {
+    background:#f4f4f4 !important;
+  }
+  
+  .side-nav {
+    background:#f4f4f4 !important;
+    margin-top:1px !important;
+    margin-bottom:0 !important;
+  }
+  
+  .navbar-user-nuteds {
+      border-bottom:none !important;
+      color:#FFF !important;
+  }
+  
+  .navbar-user {
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+  }
+  
+  .nuteds-table {
+    background:#1e68bf;
+    color:#fff;
+  }
+  
+  .margin-bottom {
+      margin-bottom: 20px;
+  }
+  
+  @media (min-width:768px) {
+  
+    /* Wrappers */
+  
+    #wrapper {
+      padding-left: 225px;
+    }
+  
+    #page-wrapper {
+      /*padding: 25px 250px;*/
+      margin-top:55px;
+      margin-left: 230px;
+      padding-right: 240px;
+    }
+  
+    /* Side Nav */
+  
+    .side-nav {
+      margin-top: 1px;
+        margin-left: -225px;
+        left: 225px;
+        width: 225px;
+        position: fixed;
+        top: 50px;
+      padding-bottom:50px;
+        height: 100%;
+        border-radius: 0;
+        border-right: 1px solid #dddddd;
+        background-color: #f4f4f4;
+        overflow-y: auto;
+    }
+  
+    .side-nav>li>a {
+      width: 225px;
+      color:#999;
+    }
+  
+
+  
+    .navbar-collapse {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+  
+    .navbar-user-nuteds {
+      color:white !important;
+      border-bottom: none !important;
+    }
+  
+    .navbar-user-nuteds:hover, .navbar-user-nuteds:focus, .navbar-user-nuteds:visited  {
+      background:#0058bf !important;
+    }
+  
+    .nuteds-title {
+      padding:0;
+      margin-top:0;
+    }
+  
+    .nuteds-link {
+      color:#666;
+    }
+    .nuteds-link:hover {
+      text-decoration: none;
+      color:#999; 
+    }
+  
+  }
+  
+.navbar-inverse .navbar-nav > li > a {
+    color: #666;
+    border-bottom: 1px solid #e7e7e7;
+}

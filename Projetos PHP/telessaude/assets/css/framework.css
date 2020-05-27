@@ -1,0 +1,157 @@
+﻿.link-white {color:white !important;}
+.modal-body {text-align:justify !important;}
+.panel-color {background:#F8F8F8 !important;}
+.breadcrumb-teleconsulta {margin-top:-20px;}
+.btMarginRight {margin-right:15px;}
+.btMarginTop {margin-top:5px;}
+.btMore {color:green; font-size:1.2em;} 
+.marginCenter {margin:0 auto;}
+.marginBottom {
+	margin-bottom:.7em !important;
+}
+.btn-space {margin-left:5px;}
+.bgGrey {background:#FCFCFC;}
+.bgTopGrey {background:#F8F8F8; padding-top:.8em;}
+.bgBottomGrey {background:#F8F8F8; padding-bottom:.8em;}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+.login-box {background:white; border-radius: 10px; border:1px solid #CCC;}
+.navbar-nav.navbar-right:last-child {
+	margin-right: 0 !important;
+}
+
+.header-task {
+	background:url(../banner1.png) repeat-x; border-bottom:1px solid #e7e7e7; padding:10px 0 10px 0
+}
+
+.body-login {
+	background:url(../grey.png) repeat;
+}
+
+legend {
+	font-size:1.1em;
+	margin-bottom:10px !important;
+	font-weight:bold;
+}
+
+.loader {
+	display: none;
+}
+
+.align-right-middle {
+	text-align:right;	
+}
+
+.waiting-teleconsulta {
+	color:blue;
+	text-transform:uppercase;
+	font-weight:bold;
+}	
+.urgency-teleconsulta {
+	color:red;
+	text-transform:uppercase;
+	font-weight:bold;
+}	
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	/* Corrige botões add e pesquisar (teleconsulta) */
+	.btCorrecao {
+		padding-left:0 !important;
+		padding-right:0 !important;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.align-right-middle {
+		text-align:left;	
+		background-color:SKYBLUE;
+		color:white;
+		font-weight:bold;
+	}
+}
+
+#gritter-notice-wrapper { position:fixed; top:20px; right:20px; width:301px; z-index:9999; }
+#gritter-notice-wrapper.top-left { left: 20px; right: auto; } 
+#gritter-notice-wrapper.bottom-right { top: auto; left: auto; bottom: 20px; right: 20px; }
+#gritter-notice-wrapper.bottom-left { top: auto; right: auto; bottom: 20px; left: 20px; }
+.gritter-item-wrapper { position:relative; margin:0 0 10px 0; background:url('gritter/ie-spacer.gif'); }
+.gritter-top { background:url(gritter/gritter.png) no-repeat left -30px; height:10px; }
+.hover .gritter-top { background-position:right -30px; }
+.gritter-bottom { background:url(gritter/gritter.png) no-repeat left bottom; height:8px; margin:0; z-index: 5000; }
+.hover .gritter-bottom { background-position: bottom right; }
+.gritter-item { display:block; background:url(gritter/gritter.png) no-repeat left -40px; color:#eee; padding:2px 11px 8px 11px; font-size: 11px; font-family:verdana; }
+.hover .gritter-item { background-position:right -40px; }
+.gritter-item p { padding:0; margin:0; }
+.gritter-close { display:none; position:absolute; top:5px; left:3px; background:url(gritter/gritter.png) no-repeat left top; cursor:pointer; width:30px; height:30px; }
+.gritter-title { font-size:14px; font-weight:bold; padding:0 0 7px 0; display:block; text-shadow:1px 1px 0 #000; }
+.gritter-image { width:48px; height:48px; float:left; }
+.gritter-with-image, .gritter-without-image { padding:0 0 5px 0; }
+.gritter-with-image { width:220px; float:right; }
+.gritter-light .gritter-item, .gritter-light .gritter-bottom, .gritter-light .gritter-top, .gritter-close { background-image: url(gritter/gritter-light.png); color: #222; }
+.gritter-light .gritter-title { text-shadow: none; }
+.ui-autocomplete-loading { background: url(../autocomplete_loading.gif) right center no-repeat; }
+.ui-autocomplete-input { border: 1px solid #CCCCCC; padding: 3px !important; box-shadow: 0 2px 2px #8F8F8F inset; }
+
+.hackBt { margin-left:5px !important;}
+.hack-row  {margin-left: 0 !important;}
+@media only screen and (max-width: 768px) {
+	.hackBt {margin-left:0 !important;}
+	.hack-row  {margin-right: 0 !important;}
+}
+
+
+
+
+
+
+
+
+
+.btn-login { 
+  color: #ffffff; 
+  background-color: #77AA1F; 
+  border-color: #659610; 
+} 
+ 
+.btn-login:hover, 
+.btn-login:focus, 
+.btn-login:active, 
+.btn-login.active, 
+.open .dropdown-toggle.btn-login { 
+  color: #ffffff; 
+  background-color: #34A34E; 
+  border-color: #659610; 
+} 
+ 
+.btn-login:active, 
+.btn-login.active, 
+.open .dropdown-toggle.btn-login { 
+  background-image: none; 
+} 
+ 
+.btn-login.disabled, 
+.btn-login[disabled], 
+fieldset[disabled] .btn-login, 
+.btn-login.disabled:hover, 
+.btn-login[disabled]:hover, 
+fieldset[disabled] .btn-login:hover, 
+.btn-login.disabled:focus, 
+.btn-login[disabled]:focus, 
+fieldset[disabled] .btn-login:focus, 
+.btn-login.disabled:active, 
+.btn-login[disabled]:active, 
+fieldset[disabled] .btn-login:active, 
+.btn-login.disabled.active, 
+.btn-login[disabled].active, 
+fieldset[disabled] .btn-login.active { 
+  background-color: #77AA1F; 
+  border-color: #659610; 
+} 
+ 
+.btn-login .badge { 
+  color: #77AA1F; 
+  background-color: #ffffff; 
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Convert JSON</title>
+</head>
+<body>
+	<textarea id="original" class="form-control input save" rows="20" cols="80" spellcheck="false">
+	</textarea>
+	<button id="convert" class="btn btn-primary" onclick="converter()">
+		<i class="glyphicon glyphicon-chevron-right"></i> Converter
+	</button>
+
+	<textarea id="convertido" class="form-control input save" rows="20" cols="80" spellcheck="false">
+	</textarea>
+
+	<script type="text/javascript">
+		var atividades_teleeducacao = [];
+		class Participacao {
+			constructor(dtparti, cnes, satisf, cbo, cpf, ine, id) {
+				this.dtparti = dtparti;
+				this.cnes = String(cnes);
+				this.satisf = satisf;
+				this.cbo = String(cbo);
+				this.cpf = String(cpf);
+				this.ine = ine;
+				this.id = id;
+			}
+		}
+		class Atividade {
+			constructor(tipo, participacoes_teleeducacao, dtdispo, cargah, id, decs) {
+				this.tipo = String(tipo);
+				this.participacoes_teleeducacao = participacoes_teleeducacao;
+				this.dtdispo = dtdispo;
+				this.cargah = cargah;
+				this.id = id;
+				this.decs = decs;
+			}
+		}
+		function converter(){
+			var textoOriginal = document.getElementById("original").value;
+			var array = JSON.parse(textoOriginal);			
+			var t = 1;
+			var participacoes_teleeducacao = [];
+			const arrLength = array.length;
+			var count = 1;
+			for (var i = 0; i < array.length; i++) {			
+				while (t == array[i].turma){
+					var participacao = 
+					new Participacao(array[i].dtparti+":00", array[i].cnes, 
+						array[i].satisf, array[i].cbo, 
+						array[i].cpf,"",count++);
+					participacoes_teleeducacao.push(participacao);
+					i++;
+					if (i >= arrLength) break;
+				}
+				var atividade = new Atividade(array[i-1].tipo, participacoes_teleeducacao, 
+					array[i-1].dtdispo+":00", array[i-1].cargah, array[i-1].id, 
+					[array[i-1].decs]);
+
+				atividades_teleeducacao.push(atividade);
+				participacoes_teleeducacao = [];
+				var count = 1;
+				if (i < arrLength)
+					t = array[i].turma;
+				i--;
+			}
+			document.getElementById("convertido").value = JSON.stringify(atividades_teleeducacao);
+		}
+
+	</script>
+</body>
+</html>

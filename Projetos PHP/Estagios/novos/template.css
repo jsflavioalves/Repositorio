@@ -1,0 +1,1178 @@
+body {
+	 font: 13px/18px Tahoma, Geneva, sans-serif; color: rgb(68, 68, 68); font-size-adjust: none; font-stretch: normal; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; background:#f9f9f9;
+}
+img.scale-with-grid {
+	height: auto; max-width: 100%;
+}
+object {
+	height: auto; max-width: 100%;
+}
+embed {
+	height: auto; max-width: 100%;
+}
+.brasao img {
+	height: auto; max-width: 100%;
+}
+.banners img {
+	height: auto; width: 100%;
+}
+.item-page img {
+	height: auto; max-width: 100%;
+}
+h2 {
+	margin: 16px 0px; color: rgb(0, 95, 151); padding-bottom: 2px; font-family: "PT Sans Narrow"; font-size: 17px; font-weight: normal; border-bottom-color: rgb(232, 232, 232); border-bottom-width: 1px; border-bottom-style: solid;
+}
+h3 {
+	margin: 16px 0px; color: rgb(0, 95, 151); padding-bottom: 2px; font-family: "PT Sans Narrow"; font-size: 17px; font-weight: normal; border-bottom-color: rgb(232, 232, 232); border-bottom-width: 1px; border-bottom-style: solid;
+}
+h2 span {
+	padding-right: 10px;
+}
+input {
+	background: url("../novos/bg-input.png") repeat-x 0px 0px rgb(255, 255, 255); padding: 4px; border: 1px solid rgb(221, 221, 221);
+}
+select {
+	background: url("../novos/bg-input.png") repeat-x 0px 0px rgb(255, 255, 255); padding: 4px; border: 1px solid rgb(221, 221, 221);
+}
+a {
+	outline: 0px; color: rgb(0, 98, 156); text-decoration: none;
+}
+a:hover {
+	color: rgb(255, 153, 0);
+}
+table tbody tr td {
+	font: 13px/18px Tahoma, Geneva, sans-serif; vertical-align: middle; font-size-adjust: none; font-stretch: normal;
+}
+.cor {
+	height: 20px; background-color: rgb(204, 204, 204);
+}
+.dn {
+	display: none;
+}
+.img_esq {
+	margin: 0px 10px 0px 0px !important; padding: 3px; border: 1px solid rgb(207, 207, 207); float: left !important;
+}
+.img-esq {
+	margin: 0px 10px 0px 0px !important; padding: 3px; border: 1px solid rgb(207, 207, 207); float: left !important;
+}
+.img_dir {
+	margin: 0px 0px 0px 10px !important; padding: 3px; border: 1px solid rgb(207, 207, 207); float: right !important;
+}
+.img-dir {
+	margin: 0px 0px 0px 10px !important; padding: 3px; border: 1px solid rgb(207, 207, 207); float: right !important;
+}
+.pointer {
+	cursor: pointer;
+}
+.listar {
+	margin: 10px 0px; float: left;
+}
+.social-share {
+	margin: 20px 0px; width: 100%;
+}
+.contact h2 {
+	margin-top: 0px;
+}
+.gradient {
+	background-image: -ms-linear-gradient(bottom, rgb(237, 237, 237) 10%, rgb(255, 255, 255) 67%);
+}
+.gradient:hover {
+	background-image: -ms-linear-gradient(bottom, rgb(255, 255, 255) 10%, rgb(237, 237, 237) 67%);
+}
+a.button {
+	background: rgb(0, 75, 130); padding: 5px; border-radius: 2px; text-align: center; color: rgb(255, 255, 255); margin-right: 8px; margin-bottom: 8px; float: left;
+}
+#main .comunicacao ul li a {
+	background: rgb(0, 75, 130); padding: 5px; border-radius: 2px; text-align: center; color: rgb(255, 255, 255); margin-right: 8px; margin-bottom: 8px; float: left;
+}
+a.button:hover {
+	background-color: rgb(255, 153, 0);
+}
+#main .comunicacao ul li a:hover {
+	background-color: rgb(255, 153, 0);
+}
+a.button::after {
+	
+}
+#main .comunicacao ul li a::after {
+	
+}
+#main .comunicacao ul li a {
+	margin-right: 0px;
+}
+.search {
+	
+}
+.search .searchintro {
+	
+}
+.search form {
+	background: rgb(239, 239, 239); margin: 10px 0px; padding: 1%; border: 1px solid rgb(221, 221, 221);
+}
+.search div.form-limit {
+	float: left;
+}
+.search p.counter {
+	float: right;
+}
+.search ol.search-results {
+	clear: both; margin-top: 20px; float: left;
+}
+.search ol.search-results li {
+	margin: 12px 0px;
+}
+.right {
+	float: right;
+}
+.b0 {
+	margin: 0px !important;
+}
+.thumb {
+	background: rgb(255, 255, 255); padding: 2px; border: 1px solid rgb(221, 221, 221); float: left;
+}
+#gov {
+	background: rgb(0, 75, 130); height: 28px;
+	background: url("bg-header-mec-linha.png") repeat-x 0px bottom;
+}
+#gov .container {
+	height: 28px; line-height: 28px;
+}
+#gov {
+	height: 28px; line-height: 28px; position: relative;
+	box-shadow:2px 5px 10px #ccc;
+}
+#gov .azul {
+	top: 0px; width: 50%; height: 28px; right: 0px; text-indent: -999999px; position: absolute; background-color: rgb(0, 75, 130);
+}
+#gov .linha {
+	background: url("bg-header-mec-linha.png") repeat-x 0px bottom rgb(0, 75, 130); left: 0px; top: 0px; width: 50%; height: 28px; text-indent: -999999px; position: absolute;
+}
+#gov .container {
+	position: relative;
+		background: url("bg-header-mec-linha.png") repeat-x 0px bottom rgb(0, 75, 130);
+
+}
+#gov .container .sixteen {
+	background: url("../images/bg-header-mec-linha.png") repeat-x 0px bottom; left: 0px; top: 0px; height: 28px; position: absolute;
+}
+#gov .container .sixteen a {
+	height: 28px; line-height: 28px; float: right;
+}
+#top {
+	background: url("../novos/bg-header.png") repeat-x 0px 0px rgb(249, 249, 249); height: 150px;
+}
+#top .container {
+	padding-top: 36px; padding-bottom: 46px;
+}
+#top h1 {
+	margin: 0px;
+}
+#top .menu-servicos ul li {
+	float: left;
+}
+#top .menu-servicos {
+	height: 33px; line-height: 33px; font-family: "PT Sans Narrow"; font-size: 15px; margin-top: 10px;
+}
+#top .menu-servicos ul {
+	margin: 0px; padding: 0px; float: right;
+}
+#top .menu-servicos ul li {
+	list-style: none; margin: 0px 5px 0px 0px; padding: 0px 5px 0px 0px; display: inline;
+}
+#top .menu-servicos ul li.current a {
+	color: rgb(255, 132, 0);
+}
+#top .busca {
+	margin: 0px 0px 7px; float: right;
+}
+#top .busca .search {
+	height: 39px;
+}
+#top .busca .search label {
+	display: none;
+}
+#top .busca .search input {
+	float: left;
+}
+#top .busca .search .inputbox {
+	background: url("../novos/bg-input-search.png") repeat-x 0px 0px; padding: 5px 10px; border: 1px solid rgb(221, 221, 221); width: 210px; height: 26px; color: rgb(128, 128, 128); line-height: 19px; font-family: Tahoma, Geneva, sans-serif; font-size: 12px;
+}
+#top .busca .search .button {
+	background: url("../novos/bg-input-search-btn.png") no-repeat 0px 0px; border-width: 1px 1px 1px 0px; border-style: solid solid solid none; border-color: rgb(221, 221, 221) rgb(221, 221, 221) rgb(221, 221, 221) currentColor; padding: 0px; width: 38px; height: 38px; text-indent: -999999px; overflow: hidden; cursor: pointer;
+}
+#top .busca .search .button:hover {
+	background-position: 0px -36px;
+}
+#top .menu-social {
+	clear: both; float: right;
+}
+#top .menu-social h4 {
+	margin: 0px 10px 0px 0px; color: rgb(0, 58, 91); line-height: 16px; font-family: "PT Sans Narrow"; font-size: 12px; font-weight: normal; float: left; display: none;
+}
+#top .menu-social ul {
+	float: left;
+}
+#top .menu-social ul li {
+	float: left; display: inline;
+}
+#top .menu-social ul li a {
+	background: url("../novos/ico-sociais.png") no-repeat 0px 0px; width: 22px; height: 22px; text-indent: -999999px; overflow: hidden; margin-right: 4px;
+}
+#top .menu-social ul li a.twitter {
+	background-position: -22px 0px; float: left; display: inline;
+}
+#top .menu-social ul li a.facebook {
+	float: left; display: inline;
+}
+#top .menu-social ul li a.rss {
+	background-position: -44px 0px; float: left; display: inline;
+}
+#popup {
+	background-color: rgb(255, 255, 255);
+}
+#popup .item-page {
+	margin: 20px;
+}
+#popup #mailto-window {
+	margin: 20px;
+}
+#popup .social-share {
+	display: none;
+}
+#main {
+	background: url("../novos/bg-main-linha.png") repeat-x 0px 0px rgb(249, 249, 249);
+}
+#main .container {
+	padding-bottom: 20px;
+}
+#main .noticias h2 {
+	margin-top: 0px;
+}
+#main .reitoria h2 {
+	margin-top: 0px;
+}
+#main .menu-principal {
+	height: 56px; float: left;
+}
+#main .menu-principal ul {
+	margin: 0px; width: 100%; float: left;
+}
+#main .menu-principal ul li {
+	margin: 0px 15px; line-height: 56px; font-family: "PT Sans Narrow"; font-size: 20px; float: left; display: inline;
+}
+#main .menu-principal ul li a {
+	border-top-color: rgb(238, 238, 238); border-top-width: 1px; border-top-style: solid; float: left;
+}
+#main .menu-principal ul li a:hover {
+	color: rgb(255, 180, 0); border-top-color: rgb(255, 180, 0); border-top-width: 1px; border-top-style: solid; float: left;
+}
+#main .menu-principal ul li.active a {
+	color: rgb(255, 180, 0); border-top-color: rgb(255, 180, 0); border-top-width: 1px; border-top-style: solid; float: left;
+}
+#main .menu-principal ul li.inicio {
+	margin-left: 5px;
+}
+#main .menu-principal ul li.ufc-digital {
+	margin-right: 0px;
+}
+#main .slider {
+	background: url("../novos/bg-sombra-slider.png") no-repeat 0px bottom rgb(204, 204, 204); overflow: hidden; padding-bottom: 13px; margin-bottom: 10px; position: relative;
+}
+#main .slider .moduletable {
+	border: 1px solid rgb(239, 239, 239); width: 99.7%; float: left;
+}
+#main .slider .moduletable .gallery ul li img {
+	width: 100%; margin-top: 1px;
+}
+#main .slider .moduletable .next {
+	right: 0px !important; bottom: 0px !important; position: absolute !important;
+}
+#main .noticias .destaques .item {
+	width: 184px; margin-right: 14px; float: left;
+}
+#main .noticias .destaques .last-item {
+	margin: 0px;
+}
+#main .noticias .destaques .item .thumb {
+	margin-bottom: 10px; background-color: rgb(255, 255, 255);
+}
+#main .noticias .destaques .item .thumb img {
+	width: 178px; height: 117px;
+}
+#main .noticias .destaques .item .noticia a {
+	color: rgb(0, 98, 168);
+}
+#main .noticias .destaques .item .noticia a:hover {
+	color: rgb(255, 153, 0);
+}
+#main .noticias .destaques .item .noticia a .data {
+	margin: 0px; font-size: 11px; font-weight: normal; display: none;
+}
+#main .noticias .destaques .item .noticia a .titulo {
+	font-size: 14px; margin-bottom: 10px;
+}
+#main .noticias .ultimas {
+	margin-top: 20px;
+}
+#main .noticias .ultimas .item {
+	margin: 10px 0px; padding: 10px 0px 0px; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: dotted; float: left;
+}
+#main .noticias .ultimas .item .thumb {
+	margin-right: 20px; float: left;
+}
+#main .noticias .ultimas .item .thumb a {
+	width: 98px; height: 65px; overflow: hidden; float: left;
+}
+#main .noticias .ultimas .item .thumb img {
+	width: 98px; height: 65px;
+}
+#main .noticias .ultimas .item .noticia {
+	width: 100%; float: left;
+}
+#main .noticias .ultimas .item .noticia a {
+	color: rgb(0, 98, 168);
+}
+#main .noticias .ultimas .item .noticia a:hover {
+	color: rgb(255, 153, 0);
+}
+#main .noticias .ultimas .item .noticia a p {
+	margin: 0px;
+}
+#main .noticias .ultimas .item .noticia a .data {
+	margin: 0px; font-size: 11px; font-weight: normal; display: none;
+}
+#main .noticias .ultimas .item .noticia a .titulo {
+	font-size: 14px; margin-bottom: 10px;
+}
+#main .videos {
+	
+}
+#main .videos .thumb {
+	margin-right: 10px; float: left;
+}
+#main .videos .thumb a {
+	float: left;
+}
+#main .videos .thumb img {
+	width: 91px; height: 68px;
+}
+#main .videos .texto {
+	width: 233px; float: left;
+}
+#main .videos .texto a {
+	margin: 0px; float: left;
+}
+#main .videos .texto a.button {
+	float: right;
+}
+#main .videos .texto a.modal-button {
+	color: rgb(35, 35, 35);
+}
+#main .videos .texto a strong {
+	color: rgb(33, 125, 175); font-weight: bold; display: block;
+}
+#main .eventos .item {
+	width: 100%; padding-bottom: 10px; margin-bottom: 10px; border-bottom-color: rgb(232, 232, 232); border-bottom-width: 1px; border-bottom-style: dotted; float: left;
+}
+#main .eventos .item a {
+	background: url("../novos/ico-eventos.png") no-repeat 0px 1px; padding: 0px 0px 0px 25px; font-weight: normal; float: left;
+}
+#main .eventos .item a:hover {
+	background: url("../novos/ico-eventos-hover.png") no-repeat 0px 1px;
+}
+#main .eventos .item a span {
+	font-weight: bold; margin-right: 10px;
+}
+#main .conhecendo .social-share {
+	display: none;
+}
+#main .banners {
+	
+}
+#main .banners .banneritem {
+	margin: 0 0 10px; float: left;
+	padding-bottom:	2% !important; 
+}
+#main .banners .banneritem a {
+	padding: 1px; border: 1px solid rgb(204, 204, 204); float: left;
+}
+#main .banners .banneritem a:hover {
+	border: 1px solid rgb(255, 112, 0); background-color: rgb(255, 112, 0);
+}
+#main .submenu {
+	color: rgb(0, 58, 91); font-family: "PT Sans Narrow"; font-size: 16px; font-weight: normal;
+}
+#main .submenu ul.menu {
+	background: url("../novos/bg-submenu.png") no-repeat 0px 0px; float: left;
+}
+#main .submenu ul.menu li {
+	
+}
+#main .submenu ul.menu li ul {
+	
+}
+#main .submenu ul.menu li ul li {
+	width: 90%; line-height: 18px; padding-left: 10%; float: left;
+}
+#main .submenu ul.menu li ul li.active {
+	background: url("../novos/bg-submenu-active.png") no-repeat 2px 5px;
+}
+#main .submenu ul.menu li ul li.active a {
+	color: rgb(255, 153, 0);
+}
+#main .submenu ul.menu li ul li a {
+	width: 98%; padding-top: 3%; padding-bottom: 3%; padding-left: 2%; border-bottom-color: rgb(234, 234, 234); border-bottom-width: 1px; border-bottom-style: solid; float: left;
+}
+#main .submenu ul.menu li ul li a:hover {
+	color: rgb(255, 153, 0);  background-color: rgb(255, 255, 255);
+}
+#main .submenu span {
+	background: url("../novos/bg-submenu-bottom.png") no-repeat 0px bottom; width: 100%; height: 136px; text-transform: uppercase; text-indent: -99999px; overflow: hidden; float: left;
+}
+#acessibilidade #main .submenu span {
+	height: 118px;
+}
+#noticias #main .submenu span {
+	height: 118px;
+}
+#main .conteudo strong {
+	font-weight: bold;
+}
+#main .conteudo em {
+	
+}
+#main .conteudo .category-list {
+	
+}
+#main .conteudo .category-list .category-desc {
+	width: 100%; margin-bottom: 20px; display: block;
+}
+#main .conteudo .category-list .cat-items {
+	margin-bottom: 20px;
+}
+#main .conteudo .category-list .category-desc h6 {
+	font-weight: bold;
+}
+#main .comunicacao ul {
+	margin-top: 10px; float: right;
+}
+#main .conteudo .videos-feed {
+	
+}
+#main .conteudo .videos-feed ul {
+	margin-top: 10px;
+}
+#main .conteudo .videos-feed ul li {
+	margin: 0px 0px 20px; padding: 1%; width: 96%; float: left;
+}
+#main .conteudo .videos-feed ul li.par {
+	background: rgb(237, 237, 237);
+}
+#main .conteudo .videos-feed ul li .thumb {
+	margin-right: 10px; float: left;
+}
+#main .conteudo .videos-feed ul li .texto {
+	width: 500px; float: left;
+}
+#main .conteudo .videos-feed ul li .texto a {
+	color: rgb(69, 69, 69);
+}
+#main .conteudo .videos-feed ul li .texto a strong {
+	color: rgb(33, 125, 175);
+}
+#footer {
+	background-image: url(../novos/bg-footer.png);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	color:#333 !IMPORTANT;
+	clear:both;
+}
+#footer .container {
+	padding: 0px;
+}
+#footer .menu-rodape {
+	height: 49px;
+}
+#footer .menu-rodape ul {
+	padding: 19px 0px; font-family: "PT Sans Narrow"; float: left;
+}
+#footer .menu-rodape ul li {
+	list-style: none; margin: 0px; padding: 0px; display: inline;
+}
+#footer .menu-rodape ul li a {
+	margin: 0px 12px 0px 0px; padding: 0px 12px 0px 0px; height: 11px; line-height: 11px; font-size: 15px; border-right-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; float: left; display: block;
+}
+#footer .menu-rodape ul li a:hover {
+	background-position: 0px -10px;
+}
+#footer .banner-rodape {
+	height: 49px; overflow: hidden; margin-top: 20px;
+}
+#footer .banner-rodape ul {
+	float: right;
+}
+#footer .banner-rodape ul li {
+	margin-top: 5px; margin-left: 9px; float: left;
+}
+#footer .banner-rodape ul li a {
+	float: left;
+}
+#footer .banner-rodape ul li a:hover {
+	float: left;
+}
+#footer .banner-rodape ul li.selo-periodicos a img {
+	padding: 2px; border: 1px solid currentColor; margin-top: 7px;
+}
+#footer .endereco {
+	margin-top: 20px; margin-bottom: 20px;
+}
+#footer .endereco ul {
+	width: 100%; margin-bottom: 16px; float: left; display: block;
+}
+#footer .endereco ul li {
+	margin-right: 20px;
+	float: left;
+}
+#footer .endereco ul li a {
+	background: url("../novos/bg-menu-dpu.png") no-repeat 0px 4px; color: rgb(255, 255, 255); padding-bottom: 2px; padding-left: 15px; font-weight: bold;
+}
+#footer .endereco ul li a:hover {
+	color: rgb(255, 153, 0); border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+#footer .endereco strong {
+	font-weight: bold;
+}
+#footer .endereco address {
+	line-height: 16px; font-style: normal;
+}
+
+#footer .endereco address a:hover {
+	border-bottom-color: rgb(255, 255, 255); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+#footer .endereco span {
+	margin: 20px 0px 0px; color: rgb(255, 255, 255); font-size: 10px; float: left;
+}
+#footer .endereco span a {
+	margin: 0px 0px 0px 5px;
+}
+#footer .endereco span a.sti {
+	color: rgb(255, 255, 255);
+}
+#footer .endereco span a.sti:hover {
+	border-bottom-color: rgb(255, 255, 255); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+#footer .assinatura {
+	margin-top: 20px;
+}
+.foto-destaque img {
+	padding: 2px; border: 1px solid rgb(207, 207, 207); margin-bottom: 20px;
+}
+.breadcrumb {
+	
+}
+.breadcrumb .breadcrumbs {
+	background: url("../novos/bg-breadcrumb.png") repeat-x 0px 0px rgb(249, 249, 249); padding: 0px 10px; border-radius: 3px; border: 1px solid rgb(207, 207, 207); height: 29px; color: rgb(69, 69, 69); line-height: 29px; font-size: 11px; margin-bottom: 20px; box-shadow: 0px 1px 2px #eaeaea; -webkit-box-shadow: 0px 1px 2px #eaeaea; -moz-box-shadow: 0px 1px 2px #eaeaea;
+}
+.breadcrumb .breadcrumbs span {
+	font-weight: bold;
+}
+.breadcrumb .breadcrumbs span.showHere {
+	font-weight: normal; margin-right: 5px;
+}
+.item-page {
+	
+}
+.item-page .head {
+	margin: 0px 0px 20px; padding: 0px 0px 5px; width: 100%; border-bottom-color: rgb(232, 232, 232); border-bottom-width: 1px; border-bottom-style: solid; float: left;
+}
+.item-page .head h2 {
+	margin: 0px; padding: 0px; border: 0px currentColor; float: left;
+}
+.item-page .head ul.actions {
+	margin-left: 10px; float: right;
+}
+.item-page .head ul.actions li {
+	margin: 0px; padding: 0px; display: inline;
+}
+.item-page .main {
+	width: 100%; float: left;
+}
+.item-page h3 {
+	border: 0px currentColor; color: rgb(0, 60, 97); font-family: Tahoma, Geneva, sans-serif; font-weight: bold;
+}
+.item-page h4 {
+	border: 0px currentColor; color: rgb(0, 60, 97); font-family: Tahoma, Geneva, sans-serif; font-weight: bold;
+}
+.item-page h5 {
+	border: 0px currentColor; color: rgb(0, 60, 97); font-family: Tahoma, Geneva, sans-serif; font-weight: bold;
+}
+.item-page h6 {
+	border: 0px currentColor; color: rgb(0, 60, 97); font-family: Tahoma, Geneva, sans-serif; font-weight: bold;
+}
+.item-page h3 {
+	font-size: 16px;
+}
+.item-page h4 {
+	font-size: 15px;
+}
+.item-page h5 {
+	font-size: 14px;
+}
+.item-page h6 {
+	font-size: 13px;
+}
+.item-page p {
+	margin: 14px 0px; color: rgb(69, 69, 69); line-height: 22px; font-family: Tahoma, Geneva, sans-serif; font-size: 13px;
+}
+.item-page p a {
+	color: rgb(0, 102, 153); border-bottom-color: rgb(102, 153, 255); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+.item-page p a:hover {
+	color: rgb(255, 102, 0); border-bottom-color: rgb(255, 102, 0); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(255, 255, 204);
+}
+.item-page strong {
+	font-weight: bold;
+}
+.item-page em {
+	font-style: italic;
+}
+.item-page ul li {
+	background: url("../novos/ico-list.png") no-repeat 0px 5px; list-style: none; color: rgb(69, 69, 69); padding-left: 20px; font-family: Tahoma, Geneva, sans-serif; font-size: 13px;
+}
+.item-page ul li p {
+	margin: 3px 0px;
+}
+.item-page table {
+	width: 100% !important;
+}
+.item-page table tr.cinza_cc {
+	background-color: rgb(204, 204, 204);
+}
+.item-page table tr.cinza_ee {
+	background-color: rgb(238, 238, 238);
+}
+.item-page table tr:hover {
+	background-color: rgb(255, 235, 215) !important;
+}
+.item-page table td:hover {
+	background-color: rgb(255, 235, 215) !important;
+}
+.item-page table tr td {
+	padding: 5px; border: 1px solid rgb(255, 255, 255); font-family: Tahoma, Geneva, sans-serif; font-size: 13px;
+}
+.item-page table tr td a {
+	color: rgb(33, 125, 175); text-decoration: none;
+}
+.item-page table tr td a:hover {
+	color: rgb(255, 153, 0);
+}
+.item-page .article-info {
+	margin: 0px;
+}
+.item-page .article-info * {
+	color: rgb(126, 126, 126); font-family: Tahoma, Geneva, sans-serif; font-size: 11px;
+}
+.item-page ul.pagenav {
+	margin: 20px 0px; float: left;
+}
+.item-page ul.pagenav li {
+	padding: 0px; margin-right: 10px; float: left;
+}
+.item-page ul.pagenav li a {
+	padding: 5px; border-radius: 2px; border: 1px solid rgb(0, 51, 90); color: rgb(255, 255, 255); background-color: rgb(0, 51, 90);
+}
+.item-page ul.pagenav li a:hover {
+	border-color: rgb(255, 153, 0); color: rgb(255, 255, 255); background-color: rgb(255, 153, 0);
+}
+#identidade-visual-da-ufc .item-page table tr td {
+	border: 1px solid rgb(204, 204, 204); height: 70px; vertical-align: middle;
+}
+.print-icon a img {
+	opacity: 0.6; -moz-opacity: 0.6; -khtml-opacity: 0.6;
+}
+.print-icon a img:hover {
+	opacity: 1;
+}
+.email-icon a img {
+	opacity: 0.6; -moz-opacity: 0.6; -khtml-opacity: 0.6;
+}
+.email-icon a img:hover {
+	opacity: 1;
+}
+#mailto-window {
+	
+}
+#mailto-window .mailto-close {
+	display: none;
+}
+#mailto-window form {
+	
+}
+#mailto-window form div.formelm {
+	width: 100%; margin-bottom: 10px;
+}
+#mailto-window form div.formelm input {
+	padding: 1%; width: 98%;
+}
+fieldset.filters {
+	margin-bottom: 10px;
+}
+fieldset.filters legend.hidelabeltxt {
+	display: none;
+}
+fieldset.filters .filter-search {
+	float: left;
+}
+fieldset.filters .display-limit {
+	float: right;
+}
+table.category {
+	width: 100% !important;
+}
+table.category tr {
+	
+}
+table.category thead tr {
+	text-align: left;
+}
+table.category thead tr a {
+	margin: 7px; font-size: 12px; float: left;
+}
+table.category thead tr th.list-date a {
+	float: right;
+}
+table.category tr.cat-list-row0 {
+	background-color: rgb(255, 241, 228);
+}
+table.category tr.cat-list-row1 {
+	background-color: rgb(249, 249, 249);
+}
+table.category tr td {
+	padding: 0px;
+}
+table.category tr:hover {
+	background-color: rgb(255, 255, 255) !important;
+}
+table.category td:hover {
+	background-color: rgb(255, 255, 255) !important;
+}
+table.category tr td a {
+	margin: 7px; font-size: 12px; float: left;
+}
+table.category tr td span {
+	margin: 7px; font-size: 12px; float: left;
+}
+table.category tr td span {
+	color: rgb(69, 69, 69); font-size: 11px; float: right;
+}
+table.category td.list-date {
+	text-align: center;
+}
+table.category td.list-hits {
+	text-align: center;
+}
+.pagination {
+	margin: 20px 0px 0px; padding: 5px 0px 0px; width: 100%; font-size: 12px; border-top-color: rgb(239, 239, 239); border-top-width: 1px; border-top-style: solid; float: left;
+}
+.pagination p.counter {
+	margin: 9px 0px; padding: 0px; color: rgb(143, 143, 143); line-height: 10px; font-size: 11px; float: right;
+}
+.pagination ul {
+	line-height: 28px; float: left;
+}
+.pagination ul li {
+	margin-right: 5px; float: left;
+}
+.pagination ul li a {
+	padding: 5px;
+}
+.pagination ul li span {
+	padding: 5px;
+}
+.pagination ul li a {
+	border-radius: 2px; border: 1px solid rgb(239, 239, 239);
+}
+.pagination ul li a:hover {
+	border-radius: 2px; color: rgb(255, 255, 255); background-color: rgb(255, 153, 0);
+}
+.pagination ul li.pagination-start span.pagenav {
+	border: 0px currentColor; color: rgb(204, 204, 204); font-weight: normal;
+}
+.pagination ul li.pagination-prev span.pagenav {
+	border: 0px currentColor; color: rgb(204, 204, 204); font-weight: normal;
+}
+.pagination ul li.pagination-next span.pagenav {
+	border: 0px currentColor; color: rgb(204, 204, 204); font-weight: normal;
+}
+.pagination ul li.pagination-end span.pagenav {
+	border: 0px currentColor; color: rgb(204, 204, 204); font-weight: normal;
+}
+.pagination ul li span.pagenav {
+	color: rgb(255, 132, 0); font-weight: bold; border-bottom-color: rgb(255, 132, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.pagination ul li.pagination-start span {
+	font-weight: normal;
+}
+.pagination ul li.pagination-prev span {
+	font-weight: normal;
+}
+.pagination ul li.pagination-start a {
+	border: 0px currentColor; font-weight: normal;
+}
+.pagination ul li.pagination-prev a {
+	border: 0px currentColor; font-weight: normal;
+}
+.pagination ul li.pagination-next a {
+	border: 0px currentColor; font-weight: normal;
+}
+.pagination ul li.pagination-end a {
+	border: 0px currentColor; font-weight: normal;
+}
+.pagination ul li.pagination-next span {
+	font-weight: normal;
+}
+.pagination ul li.pagination-end span {
+	font-weight: normal;
+}
+.mais-ufc ul {
+	width: 150px; float: left;
+}
+.reitoria ul {
+	background: rgb(238, 238, 238); width: 100%; float: left;
+}
+.mais-ufc a {
+	padding: 2%; width: 96%; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dotted; float: left;
+}
+
+.mais-ufc .banneritem a {
+	
+	border-bottom:none !important;
+	margin-top:10px !important;
+
+}
+
+.reitoria a {
+	padding: 2%; width: 96%; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dotted; float: left;
+}
+.mais-ufc a:hover {
+	background: url("../novos/ico-seta.png") no-repeat 97% rgb(255, 255, 255); color: rgb(0, 75, 130);
+}
+.reitoria a:hover {
+	background: url("../novos/ico-seta.png") no-repeat 97% rgb(255, 255, 255); color: rgb(0, 75, 130);
+}
+.twtr-hd h3 {
+	display: none;
+}
+.twtr-hd h4 {
+	display: none;
+}
+.twtr-ft {
+	display: none;
+}
+img.twtr-profile-img {
+	display: none;
+}
+.twtr-tweet-text p em {
+	display: none;
+}
+.twtr-hd {
+	padding: 0px; width: 20%; margin-right: 0px; float: left;
+}
+.twtr-hd a {
+	background: url("../novos/twtr-bird.png") no-repeat center 0px; width: 100%; height: 30px; float: left;
+}
+.twtr-bd {
+	background: url("../novos/twtr-bg-balao.png") no-repeat 0px 20px; width: 70.1%; padding-left: 3.9%; float: left;
+}
+@media only screen and (max-width:959px) and (min-width:768px)
+{
+#main .menu-principal {
+	height: 56px; line-height: 56px;
+}
+#main .menu-principal ul li {
+	margin: 0px 11px; line-height: 56px; font-size: 16px;
+}
+#top .menu-servicos {
+	font-size: 11px;
+}
+#main .slider {
+	background: url("../novos/bg-sombra-slider_2.png") no-repeat 0px bottom;
+}
+#main .slider .gallery {
+	width: 100%; height: 298px;
+}
+#main .slider .gallery ul li img {
+	width: 100%;
+}
+#main .slider .thumbs {
+	display: none;
+}
+#main .slider .thumbs1 {
+	width: 151px; float: left; display: none;
+}
+#main .noticias .destaques .item {
+	margin: 0px 0px 20px; width: 100%; float: left;
+}
+#main .noticias .destaques .item .thumb {
+	margin: 0px 20px 0px 0px;
+}
+#main .noticias .destaques .item .thumb img {
+	width: 100px; height: 59px;
+}
+#main .noticias .destaques .item .noticia p a.title {
+	line-height: 20px; font-size: 16px;
+}
+#main .noticias .ultimas {
+	margin-top: 0px;
+}
+#main .noticias .ultimas .item {
+	margin: 10px 0px; float: left;
+}
+#main .noticias .ultimas .item .thumb {
+	display: none;
+}
+#main .noticias .ultimas .item .noticia {
+	width: 100%;
+}
+#main .videos .texto {
+	width: 154px; float: left;
+}
+#main .conteudo .videos-feed ul li .texto {
+	width: 394px;
+}
+#main .banners .banneritem {
+	width: 46%;
+}
+#main .banners .banneritem a {
+	width: 100%;
+}
+#footer .menu-rodape ul li a {
+	margin: 0px 8px 0px 0px; padding: 0px 8px 0px 0px;
+}
+.twtr-bd {
+	width: 147px;
+}
+}
+@media only screen and (max-width:767px)
+{
+.breadcrumb {
+	display: none;
+}
+.busca {
+	display: none;
+}
+.menu-social {
+	display: none;
+}
+#main .slider {
+	background: url("../novos/bg-sombra-slider_3.png") no-repeat 0px bottom; height: 158px; margin-bottom: 10px;
+}
+#main .slider .gallery ul li img {
+	width: 100%;
+}
+#main .slider .gallery {
+	width: 100%;
+}
+#main .slider .thumbs1 {
+	display: none;
+}
+#main .menu-principal {
+	margin: 20px 0px; height: auto;
+}
+#main .menu-principal ul li {
+	margin: 0px; width: 100%; line-height: 14px; float: left;
+}
+#main .menu-principal ul li a {
+	padding: 2%; border-radius: 2px; width: 96%; text-align: left; line-height: 14px; margin-bottom: 5px; border-bottom-color: rgb(217, 217, 217); border-bottom-width: 1px; border-bottom-style: solid; float: left; background-color: rgb(233, 233, 233);
+}
+#main .menu-principal ul li a:hover {
+	width: 94.7%; border-top-color: rgb(238, 238, 238); border-right-color: rgb(255, 153, 0); border-top-width: 1px; border-right-width: 4px; border-top-style: solid; border-right-style: solid;
+}
+#main .menu-principal ul li.active a {
+	color: rgb(255, 255, 255); background-color: rgb(255, 180, 0);
+}
+#main .menu-principal ul li.dn {
+	display: none;
+}
+#main .menu-principal ul li.inicio {
+	margin-left: 0px;
+}
+#main .submenu ul.menu {
+	background: rgb(239, 239, 239);
+}
+#main .submenu ul.menu li ul {
+	width: 100%;
+}
+#main .submenu ul.menu li ul li {
+	padding: 0px; width: 100%;
+}
+#main .submenu ul.menu li ul li.active {
+	background: url("../novos/bg-submenu-active.png") no-repeat 98% 9px;
+}
+#main .submenu ul.menu li ul li a {
+	margin: 0px; padding: 2%; width: 96%;
+}
+#main .submenu span {
+	display: none;
+}
+#main .noticias .destaques .item {
+	margin: 0px 0px 20px; width: 100%; float: left;
+}
+#main .noticias .destaques .item .thumb {
+	margin: 0px 20px 0px 0px; width: 26%;
+}
+#main .noticias .destaques .item .thumb img {
+	width: 109px; height: 72px;
+}
+#main .noticias .destaques .item .noticia {
+	
+}
+#main .noticias .ultimas .item .thumb {
+	display: none;
+}
+#main .noticias .ultimas .item {
+	display: none;
+}
+#footer .menu-rodape {
+	display: none;
+}
+#main .videos .texto {
+	width: 306px; float: left;
+}
+#main .conteudo .videos-feed ul li .texto {
+	width: 306px;
+}
+#main .banners .banneritem {
+	width: 38%;
+}
+#main .banners .banneritem a {
+	width: 98%;
+}
+#footer {
+}
+#footer .endereco ul li a {
+	
+}
+.twtr-bd {
+	width: 299px;
+}
+}
+@media only screen and (max-width:479px)
+{
+a.button {
+	display: block;
+}
+.breadcrumb {
+	display: none;
+}
+.busca {
+	display: none;
+}
+.menu-social {
+	display: none;
+}
+#top {
+	height: 180px;
+}
+#top .menu-servicos {
+	margin: 20px auto; width: 280px; font-size: 11px;
+}
+#top .menu-servicos ul li.fale-conosco {
+	margin: 0px; padding: 0px;
+}
+#main .slider {
+	background: url("../novos/bg-sombra-slider_4.png") no-repeat 0px bottom; height: 106px; margin-bottom: 10px;
+}
+#main .slider .gallery ul li img {
+	width: 100%;
+}
+#main .slider .gallery {
+	width: 100%;
+}
+#main .slider .thumbs {
+	display: none;
+}
+#main .menu-principal {
+	margin: 20px 0px; height: auto;
+}
+#main .menu-principal ul li {
+	width: 100%; float: left;
+}
+#main .menu-principal ul li a {
+	padding: 2%; border-radius: 2px; width: 96%; text-align: left; line-height: 14px; margin-bottom: 5px; border-bottom-color: rgb(217, 217, 217); border-bottom-width: 1px; border-bottom-style: solid; float: left; background-color: rgb(233, 233, 233);
+}
+#main .menu-principal ul li a:hover {
+	width: 94.7%; border-top-color: rgb(238, 238, 238); border-right-color: rgb(255, 153, 0); border-top-width: 1px; border-right-width: 4px; border-top-style: solid; border-right-style: solid;
+}
+#main .menu-principal ul li.active a {
+	color: rgb(255, 255, 255); background-color: rgb(255, 180, 0);
+}
+#main .menu-principal ul li.dn {
+	display: none;
+}
+#main .submenu ul.menu {
+	background: rgb(239, 239, 239);
+}
+#main .submenu ul.menu li ul {
+	width: 100%;
+}
+#main .submenu ul.menu li ul li {
+	padding: 0px; width: 100%;
+}
+#main .submenu ul.menu li ul li.active {
+	background: url("../novos/bg-submenu-active.png") no-repeat 98% 9px;
+}
+#main .submenu ul.menu li ul li a {
+	margin: 0px; padding: 2%; width: 96%;
+}
+#main .submenu span {
+	display: none;
+}
+#main .noticias .destaques .item {
+	width: 100%; float: left;
+}
+#main .noticias .destaques .item .thumb {
+	display: none;
+}
+#main .noticias .ultimas {
+	display: none;
+}
+#main .videos .texto {
+	width: 186px; float: left;
+}
+#main .conteudo .videos-feed ul li .thumb {
+	display: none;
+}
+#footer .menu-rodape {
+	display: none;
+}
+#footer {
+	color: #00F;
+}
+#footer .endereco ul li a {
+	
+}
+.twtr-bd {
+	width: 179px;
+}
+}
+
+.mais-ufc {
+	
+	
+}
+
+.noticias {
+	
+	/*float:right;*/
+	min-height:500px;
+	height:auto !important;
+	height:500px;
+
+	
+}
+
+.brasil {
+	
+	margin-right: -10px;
+}

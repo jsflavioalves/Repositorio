@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<DBMODEL Version="1.4" TYPE="PostgreSQL">
+
+<MODELSETTINGS MDDVERSION="1.2.11 (build 650)" ModelProject="" ModelName="teleconsulta" ModelCompany="" ModelAuthor="" ModelCopyright="" ModelVersion="" ModelVersionAI="0" ModelCreated="2013-04-19 09:23:43" ModelUpdated="2015-03-26 16:59:07" Description="" Annotation="" ZoomFac="100.00" XPos="0" YPos="0" PrintLink="" GenSettings="object GenSettings1: TGenSettings\n  TextCharCase = tccMixed\n  ModelCheck = True\n  DropIfExists = True\n  ISQL = False\n  DBOptions = [dbgoCreate, dbgoBeginScript, dbgoEndScript]\n  ViewOptions = [viewgoCreate, viewgoCreateRule]\n  SPOptions = [spgoCreate]\n  TableOptions = [tblgoCreate, tblgoBeginScript, tblgoEndScript, tblgoComment, tblgoCreatePK, tblgoCreateFK, tblgoCreateIndex, tblgoCreateRule, tblgoCreateTrigger, tblgoCreateCHECK]\n  OwnerOptions = [owngoSchema, owngoTable, owngoView, owngoSP, owngoSequence, owngoUDT]\n  ACLOptions = [aclgoSchema, aclgoTable, aclgoView, aclgoSP, aclgoSequence]\n  RoleCreate = True\n  RoleWhenCreate = rocrInScript\n  SQLTypeNames = False\nend\n" DisplaySettings="object DisplaySettings1: TDisplaySettings\n  ObjectsDisplay = [edoColumns, edoInhColumns, edoIndices, edoConstraints, edoTriggers, edoRules, edoColTypes, edoFKs, rdoRefName, spdoParameters, spdoResult, spdoParamTypes, spdoParamKind, vdoAttributes, vdoTargets, vdoRules]\n  Color = clWhite\n  ShowIcons = True\n  SnapGrid = True\n  DisplaySnap = True\n  SnapSize = 10\n  ShowPages = True\n  EntityFillColor = clWhite\n  EntityLineColor = clNavy\n  SPFillColor = 13499135\n  SPLineColor = clNavy\n  ViewFillColor = 3329434\n  ViewLineColor = clNavy\n  RefNotation = 0\n  RefColor = clNavy\n  RefLabelColor = clWhite\n  MinimapShapesStyle = mmssFillAndBorder\n  MinimapVisibleAreaStyle = mmvasBitmapShading\n  MinimapBackColor = clWhite\nend\n" DefaultDelete="3" DefaultUpdate="3" DefaultDataType="23" DefaultSchemaID="0" FKPrefix="" QueryDelimiter=";" DBQuoteCharacter="\A" EncloseNames="1" HPageCount="5" VPageCount="5" />
+
+<DATABASE Name="Database_1" CharacterSet="" Collate="" CType="" Tablespace="" Owner="" Template="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="0" />
+
+<STAMPS>
+</STAMPS>
+
+<ROLES>
+</ROLES>
+
+<SCHEMAS>
+<SCHEMA ID="0" Name="public" Owner="" Generate="0" Comments="" System="1"></SCHEMA>
+<SCHEMA ID="2201" Name="integracao" Owner="" Generate="1" Comments="" System="0"></SCHEMA>
+</SCHEMAS>
+
+<SEQUENCES>
+</SEQUENCES>
+
+<DOMAINS>
+</DOMAINS>
+
+<COMPOSITES>
+<COMPOSITE ID="10034" Name="tb_transacao" SchemaName="public" OwnerName="" Comments="" MasterTableOID="1894">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10035" Name="tb_localidade" SchemaName="public" OwnerName="" Comments="" MasterTableOID="1925">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10037" Name="tb_profissional" SchemaName="integracao" OwnerName="" Comments="" MasterTableOID="1997">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10038" Name="tb_paciente" SchemaName="public" OwnerName="" Comments="" MasterTableOID="2037">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10039" Name="tb_especialidade" SchemaName="public" OwnerName="" Comments="" MasterTableOID="2083">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10041" Name="tb_profissional_especialidade" SchemaName="public" OwnerName="" Comments="" MasterTableOID="2109">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10042" Name="tb_profissional_localidade" SchemaName="public" OwnerName="" Comments="" MasterTableOID="2123">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10043" Name="tb_teleconsulta_resposta" SchemaName="public" OwnerName="" Comments="" MasterTableOID="2722">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10045" Name="tb_mobile_teleconsulta" SchemaName="public" OwnerName="" Comments="" MasterTableOID="3155">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10046" Name="tb_mobile_log" SchemaName="public" OwnerName="" Comments="" MasterTableOID="3210">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10047" Name="tb_service_mail_2" SchemaName="public" OwnerName="" Comments="" MasterTableOID="3333">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10048" Name="tb_integracao" SchemaName="integracao" OwnerName="" Comments="" MasterTableOID="3600">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10049" Name="tb_municipio" SchemaName="integracao" OwnerName="" Comments="" MasterTableOID="3668">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10050" Name="tb_profissional" SchemaName="integracao" OwnerName="" Comments="" MasterTableOID="3799">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10051" Name="tb_ciap" SchemaName="public" OwnerName="" Comments="" MasterTableOID="3900">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10052" Name="tb_especialidade_cbo" SchemaName="integracao" OwnerName="" Comments="" MasterTableOID="3952">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10053" Name="tb_equipe_saude" SchemaName="integracao" OwnerName="" Comments="" MasterTableOID="3980">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="10054" Name="tb_estabelecimento" SchemaName="integracao" OwnerName="" Comments="" MasterTableOID="4014">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+</COMPOSITES>
+
+<SCALARS>
+</SCALARS>
+
+<ENUMS>
+</ENUMS>
+
+<TABLESPACES>
+</TABLESPACES>
+
+<METADATA>
+<ENTITIES>
+<ENTITY ID="1857" Name="tb_usuario_grupo" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="400" YPos="660" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="1858" Name="ci_usuario_grupo" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1859" Name="cd_usuario" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1860" Name="cd_grupo" Pos="2" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_END>
+		<REFERENCE_END ID="1890" />
+		<REFERENCE_END ID="1891" />
+	</REFERENCES_END>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="1861" Name="" Kind="2" Expression="" ReferenceIndex="1917" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="1858" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="1917" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="1861" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_usuario_grupo"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="1863" Name="tb_grupo_transacao" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="40" YPos="540" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="1864" Name="ci_grupo_transacao" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1865" Name="cd_grupo" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1901" Name="cd_transacao" Pos="2" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1869" Name="fl_inserir" Pos="3" Datatype="1042" Type="char" Width="1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="\aN\a" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1870" Name="fl_alterar" Pos="4" Datatype="1042" Type="char" Width="1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="\aN\a" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1871" Name="fl_deletar" Pos="5" Datatype="1042" Type="char" Width="1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="\aN\a" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1873" Name="dt_cadastro" Pos="6" Datatype="1114" Type="timestamp" Width="-1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="now()" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_END>
+		<REFERENCE_END ID="1888" />
+		<REFERENCE_END ID="1889" />
+	</REFERENCES_END>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="1874" Name="" Kind="2" Expression="" ReferenceIndex="1908" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="1864" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="1908" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="1874" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_grupo_transacao"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="1876" Name="tb_grupo" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="50" YPos="70" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="1877" Name="ci_grupo" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1878" Name="nm_grupo" Pos="1" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1861" Name="ds_descricao" Pos="2" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1879" Name="dt_cadastro" Pos="3" Datatype="1114" Type="timestamp" Width="-1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="now()" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="1888" />
+		<REFERENCE_BEGIN ID="1891" />
+	</REFERENCES_BEGIN>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="1880" Name="" Kind="2" Expression="" ReferenceIndex="1895" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="1877" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="1895" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="1880" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_grupo"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="1882" Name="tb_usuario" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="300" YPos="30" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="1883" Name="ci_usuario" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1905" Name="tp_nivelacesso" Pos="1" Datatype="21" Type="int2" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="1" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1884" Name="nm_usuario" Pos="2" Datatype="1043" Type="varchar" Width="150" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1885" Name="nm_login" Pos="3" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1886" Name="nm_senha" Pos="4" Datatype="1043" Type="varchar" Width="250" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1887" Name="ds_email" Pos="5" Datatype="1043" Type="varchar" Width="150" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1888" Name="fl_sexo" Pos="6" Datatype="21" Type="int2" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="1" QuoteDefault="0" Comments="1 = Masculino, 2 = Feminino"></COLUMN>
+			<COLUMN ID="1889" Name="fl_atualizousenha" Pos="7" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1890" Name="fl_ativo" Pos="8" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2404" Name="fl_profissional" Pos="9" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1891" Name="dt_cadastro" Pos="10" Datatype="1114" Type="timestamp" Width="-1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="now()" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1906" Name="dt_acesso" Pos="11" Datatype="1114" Type="timestamp" Width="-1" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="1890" />
+		<REFERENCE_BEGIN ID="2210" />
+	</REFERENCES_BEGIN>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="1866" Name="" Kind="2" Expression="" ReferenceIndex="4052" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="1883" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+			<CONSTRAINT ID="1906" Name="unq_tb_usuario_nm_login" Kind="1" Expression="" ReferenceIndex="2615" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="1885" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+			<CONSTRAINT ID="1907" Name="unq_tb_usuario_ds_email" Kind="1" Expression="" ReferenceIndex="4053" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="1887" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="2615" Name="unq_tb_usuario_nm_login_idx_ui" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="1906" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="nm_login"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+		<INDEX ID="4052" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="1866" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_usuario"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+		<INDEX ID="4053" Name="unq_tb_usuario_ds_email_idx_ui" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="1907" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ds_email"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="1894" Name="tb_transacao" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="50" YPos="780" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="1898" Name="ci_transacao" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1899" Name="nm_transacao" Pos="1" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1900" Name="nm_label" Pos="2" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1903" Name="tp_tipo" Pos="3" Datatype="21" Type="int2" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="1" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1904" Name="ds_descricao" Pos="4" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="1889" />
+	</REFERENCES_BEGIN>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="1887" Name="" Kind="2" Expression="" ReferenceIndex="1915" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="1898" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="1915" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="1887" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_transacao"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="1925" Name="tb_localidade" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="1650" YPos="10" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="1909" Name="ci_localidade" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1910" Name="sg_estado" Pos="1" Datatype="1042" Type="char" Width="2" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1911" Name="ds_localidade" Pos="2" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1912" Name="tipo" Pos="3" Datatype="1042" Type="char" Width="1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments="M - Munic\237pio, P - Povoado, D - Distrito, R - Regi\227o Administativa"></COLUMN>
+			<COLUMN ID="1913" Name="situacao" Pos="4" Datatype="1042" Type="char" Width="1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments="C - Munic\237pio codificado  \224 n\237vel de Logradouro, I - Distrito ou Povoado inserido na codifica\231\227o \224  n\237vel de Logradouro, N - N\227o codificada \224 n\237vel de  Logradouro"></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="1989" />
+		<REFERENCE_BEGIN ID="1994" />
+		<REFERENCE_BEGIN ID="2004" />
+		<REFERENCE_BEGIN ID="2217" />
+	</REFERENCES_BEGIN>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="1897" Name="" Kind="2" Expression="" ReferenceIndex="2440" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="1909" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="2440" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="1897" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_localidade"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="1980" Name="tb_profissao" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="2580" YPos="100" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="1981" Name="ci_profissao" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1982" Name="nm_profissao" Pos="1" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1983" Name="nm_registro" Pos="2" Datatype="1043" Type="varchar" Width="10" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2455" Name="nr_familia_cbo" Pos="3" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="1987" />
+	</REFERENCES_BEGIN>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="1985" Name="" Kind="2" Expression="" ReferenceIndex="3760" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="1981" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="3760" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="1985" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_profissao"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="1997" Name="tb_profissional" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="2220" YPos="400" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="1984" Name="ci_profissional" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1985" Name="cd_profissao" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1986" Name="cd_localidade" Pos="2" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1987" Name="nr_cpf" Pos="3" Datatype="1042" Type="char" Width="14" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1989" Name="nr_rg" Pos="4" Datatype="1043" Type="varchar" Width="20" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2424" Name="ds_orgao_emissor" Pos="5" Datatype="1043" Type="varchar" Width="10" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1992" Name="nr_registro" Pos="6" Datatype="1043" Type="varchar" Width="20" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments="N\250mero do CRM / COREM / Outros"></COLUMN>
+			<COLUMN ID="1993" Name="ds_endereco" Pos="7" Datatype="1043" Type="varchar" Width="200" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1994" Name="ds_complemento" Pos="8" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1995" Name="ds_bairro" Pos="9" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1996" Name="nr_numero" Pos="10" Datatype="1043" Type="varchar" Width="10" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1997" Name="nr_cep" Pos="11" Datatype="1042" Type="char" Width="10" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1998" Name="nr_telefone1" Pos="12" Datatype="1042" Type="char" Width="14" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1999" Name="nr_telefone2" Pos="13" Datatype="1042" Type="char" Width="14" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2000" Name="nr_telefone3" Pos="14" Datatype="1042" Type="char" Width="14" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="1990" Name="dt_nascimento" Pos="15" Datatype="1082" Type="date" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2440" Name="nr_cnes" Pos="16" Datatype="1043" Type="varchar" Width="10" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="2000" />
+		<REFERENCE_BEGIN ID="2003" />
+		<REFERENCE_BEGIN ID="2213" />
+		<REFERENCE_BEGIN ID="2214" />
+		<REFERENCE_BEGIN ID="2556" />
+	</REFERENCES_BEGIN>
+	<REFERENCES_END>
+		<REFERENCE_END ID="1987" />
+		<REFERENCE_END ID="1989" />
+	</REFERENCES_END>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="1986" Name="" Kind="2" Expression="" ReferenceIndex="3554" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="1984" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="3554" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="1986" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_profissional"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="2037" Name="tb_paciente" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="1710" YPos="170" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2008" Name="ci_paciente" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2086" Name="cd_localidade" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2011" Name="nm_paciente" Pos="2" Datatype="1043" Type="varchar" Width="150" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2009" Name="nr_cpf" Pos="3" Datatype="1042" Type="char" Width="14" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2010" Name="nr_rg" Pos="4" Datatype="1043" Type="varchar" Width="20" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2407" Name="ds_orgao_emissor" Pos="5" Datatype="1043" Type="varchar" Width="10" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2409" Name="fl_sexo" Pos="6" Datatype="21" Type="int2" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="1" QuoteDefault="0" Comments="1 = Masculino, 2 = Feminino"></COLUMN>
+			<COLUMN ID="2087" Name="nr_codigo" Pos="7" Datatype="1043" Type="varchar" Width="20" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2088" Name="ds_endereco" Pos="8" Datatype="1043" Type="varchar" Width="200" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2089" Name="ds_complemento" Pos="9" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2090" Name="ds_bairro" Pos="10" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2091" Name="nr_numero" Pos="11" Datatype="1043" Type="varchar" Width="10" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2092" Name="nr_cep" Pos="12" Datatype="1042" Type="char" Width="10" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2093" Name="nr_telefone1" Pos="13" Datatype="1042" Type="char" Width="14" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2094" Name="nr_telefone2" Pos="14" Datatype="1042" Type="char" Width="14" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2406" Name="ds_email" Pos="15" Datatype="1043" Type="varchar" Width="150" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2012" Name="dt_nascimento" Pos="16" Datatype="1082" Type="date" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2408" Name="dt_cadastro" Pos="17" Datatype="1114" Type="timestamp" Width="-1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="now()" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2410" Name="cd_usuario_insert" Pos="18" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2411" Name="cd_usuario_update" Pos="19" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="2216" />
+	</REFERENCES_BEGIN>
+	<REFERENCES_END>
+		<REFERENCE_END ID="1994" />
+	</REFERENCES_END>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="1993" Name="" Kind="2" Expression="" ReferenceIndex="3085" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2008" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="3085" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="1993" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_paciente"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="2083" Name="tb_especialidade" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="1640" YPos="900" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2100" Name="ci_especialidade" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2102" Name="nm_especialidade" Pos="1" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2103" Name="fl_exame" Pos="2" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2104" Name="fl_online" Pos="3" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2457" Name="nr_especialidade_cbo" Pos="4" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="2001" />
+		<REFERENCE_BEGIN ID="2218" />
+	</REFERENCES_BEGIN>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="1996" Name="" Kind="2" Expression="" ReferenceIndex="3767" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2100" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+			<CONSTRAINT ID="2457" Name="unique_nm_especialidade" Kind="1" Expression="" ReferenceIndex="4054" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2102" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="3767" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="1996" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_especialidade"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+		<INDEX ID="4054" Name="unique_nm_especialidade_idx_ui" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2457" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="nm_especialidade"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="2109" Name="tb_profissional_especialidade" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="2130" YPos="840" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2110" Name="ci_profissional_especialidade" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2111" Name="cd_profissional" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2112" Name="cd_especialidade" Pos="2" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_END>
+		<REFERENCE_END ID="2000" />
+		<REFERENCE_END ID="2001" />
+	</REFERENCES_END>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="1999" Name="" Kind="2" Expression="" ReferenceIndex="2112" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2110" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="2112" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="1999" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_profissional_especialidade"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="2123" Name="tb_profissional_localidade" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="2190" YPos="170" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2113" Name="ci_profissional_localidade" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2114" Name="cd_profissional" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2115" Name="cd_localidade" Pos="2" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_END>
+		<REFERENCE_END ID="2003" />
+		<REFERENCE_END ID="2004" />
+	</REFERENCES_END>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2002" Name="" Kind="2" Expression="" ReferenceIndex="3573" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2113" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="3573" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2002" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_profissional_localidade"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="2135" Name="tb_file" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="780" YPos="60" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2136" Name="ci_file" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2138" Name="cd_usuario" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2137" Name="cd_teleconsulta" Pos="2" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2139" Name="nm_file" Pos="3" Datatype="1043" Type="varchar" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2140" Name="tp_tipo" Pos="4" Datatype="1043" Type="varchar" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2141" Name="nr_tamanho" Pos="5" Datatype="1700" Type="numeric" Width="30" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2142" Name="ds_tamanho" Pos="6" Datatype="1043" Type="varchar" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2143" Name="nr_versao" Pos="7" Datatype="21" Type="int2" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2144" Name="ds_descricao" Pos="8" Datatype="1043" Type="varchar" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2145" Name="dt_data" Pos="9" Datatype="1114" Type="timestamp" Width="-1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="now()" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_END>
+		<REFERENCE_END ID="2210" />
+		<REFERENCE_END ID="2211" />
+	</REFERENCES_END>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2148" Name="" Kind="2" Expression="" ReferenceIndex="2225" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2136" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="2225" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2148" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_file"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="2151" Name="tb_orientacao" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="700" YPos="700" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2152" Name="ci_orientacao" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2153" Name="nm_orientacao" Pos="1" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="2222" />
+	</REFERENCES_BEGIN>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2155" Name="" Kind="2" Expression="" ReferenceIndex="4056" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2152" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+			<CONSTRAINT ID="2456" Name="unique_nm_orientacao" Kind="1" Expression="" ReferenceIndex="2689" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2153" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="2689" Name="unique_nm_orientacao_idx_ui" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2456" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="nm_orientacao"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+		<INDEX ID="4056" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2155" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_orientacao"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="2157" Name="tb_teleconsulta" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="1030" YPos="470" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2158" Name="ci_teleconsulta" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2159" Name="cd_profissional_solicitante" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2160" Name="cd_profissional_especialista" Pos="2" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2161" Name="cd_paciente" Pos="3" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2162" Name="cd_localidade" Pos="4" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2163" Name="cd_especialidade" Pos="5" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2164" Name="cd_categoria_cid" Pos="6" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2165" Name="cd_subcategoria_cid" Pos="7" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2166" Name="cd_duvida" Pos="8" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2167" Name="cd_orientacao" Pos="9" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2168" Name="tp_tipo" Pos="10" Datatype="21" Type="int2" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments="1 - Exame, 2 - Segunda Opni\227o Formativa"></COLUMN>
+			<COLUMN ID="2170" Name="tp_status" Pos="11" Datatype="21" Type="int2" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="1" QuoteDefault="0" Comments="1 = Aguardando, 2 = Em andamento, 3 = Finalizada"></COLUMN>
+			<COLUMN ID="2171" Name="ds_solicitacao" Pos="12" Datatype="25" Type="text" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2172" Name="dt_solicitacao" Pos="13" Datatype="1114" Type="timestamp" Width="-1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="now()" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2421" Name="ds_resposta" Pos="14" Datatype="25" Type="text" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2420" Name="dt_resposta" Pos="15" Datatype="1114" Type="timestamp" Width="-1" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2419" Name="ds_medicamento" Pos="16" Datatype="25" Type="text" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2176" Name="fl_urgencia" Pos="17" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2422" Name="fl_inconclusivo" Pos="18" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2479" Name="cd_ciap" Pos="19" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="2211" />
+		<REFERENCE_BEGIN ID="2406" />
+		<REFERENCE_BEGIN ID="2555" />
+	</REFERENCES_BEGIN>
+	<REFERENCES_END>
+		<REFERENCE_END ID="2213" />
+		<REFERENCE_END ID="2214" />
+		<REFERENCE_END ID="2216" />
+		<REFERENCE_END ID="2217" />
+		<REFERENCE_END ID="2218" />
+		<REFERENCE_END ID="2219" />
+		<REFERENCE_END ID="2220" />
+		<REFERENCE_END ID="2221" />
+		<REFERENCE_END ID="2222" />
+	</REFERENCES_END>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2186" Name="" Kind="2" Expression="" ReferenceIndex="3948" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2158" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="3948" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2186" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_teleconsulta"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="2188" Name="tb_subcategoria_cid" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="1180" YPos="910" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2189" Name="ci_subcategoria_cid" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2190" Name="cd_categoria_cid" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2191" Name="nr_subcategoria_cid" Pos="2" Datatype="1043" Type="varchar" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2192" Name="nm_subcategoria_cid" Pos="3" Datatype="1043" Type="varchar" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2193" Name="nr_categoria_cid" Pos="4" Datatype="1043" Type="varchar" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="2220" />
+	</REFERENCES_BEGIN>
+	<REFERENCES_END>
+		<REFERENCE_END ID="2207" />
+	</REFERENCES_END>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2195" Name="" Kind="2" Expression="" ReferenceIndex="2471" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2189" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="2471" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2195" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_subcategoria_cid"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="2197" Name="tb_categoria_cid" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="700" YPos="900" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2198" Name="ci_categoria_cid" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2199" Name="nr_categoria_cid" Pos="1" Datatype="1043" Type="varchar" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2200" Name="nm_categoria_cid" Pos="2" Datatype="1043" Type="varchar" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="2207" />
+		<REFERENCE_BEGIN ID="2219" />
+	</REFERENCES_BEGIN>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2201" Name="" Kind="2" Expression="" ReferenceIndex="2466" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2198" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="2466" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2201" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_categoria_cid"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="2203" Name="tb_duvida" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="710" YPos="550" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2204" Name="ci_duvida" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2205" Name="nm_duvida" Pos="1" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="2221" />
+	</REFERENCES_BEGIN>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2206" Name="" Kind="2" Expression="" ReferenceIndex="4055" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2204" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+			<CONSTRAINT ID="2455" Name="unique_nm_duvida" Kind="1" Expression="" ReferenceIndex="2677" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2205" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="2677" Name="unique_nm_duvida_idx_ui" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2455" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="nm_duvida"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+		<INDEX ID="4055" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2206" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_duvida"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="2374" Name="tb_exame_telecardiologia" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="760" YPos="1110" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2375" Name="ci_exame_telecardiologia" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2376" Name="cd_teleconsulta" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2377" Name="peso" Pos="2" Datatype="1042" Type="char" Width="5" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2378" Name="altura" Pos="3" Datatype="1042" Type="char" Width="5" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2379" Name="imc" Pos="4" Datatype="1042" Type="char" Width="5" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2380" Name="medi_diuretico" Pos="5" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2381" Name="medi_digital" Pos="6" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2382" Name="medi_betabloqueador" Pos="7" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2383" Name="medi_inibidor" Pos="8" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2384" Name="medi_amiodarona" Pos="9" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2385" Name="medi_bloquadorcalcio" Pos="10" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2386" Name="medi_nenhum" Pos="11" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2387" Name="medi_outro" Pos="12" Datatype="1043" Type="varchar" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2388" Name="risco_hipertensaoarterial" Pos="13" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2389" Name="risco_doencachagas" Pos="14" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2390" Name="risco_obesidade" Pos="15" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2391" Name="risco_diabete" Pos="16" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2392" Name="risco_tabagismo" Pos="17" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2393" Name="risco_infarto" Pos="18" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2394" Name="risco_dislipdemia" Pos="19" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2395" Name="risco_historico" Pos="20" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2396" Name="risco_doencarenal" Pos="21" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2397" Name="risco_doencapulmonar" Pos="22" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2398" Name="risco_revascularizacao" Pos="23" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2399" Name="risco_nenhum" Pos="24" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2400" Name="dor_momentoexame" Pos="25" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="False" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2401" Name="dor_tempodor" Pos="26" Datatype="1042" Type="char" Width="5" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2402" Name="dor_dataultimoepsodio" Pos="27" Datatype="1042" Type="char" Width="10" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2403" Name="dor_duracaoultimoepsodio" Pos="28" Datatype="1042" Type="char" Width="5" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_END>
+		<REFERENCE_END ID="2406" />
+	</REFERENCES_END>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2405" Name="" Kind="2" Expression="" ReferenceIndex="2412" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2375" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="2412" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2405" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_exame_telecardiologia"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="2722" Name="tb_teleconsulta_resposta" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="1680" YPos="690" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2412" Name="ci_teleconsulta_resposta" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2413" Name="cd_teleconsulta" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2418" Name="cd_profissional" Pos="2" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2414" Name="ds_resposta" Pos="3" Datatype="25" Type="text" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2415" Name="dt_resposta" Pos="4" Datatype="1114" Type="timestamp" Width="-1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="now()" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_END>
+		<REFERENCE_END ID="2555" />
+		<REFERENCE_END ID="2556" />
+	</REFERENCES_END>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2506" Name="" Kind="2" Expression="" ReferenceIndex="2913" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2412" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="2913" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2506" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_teleconsulta_resposta"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="3155" Name="tb_mobile_teleconsulta" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="2600" YPos="450" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2432" Name="ci_mobile_teleconsulta" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2433" Name="cd_profissional" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2434" Name="cd_teleconsulta" Pos="2" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2435" Name="dt_data" Pos="3" Datatype="1114" Type="timestamp" Width="-1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="now()" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2561" Name="" Kind="2" Expression="" ReferenceIndex="3266" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2432" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="3266" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2561" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_mobile_teleconsulta"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="3210" Name="tb_mobile_log" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="2600" YPos="360" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2437" Name="ci_mobile_log" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2438" Name="cd_profissional" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2439" Name="dt_data" Pos="2" Datatype="1114" Type="timestamp" Width="-1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="now()" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2616" Name="" Kind="2" Expression="" ReferenceIndex="3211" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2437" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="3211" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2616" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="ci_mobile_log"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="3333" Name="tb_service_mail_2" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="2600" YPos="560" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2442" Name="cd_teleconsulta" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2443" Name="cd_especialidade" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2669" Name="" Kind="2" Expression="" ReferenceIndex="3360" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2442" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="3360" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2669" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="cd_teleconsulta"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="3600" Name="tb_integracao" SchemaOID="2201" SchemaName="integracao" OwnerID="0" OwnerName="" TablespaceID="0" XPos="2830" YPos="450" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2444" Name="ci_integracao" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2448" Name="tp_titpo" Pos="1" Datatype="21" Type="int2" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="1" QuoteDefault="0" Comments="1 = Cadastro de Equipe\n2 = Envio de Indicadores"></COLUMN>
+			<COLUMN ID="2450" Name="ds_envio" Pos="2" Datatype="25" Type="text" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2445" Name="ds_resposta" Pos="3" Datatype="25" Type="text" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2446" Name="dt_data" Pos="4" Datatype="1114" Type="timestamp" Width="-1" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="now()" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2722" Name="" Kind="2" Expression="" ReferenceIndex="0" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2444" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+</ENTITY>
+<ENTITY ID="3668" Name="tb_municipio" SchemaOID="2201" SchemaName="integracao" OwnerID="0" OwnerName="" TablespaceID="0" XPos="2830" YPos="320" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2451" Name="codigo" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2452" Name="nome" Pos="1" Datatype="1043" Type="varchar" Width="200" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2453" Name="uf" Pos="2" Datatype="1042" Type="char" Width="2" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2454" Name="cd_localidade" Pos="3" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2775" Name="" Kind="2" Expression="" ReferenceIndex="0" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2451" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+</ENTITY>
+<ENTITY ID="3799" Name="tb_profissional" SchemaOID="2201" SchemaName="integracao" OwnerID="0" OwnerName="" TablespaceID="0" XPos="2830" YPos="590" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2469" Name="cpf" Pos="0" Datatype="1042" Type="char" Width="11" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2470" Name="cns" Pos="1" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2471" Name="nome" Pos="2" Datatype="1043" Type="varchar" Width="250" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2472" Name="codigo_cbo" Pos="3" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2473" Name="equipe_codigo_ine" Pos="4" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2474" Name="estabelecimento_codigo_cnes" Pos="5" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2475" Name="fl_alterado" Pos="6" Datatype="21" Type="int2" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="0" QuoteDefault="0" Comments="Informa se o registro foi informado pelo minist\233rio"></COLUMN>
+	</COLUMNS>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2830" Name="" Kind="2" Expression="" ReferenceIndex="3867" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2469" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="3867" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="2830" FillFactor="0" Comments="">
+			<INDEXCOLUMNS COMMATEXT="cpf"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+<ENTITY ID="3900" Name="tb_ciap" SchemaOID="0" SchemaName="public" OwnerID="0" OwnerName="" TablespaceID="0" XPos="710" YPos="440" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2476" Name="ci_ciap" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2477" Name="nr_ciap" Pos="1" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2478" Name="nm_ciap" Pos="2" Datatype="1043" Type="varchar" Width="200" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2883" Name="" Kind="2" Expression="" ReferenceIndex="0" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2476" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+</ENTITY>
+<ENTITY ID="3952" Name="tb_especialidade_cbo" SchemaOID="2201" SchemaName="integracao" OwnerID="0" OwnerName="" TablespaceID="0" XPos="2830" YPos="770" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2481" Name="codigo" Pos="0" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2482" Name="nome" Pos="1" Datatype="1043" Type="varchar" Width="200" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2884" Name="" Kind="2" Expression="" ReferenceIndex="0" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2481" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+</ENTITY>
+<ENTITY ID="3980" Name="tb_equipe_saude" SchemaOID="2201" SchemaName="integracao" OwnerID="0" OwnerName="" TablespaceID="0" XPos="2830" YPos="860" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2483" Name="codigo_ine" Pos="0" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2484" Name="codigo_municipio" Pos="1" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2489" Name="codigo_tipo_equipe" Pos="2" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2490" Name="estabelecimento_cnes" Pos="3" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2491" Name="nome" Pos="4" Datatype="1043" Type="varchar" Width="200" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2492" Name="uf" Pos="5" Datatype="1042" Type="char" Width="2" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2885" Name="" Kind="2" Expression="" ReferenceIndex="0" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2483" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+</ENTITY>
+<ENTITY ID="4014" Name="tb_estabelecimento" SchemaOID="2201" SchemaName="integracao" OwnerID="0" OwnerName="" TablespaceID="0" XPos="3100" YPos="600" Temporary="0" OnCommit="" WithOIDsSpecified="0" WithOIDs="0" FillFactor="0" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" >
+	<COLUMNS>
+			<COLUMN ID="2505" Name="codigo_cnes" Pos="0" Datatype="1043" Type="varchar" Width="100" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2506" Name="codigo_municipio" Pos="1" Datatype="1043" Type="varchar" Width="20" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2507" Name="cnpj" Pos="2" Datatype="1043" Type="varchar" Width="20" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2508" Name="cep" Pos="3" Datatype="1043" Type="varchar" Width="20" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2509" Name="email" Pos="4" Datatype="1043" Type="varchar" Width="200" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2510" Name="logradouro" Pos="5" Datatype="1043" Type="varchar" Width="200" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2511" Name="nome" Pos="6" Datatype="1043" Type="varchar" Width="200" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2512" Name="num_endereco" Pos="7" Datatype="1043" Type="varchar" Width="20" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2513" Name="razao_social" Pos="8" Datatype="1043" Type="varchar" Width="200" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2514" Name="telefone" Pos="9" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+			<COLUMN ID="2515" Name="uf" Pos="10" Datatype="1042" Type="char" Width="2" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<CONSTRAINTS>
+			<CONSTRAINT ID="2886" Name="" Kind="2" Expression="" ReferenceIndex="0" FillFactor="0" Comments="" TablespaceID="0">
+				<CONSTRAINTCOLUMNS>
+					<CONSTRAINTCOLUMN ID="2505" />
+				</CONSTRAINTCOLUMNS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+</ENTITY>
+</ENTITIES>
+
+<REFERENCES>
+<REFERENCE ID="1888" Name="Ref_tb_grupo_transacao_to_tb_grupo" SOURCE="1876" DESTINATION="1863" FKIDS="1877=1865\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1880" />
+<REFERENCE ID="1889" Name="Ref_tb_grupo_transacao_to_tb_transacao" SOURCE="1894" DESTINATION="1863" FKIDS="1898=1901\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1887" />
+<REFERENCE ID="1890" Name="Ref_tb_usuario_grupo_to_tb_usuario" SOURCE="1882" DESTINATION="1857" FKIDS="1883=1859\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1866" />
+<REFERENCE ID="1891" Name="Ref_tb_usuario_grupo_to_tb_grupo" SOURCE="1876" DESTINATION="1857" FKIDS="1877=1860\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1880" />
+<REFERENCE ID="1987" Name="Ref_tb_profissional_to_tb_profissao" SOURCE="1980" DESTINATION="1997" FKIDS="1981=1985\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1985" />
+<REFERENCE ID="1989" Name="Ref_tb_profissional_to_tb_localidade" SOURCE="1925" DESTINATION="1997" FKIDS="1909=1986\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1897" />
+<REFERENCE ID="1994" Name="Ref_tb_paciente_to_tb_localidade" SOURCE="1925" DESTINATION="2037" FKIDS="1909=2086\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1897" />
+<REFERENCE ID="2000" Name="Ref_tb_profissional_especialidade_to_tb_profissional" SOURCE="1997" DESTINATION="2109" FKIDS="1984=2111\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1986" />
+<REFERENCE ID="2001" Name="Ref_tb_profissional_especialidade_to_tb_especialidade" SOURCE="2083" DESTINATION="2109" FKIDS="2100=2112\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1996" />
+<REFERENCE ID="2003" Name="Ref_tb_profissional_localidade_to_tb_profissional" SOURCE="1997" DESTINATION="2123" FKIDS="1984=2114\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1986" />
+<REFERENCE ID="2004" Name="Ref_tb_profissional_localidade_to_tb_localidade" SOURCE="1925" DESTINATION="2123" FKIDS="1909=2115\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1897" />
+<REFERENCE ID="2207" Name="Ref_tb_subcategoria_cid_to_tb_categoria_cid" SOURCE="2197" DESTINATION="2188" FKIDS="2198=2190\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="3" OnUpdate="3" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="2201" />
+<REFERENCE ID="2210" Name="Ref_tb_file_to_tb_usuario" SOURCE="1882" DESTINATION="2135" FKIDS="1883=2138\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1866" />
+<REFERENCE ID="2211" Name="Ref_tb_file_to_tb_teleconsulta" SOURCE="2157" DESTINATION="2135" FKIDS="2158=2137\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="2186" />
+<REFERENCE ID="2213" Name="Ref_tb_teleconsulta_to_tb_profissional" SOURCE="1997" DESTINATION="2157" FKIDS="1984=2159\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1986" />
+<REFERENCE ID="2214" Name="Ref_tb_teleconsulta_to_tb_profissional0" SOURCE="1997" DESTINATION="2157" FKIDS="1984=2160\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="3" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1986" />
+<REFERENCE ID="2216" Name="Ref_tb_teleconsulta_to_tb_paciente" SOURCE="2037" DESTINATION="2157" FKIDS="2008=2161\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1993" />
+<REFERENCE ID="2217" Name="Ref_tb_teleconsulta_to_tb_localidade" SOURCE="1925" DESTINATION="2157" FKIDS="1909=2162\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1897" />
+<REFERENCE ID="2218" Name="Ref_tb_teleconsulta_to_tb_especialidade" SOURCE="2083" DESTINATION="2157" FKIDS="2100=2163\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1996" />
+<REFERENCE ID="2219" Name="Ref_tb_teleconsulta_to_tb_categoria_cid" SOURCE="2197" DESTINATION="2157" FKIDS="2198=2164\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="2201" />
+<REFERENCE ID="2220" Name="Ref_tb_teleconsulta_to_tb_subcategoria_cid" SOURCE="2188" DESTINATION="2157" FKIDS="2189=2165\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="2195" />
+<REFERENCE ID="2221" Name="Ref_tb_teleconsulta_to_tb_duvida" SOURCE="2203" DESTINATION="2157" FKIDS="2204=2166\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="2206" />
+<REFERENCE ID="2222" Name="Ref_tb_teleconsulta_to_tb_orientacao" SOURCE="2151" DESTINATION="2157" FKIDS="2152=2167\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="2155" />
+<REFERENCE ID="2406" Name="Ref_tb_exame_telecardiologia_to_tb_teleconsulta" SOURCE="2157" DESTINATION="2374" FKIDS="2158=2376\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="2186" />
+<REFERENCE ID="2555" Name="Ref_tb_teleconsulta_resposta_to_tb_teleconsulta" SOURCE="2157" DESTINATION="2722" FKIDS="2158=2413\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="2186" />
+<REFERENCE ID="2556" Name="Ref_tb_teleconsulta_resposta_to_tb_profissional" SOURCE="1997" DESTINATION="2722" FKIDS="1984=2418\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="0" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="1986" />
+</REFERENCES>
+
+<NOTES>
+<NOTE ID="1893" Name="Note_01" XPos="210" YPos="780" Text="tb_transacao =\g tp_tipo\n1 - CADASTRO\n2 - SOMENTE INCLUS\195O\n3 - SOMENTE ALTERA\199\195O\n4 - SOMENTE EXCLUS\195O\n5 - FUNCIONALIDADE\n" BackColor="13499135" />
+<NOTE ID="1910" Name="Note_02" XPos="470" YPos="30" Text="tb_usuario =\g tp_nivelacesso\n1 - COMUM\n2 - ADMINISTRADOR (GERENCIAR GRUPOS)\n3 - MASTER (GERENCIAR TRANSACOES)\n" BackColor="13499135" />
+<NOTE ID="1919" Name="Note_03" XPos="470" YPos="100" Text="tb_usuario =\g fl_sexo\n1 - MASCULINO\n2 - FEMININO\n" BackColor="13499135" />
+<NOTE ID="2349" Name="Note_04" XPos="1260" YPos="530" Text="tp_tipo\n1 - Exame\n2 - Segunda Opni\227o Formativa\n" BackColor="13499135" />
+<NOTE ID="2355" Name="Note_05" XPos="1260" YPos="590" Text="tp_status\n1 = Aguardando\n2 = Em an\225lise\n3 = Respondido\n4 = Finalizado\n" BackColor="13499135" />
+</NOTES>
+
+<STOREDPROCES>
+</STOREDPROCES>
+
+<VIEWS>
+</VIEWS>
+
+</METADATA>
+</DBMODEL>

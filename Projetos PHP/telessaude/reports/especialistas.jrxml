@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5337e78a-fe4b-44f2-8694-c3111e7234de">
+	<property name="ireport.zoom" value="1.6105100000000012"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\localhost\\www\\financeiro\\reports\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select
+	tu.ci_usuario,
+	upper(tu.nm_usuario) as nm_usuario,
+	tu.nm_login,
+	tu.ds_email,
+	tu.fl_ativo,
+	tu.tp_nivelacesso,
+	tp.nr_telefone1,
+	tp.nr_telefone2,
+	tp.nr_telefone3,
+	(select array_to_string( array(select tl.ds_localidade
+	from tb_profissional_localidade tpl
+	inner join tb_localidade tl on(tpl.cd_localidade=tl.ci_localidade)
+	where cd_profissional = tu.ci_usuario
+	group by 1
+	order by 1), ', ')) as municipios,
+	(select array_to_string( array(select te.nm_especialidade
+	from tb_profissional_especialidade tpe
+	inner join tb_especialidade te on(tpe.cd_especialidade=te.ci_especialidade)
+	where tpe.cd_profissional = tu.ci_usuario
+	group by 1
+	order by 1), ', ')) as especialidades
+from tb_usuario tu
+inner join tb_profissional tp on(tu.ci_usuario=tp.ci_profissional)
+where tu.ci_usuario in(
+	select distinct cd_usuario
+	from tb_usuario_grupo
+	where cd_grupo in(
+		select distinct cd_grupo
+		from tb_grupo_transacao
+		where cd_transacao in(6,7)
+	)
+)
+order by tu.nm_usuario]]>
+	</queryString>
+	<field name="ci_usuario" class="java.lang.Integer"/>
+	<field name="nm_usuario" class="java.lang.String"/>
+	<field name="nm_login" class="java.lang.String"/>
+	<field name="ds_email" class="java.lang.String"/>
+	<field name="fl_ativo" class="java.lang.Boolean"/>
+	<field name="tp_nivelacesso" class="java.lang.Integer"/>
+	<field name="nr_telefone1" class="java.lang.String"/>
+	<field name="nr_telefone2" class="java.lang.String"/>
+	<field name="nr_telefone3" class="java.lang.String"/>
+	<field name="municipios" class="java.lang.String"/>
+	<field name="especialidades" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="56" splitType="Stretch">
+			<image>
+				<reportElement uuid="78103155-50d4-4585-80a8-db7e7f090a69" x="0" y="0" width="150" height="38"/>
+				<imageExpression><![CDATA["./../assets/logo_nuteds.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="33affdd7-c2a9-410c-b9a9-01dbed37490d" x="150" y="0" width="490" height="17"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Especialistas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="57e342c2-8d3c-4041-aefd-ab47d4afab04" x="693" y="0" width="53" height="13"/>
+				<textElement markup="none">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Todos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="640" y="0" width="53" height="13"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Município:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="0" y="41" width="31" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="41" y="41" width="228" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="269" y="41" width="161" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="429" y="41" width="83" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Login]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="512" y="41" width="170" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Telefones]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="681" y="41" width="61" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Nível Acesso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="742" y="41" width="59" height="15"/>
+				<textElement>
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="72" splitType="Stretch">
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="0" y="0" width="31" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ci_usuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="41" y="0" width="228" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_usuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="269" y="0" width="161" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ds_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="429" y="0" width="83" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_login}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="512" y="0" width="170" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nr_telefone1} + " " + $F{nr_telefone2} + " " + $F{nr_telefone3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="681" y="0" width="61" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(
+    $F{tp_nivelacesso} == 1 ? "COMUM" :
+    $F{tp_nivelacesso} == 2 ? "ADMIN" :
+    "MASTER"
+)]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="742" y="0" width="59" height="13"/>
+				<textElement markup="html">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(
+    $F{fl_ativo} == true ? "<font color='green'>ATIVADO</font>" :
+    "<font color='red'>DESATIVADO</font>"
+)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="493" y="18" width="88" height="15"/>
+				<textElement textAlignment="Left">
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Especialidades]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="377bb261-8545-4bb3-b7ee-68246ef073c3" x="0" y="67" width="801" height="1" forecolor="#CCCCCC"/>
+			</line>
+			<staticText>
+				<reportElement uuid="7ad13fa9-d7a2-4d95-b7bb-5457f5e56abe" x="121" y="18" width="88" height="15"/>
+				<textElement textAlignment="Left">
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Municípios]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="493" y="33" width="329" height="35"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{especialidades}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5be81c2d-f142-4964-a551-00b9ccec1ab6" x="121" y="33" width="329" height="35"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{municipios}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<summary>
+		<band height="34" splitType="Stretch">
+			<line>
+				<reportElement uuid="a4649e80-ed99-4f91-902f-3fcd5a586ceb" x="0" y="4" width="802" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="ae5276c9-e9f4-4861-bddb-13a1aa645eed" x="575" y="10" width="118" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Total de Especialistas:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ec9790cf-ed7d-4c62-9aee-a04b3c244383" x="702" y="10" width="100" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+	<noData>
+		<band height="50">
+			<staticText>
+				<reportElement uuid="041205ae-74c9-4941-82bd-2ab03e4cc24e" x="0" y="18" width="802" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nenhum registro para o relatório.]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

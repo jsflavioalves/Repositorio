@@ -1,0 +1,306 @@
+<?php
+  /**
+  * Aplicação teste.
+  *
+  * Testa todos o serviços disponibilizados na versão 2.0 do SMART.
+  * @author Allyson Barros
+  */
+
+  header("Content-Type: text/html; charset=utf-8");
+  require("classes/integra.class.php");
+
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+
+  /**
+  * Simula o envio da produção de participações em atividades
+  * Nesse exemplo é enviado os dados cadastrais de cinco atividades de tele-educação e as suas respectivas participações
+  *
+  * @param Integra integra    Objeto integra, responsável por serializar os dados e enviá-los
+  * @param string url   O endereço do servidor
+  */
+  function enviarTeleeducacaoAtividade($integra, $url) {
+    echo '<fieldset>';
+    echo '<legend>Atividades de Tele-educação</legend>';
+
+    $atividade = new TeleeducacaoAtividade("0000010", "022011");
+    $atividade->addAtividade("01", "01/01/2016 18:00:00", "20", TipoAtividade::CURSO, "C02.782.350.250.214");
+  	$atividade->addAtividade("02", "02/01/2016 18:00:00", "30", TipoAtividade::FORUM, "B01.050.500.131.617.289.275.100");
+  	$atividade->addAtividade("03", "03/01/2016 18:00:00", "40", TipoAtividade::REUNIAO, "C13.703.420.491");
+  	$atividade->addAtividade("04", "04/01/2016 18:00:00", "50", TipoAtividade::WEBAULAS_PALESTRAS, "C02.081.980");
+  	$atividade->addAtividade("05", "05/01/2016 18:00:00", "60", TipoAtividade::WEBSEMINARIOS, "C16.131.666.507.500");
+  	$atividade->addParticipacaoAtividade("01", "01/01/2016 18:00:00", "03450628410", "515105", "2408236", "0001465562", GrauSatisfacao::INDIFERENTE);
+  	$atividade->addParticipacaoAtividade("01", "02/01/2016 18:00:00", "27172872487", "223293", "2408236", "0000112658", GrauSatisfacao::INSATISFEITO);
+  	$atividade->addParticipacaoAtividade("02", "03/01/2016 18:00:00", "01097944433", "322205", "2653982", null, GrauSatisfacao::MUITO_INSATISFEITO);
+  	$atividade->addParticipacaoAtividade("02", "04/01/2016 18:00:00", "01097944433", "322205", "2653982", null, GrauSatisfacao::MUITO_SATISFEITO);
+  	$atividade->addParticipacaoAtividade("03", "05/01/2016 18:00:00", "91405963468", "223268", "2409011", null, GrauSatisfacao::NAO_INFORMADO);
+  	$atividade->addParticipacaoAtividade("04", "06/01/2016 18:00:00", "03375447434", "225133", "2653982", null, GrauSatisfacao::SATISFEITO);
+
+    $dados_serializados_atividade = Integra::serializar(TipoDeDados::JSON, $atividade);
+    echo "<h3>.: Dados Serializados - Atividades de Tele-educação :.</h3>";
+    echo $dados_serializados_atividade;
+
+    $resposta_atividade = $integra->enviarDados(TipoDeDados::JSON, $url."api/v2/atividades-teleeducacao/?format=json", $dados_serializados_atividade);
+    echo "<h3>.: Resposta do Servidor - Atividades de Tele-educação :.</h3>";
+    echo $resposta_atividade;
+    echo "</fieldset>";
+  }
+
+  /**
+  * Simula o envio da produção de objetos de aprendizagem.
+  * Nesse exemplo é enviado os dados cadastrais de cinco objetos de aprendizagem com seu respectivo número de acessos.
+  *
+  * @param Integra integra    Objeto integra, responsável por serializar os dados e enviá-los
+  * @param string url   O endereço do servidor
+  */
+  function enviarTeleeducacaoObjetoAprendizagem($integra, $url) {
+    echo '<br/><br/>';
+    echo '<fieldset>';
+    echo '<legend>Objetos de Aprendizagem</legend>';
+
+    $objeto_aprendizagem = new TeleeducacaoObjetoAprendizagem("0000010", "022011");
+    $objeto_aprendizagem->addObjetoAprendizagem(
+      "01", "05/01/2016 18:00:00",
+      true, true, true, true, true,
+      TipoObjetoAprendizagem::TEXTO, "C02.782.350.250.214", null, 60
+    );
+    $objeto_aprendizagem->addObjetoAprendizagem(
+      "02", "05/01/2016 18:00:00",
+      false, false, false, false, false,
+      TipoObjetoAprendizagem::APLICATIVOS, "B01.050.500.131.617.289.275.100", null, 0
+    );
+    $objeto_aprendizagem->addObjetoAprendizagem(
+      "03", "05/01/2016 18:00:00",
+      true, true, true, true, true,
+      TipoObjetoAprendizagem::IMAGENS, "C13.703.420.491", null, 150
+    );
+    $objeto_aprendizagem->addObjetoAprendizagem(
+      "04", "05/01/2016 18:00:00",
+      true, true, true, true, true,
+      TipoObjetoAprendizagem::JOGOS_EDUCACIONAIS, "C02.081.980", "http://eaulas.usp.br/portal/video.action?idItem=1802", 0
+    );
+    $objeto_aprendizagem->addObjetoAprendizagem(
+      "05", "05/01/2016 18:00:00",
+      false, false, false, false, true,
+      TipoObjetoAprendizagem::MULTIMIDIA, "C02.782.350.250.214", "http://eaulas.usp.br/portal/video.action?idItem=1802", 0
+    );
+
+    $dados_serializados_objeto_aprendizagem = Integra::serializar(TipoDeDados::JSON, $objeto_aprendizagem);
+    echo "<h3>.: Dados Serializados - Objeto de Aprendizagem :.</h3>";
+    echo $dados_serializados_objeto_aprendizagem;
+
+    $resposta_objeto_aprendizagem = $integra->enviarDados(TipoDeDados::JSON, $url."api/v2/objetos-aprendizagem/?format=json", $dados_serializados_objeto_aprendizagem);
+    echo "<h3>.: Resposta do Servidor - Objeto de Aprendizagem :.</h3>";
+    echo $resposta_objeto_aprendizagem;
+    echo "</fieldset>";
+  }
+
+  /**
+  * Simula o envio da produção de teleconsultoria.
+  * Nesse exemplo é enviado os dados de cinco teleconsultoria.
+  *
+  * @param Integra integra    Objeto integra, responsável por serializar os dados e enviá-los
+  * @param string url   O endereço do servidor
+  */
+  function enviarTeleconsultoria($integra, $url) {
+    echo '<br/><br/>';
+    echo '<fieldset>';
+    echo '<legend>Teleconsultoria</legend>';
+
+    $teleconsultoria = new Teleconsultoria("0000010", "022011");
+    $teleconsultoria->addSolicitacao("05/01/2016 18:00:00",
+      TipoTeleconsultoria::SINCRONA, CanalAcesso::TELEFONE,
+      "03375447434", "225133", "2653982", null, "01",
+      ["a010", "a040", "w25"], ["R05", "A03", "R21"],
+      "05/01/2016 18:20:00",
+      EvitouEncaminhamentoTeleconsultoria::NAO, IntencaoEncaminhamentoTeleconsultoria::NAO,
+      GrauSatisfacao::MUITO_SATISFEITO, ResolucaoDuvidaTeleconsultoria::ATENDEU_TOTALMENTE, false
+    );
+
+    $teleconsultoria->addSolicitacao(
+      "04/01/2016 18:00:00",
+      TipoTeleconsultoria::SINCRONA, CanalAcesso::INTERNET,
+      "49206079468", "322230", "2653982", null, "01",
+      ["a010", "a040", "w25"],
+      null,
+      "04/01/2016 18:20:00",
+      EvitouEncaminhamentoTeleconsultoria::NAO, IntencaoEncaminhamentoTeleconsultoria::NAO,
+      GrauSatisfacao::MUITO_INSATISFEITO, ResolucaoDuvidaTeleconsultoria::ATENDEU_TOTALMENTE, false
+    );
+
+    $teleconsultoria->addSolicitacao(
+      "03/01/2016 18:00:00",
+      TipoTeleconsultoria::ASSINCRONA, CanalAcesso::INTERNET,
+      "04390324403", "225225", "2653923", null,"01",
+      ["a010", "a040", "w25"],
+      null,
+      "04/01/2016 18:00:00",
+      EvitouEncaminhamentoTeleconsultoria::NAO, IntencaoEncaminhamentoTeleconsultoria::SIM,
+      GrauSatisfacao::MUITO_INSATISFEITO, ResolucaoDuvidaTeleconsultoria::ATENDEU_TOTALMENTE, true
+    );
+
+    $teleconsultoria->addSolicitacao(
+      "02/01/2016 18:00:00",
+      TipoTeleconsultoria::ASSINCRONA, CanalAcesso::INTERNET,
+      "01097944433", "322205", "2653982", null,"01",
+      null,
+      ["R05", "A03", "R21"],
+      "03/01/2016 18:00:00",
+      EvitouEncaminhamentoTeleconsultoria::NAO_INFORMADO, IntencaoEncaminhamentoTeleconsultoria::NAO_INFORMADO,
+      GrauSatisfacao::INSATISFEITO, ResolucaoDuvidaTeleconsultoria::NAO_ATENDEU, false
+    );
+
+    $teleconsultoria->addSolicitacao(
+      "01/01/2016 18:00:00",
+      TipoTeleconsultoria::ASSINCRONA, CanalAcesso::INTERNET,
+      "24609455072", "225203", "3649563", null,"01",
+      ["a010", "a040", "w25"],
+      ["R05", "A03", "R21"],
+      "02/01/2016 18:00:00",
+      EvitouEncaminhamentoTeleconsultoria::SIM, IntencaoEncaminhamentoTeleconsultoria::SIM,
+      GrauSatisfacao::INDIFERENTE, ResolucaoDuvidaTeleconsultoria::ATENDEU_PARCIALMENTE, false
+    );
+
+    $dados_serializados_teleconsultoria = Integra::serializar(TipoDeDados::JSON, $teleconsultoria);
+    echo "<h2>.: Dados Serializados - Teleconsultoria :.</h2>";
+    echo $dados_serializados_teleconsultoria;
+
+    $resposta_teleconsultoria = $integra->enviarDados(TipoDeDados::JSON, $url."api/v2/teleconsultorias/?format=json", $dados_serializados_teleconsultoria);
+    echo "<h2>.: Resposta do Servidor - Teleconsultoria :.</h2>";
+    echo $resposta_teleconsultoria;
+    echo "</fieldset>";
+  }
+
+  /**
+  * Simula o envio da produção de telediagnóstico.
+  * Nesse exemplo é enviado os dados de um telediagnóstico.
+  *
+  * @param Integra integra    Objeto integra, responsável por serializar os dados e enviá-los
+  * @param string url   O endereço do servidor
+  */
+  function enviarTelediagnostico($integra, $url) {
+    echo '<br/><br/>';
+    echo '<fieldset>';
+    echo '<legend>Telediagnóstico</legend>';
+
+    $telediagnostico = new Telediagnostico("0000010", "022011");
+    $telediagnostico->addSolicitacao(
+      "20/01/2016 22:10:12",
+      "1", "17",
+      "justificativa", "2653982", "01154825477", "225125","2399741",
+      "20/01/2016 22:10:12","01154825477",
+  		"225125","2399741","06417633446","1231","240810"
+    );
+
+    $dados_serializados_telediagnostico = Integra::serializar(TipoDeDados::JSON, $telediagnostico);
+    echo "<h3>.: Dados Serializados - Telediagnóstico :.</h3>";
+    echo $dados_serializados_telediagnostico;
+
+    $resposta_telediagnostico = $integra->enviarDados(TipoDeDados::JSON, $url."api/v2/telediagnosticos/?format=json", $dados_serializados_telediagnostico);
+    echo "<h3>.: Resposta do Servidor - Telediagnóstico :.</h3>";
+    echo $resposta_telediagnostico;
+    echo "</fieldset>";
+  }
+
+  /**
+  * Simula o envio dos dados cadastrais de curso.
+  *
+  *  Nesse exemplo, é simulado o envio de um curso em quatro momentos distintos:
+  *  . É enviado o cadastro do curso, observa-se que nesse momento não se sabe quem são os matriiculados, formados, etc.;
+  *  . O curso é atualizado com as informações dos alunos matriculados;
+  *  . O curso é atualizado com as informações dos alunos evadidos;
+  *  . O curso é atualizado com as informações dos alunos reprovados;
+  *
+  * @param Integra integra    Objeto integra, responsável por serializar os dados e enviá-los
+  * @param string url   O endereço do servidor
+  */
+  function enviarCursos($integra, $url) {
+    echo '<br/><br/>';
+    echo '<fieldset>';
+    echo '<legend>Cursos</legend>';
+
+    $curso = new TeleeducacaoCurso("0000010", "022011");
+    $curso->addCurso("1234", "05/01/2016 20:00:00", "20/01/2016 20:00:00", "50", "C02.782.350.250.214", "20", [], [], [], []);
+    $curso->addCurso("1234", "05/01/2016 20:00:00", "20/01/2016 20:00:00", "50", "C02.782.350.250.214", "20", ["65453409215", "12201854777"], ["02659287104", "06698401650"], [], []);
+    $curso->addCurso("1234", "05/01/2016 20:00:00", "20/01/2016 20:00:00", "50", "C02.782.350.250.214", "20", ["49206079468"], [], ["02733890921", "04596473501"], []);
+    $curso->addCurso("1234", "05/01/2016 20:00:00", "20/01/2016 20:00:00", "50", "C02.782.350.250.214", "20", ["49206079468"], [], [], ["80018289215", "13178547304"]);
+
+    $dados_serializados_curso = Integra::serializar(TipoDeDados::JSON, $curso);
+    echo "<h3>.: Dados Serializados - Curso :.</h3>";
+    echo $dados_serializados_curso;
+
+    $resposta_curso = $integra->enviarDados(TipoDeDados::JSON, $url."api/v2/cursos-teleeducacao/?format=json", $dados_serializados_curso);
+    echo "<h3>.: Resposta do Servidor - Curso :.</h3>";
+    echo $resposta_curso;
+    echo '</fieldset>';
+  }
+
+  /**
+  * Simula o envio de atualização de estabelecimento de saúde.
+  * Nesse exemplo é atualizado os dados de quatro estabelecimentos.
+  *
+  * @param Integra integra    Objeto integra, responsável por serializar os dados e enviá-los
+  * @param string url   O endereço do servidor
+  */
+  function enviarAtualizacaoEstabelecimento($integra, $url) {
+    echo '<br/><br/>';
+    echo '<fieldset>';
+    echo '<legend>Estabelecimentos</legend>';
+
+    $estabelecimento = new EstabelecimentoSaude("0000010", "022011");
+    $estabelecimento->atualizarEstabelecimentoSaude("2653982", true, true, true);
+  	$estabelecimento->atualizarEstabelecimentoSaude("2398419", false, false, true);
+  	$estabelecimento->atualizarEstabelecimentoSaude("2653966", true, false, true);
+  	$estabelecimento->atualizarEstabelecimentoSaude("2408627", false, false, false);
+
+    $dados_serializados_estabelecimento = Integra::serializar(TipoDeDados::JSON, $estabelecimento);
+    echo "<h3>.: Dados Serializados - Estabelecimentos :.</h3>";
+    echo $dados_serializados_estabelecimento;
+
+    $resposta_estabelecimento = $integra->enviarDados(TipoDeDados::JSON, $url."api/v2/dados-estabelecimentos-saude/?format=json", $dados_serializados_estabelecimento);
+    echo "<h3>.: Resposta do Servidor - Estabelecimentos :.</h3>";
+    echo $resposta_estabelecimento;
+    echo '</fieldset>';
+  }
+
+  /**
+  * Simula o envio dos dados cadastrais de profissional de saúde.
+  * Nesse exemplos é enviado os dados cadastrais da profissional Ana Carolina Wanderley
+  *
+  * @param Integra integra    Objeto integra, responsável por serializar os dados e enviá-los
+  * @param string url   O endereço do servidor
+  */
+  function enviarCadastroProfissional($integra, $url) {
+    echo '<br/><br/>';
+    echo '<fieldset>';
+    echo '<legend>Profissionais de Saúde</legend>';
+
+    $profissional = new ProfissionalSaude("0000010", "022011");
+    $profissional->addProfissionalSaude("980016284186253", "01154825477", "Ana Carolina Wanderley Filgueiras", "2399741", "225135", "1", "01", Sexo::FEMININO);
+
+    $dados_serializados_profissional = Integra::serializar(TipoDeDados::JSON, $profissional);
+    echo "<h3>.: Dados Serializados - Profissional de Saúde :.</h3>";
+    echo $dados_serializados_profissional;
+
+    $resposta_profissional = $integra->enviarDados(TipoDeDados::JSON, $url."api/v2/profissionais-saude/?format=json", $dados_serializados_profissional);
+    echo "<h3>.: Resposta do Servidor - Profissional de Saúde :.</h3>";
+    echo $resposta_profissional;
+    echo '</fieldset>';
+  }
+
+  /**
+	* Para rodar os testes faz-se necessário pegar o token de acesso, para tal, acesse a "Visualização dos dados do Núcleo" no SMART.
+	*/
+  //$url = "http://localhost:8001/";
+  //$url = "http://smartteste.telessaude.ufrn.br/";
+  $url = 'http://smartteste.telessaude.ufrn.br/';
+  $integra = new Integra("9723f53168b7cafbc4c9d7a95b3233fff366aad1");
+
+  enviarTeleeducacaoAtividade($integra, $url);
+  enviarTeleeducacaoObjetoAprendizagem($integra, $url);
+  enviarTeleconsultoria($integra, $url);
+  enviarTelediagnostico($integra, $url);
+  enviarCursos($integra, $url);
+  enviarAtualizacaoEstabelecimento($integra, $url);
+  enviarCadastroProfissional($integra, $url);
+?>

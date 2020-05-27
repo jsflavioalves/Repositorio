@@ -1,0 +1,14 @@
+version: '3'
+services:
+  telessaude:
+    container_name: telessaude
+    build: .
+    ports:
+     - "80:80"
+    volumes:
+     - .:/var/www/html/
+
+networks:
+  default:
+    external:
+      name: sucesso

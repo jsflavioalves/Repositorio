@@ -1,0 +1,2310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0070)http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="pt-PT" <head="" class="csstransforms csstransforms3d csstransitions responsejs "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Thiago da Silva Resende – Desenvolvedor Web  » Converter HTML em PDF com PHP (HTML2PDF) </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="Description" content="Thiago da Silva Resende – Desenvolvedor Web (Minas Gerais, Betim e Belo Horizonte)">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="http://thiagosr.com.br/wp-content/themes/flexicv/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./logo_files/css">
+    <link rel="stylesheet" type="text/css" href="./logo_files/reset.css">
+
+    
+            <link rel="stylesheet" type="text/css" href="./logo_files/color-blue.css">
+    
+    <link rel="stylesheet" type="text/css" href="./logo_files/style.css">
+    <link rel="stylesheet" type="text/css" href="./logo_files/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="./logo_files/prettyPhoto.css">
+    <link rel="stylesheet" media="print" type="text/css" href="./logo_files/print.css">
+    <link rel="pingback" href="http://thiagosr.com.br/xmlrpc.php">
+
+    <link rel="alternate" type="application/rss+xml" title="Thiago da Silva Resende - Desenvolvedor Web » Feed" href="http://thiagosr.com.br/feed/">
+<link rel="alternate" type="application/rss+xml" title="Thiago da Silva Resende - Desenvolvedor Web » Feed de comentários" href="http://thiagosr.com.br/comments/feed/">
+
+            <script type="text/javascript" async="" src="./logo_files/ga.js.download"></script><script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.3 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-18463116-2']);
+				            _gaq.push(['_setCustomVar',1,'post_type','post',3],['_setCustomVar',2,'year','2010',3],['_setCustomVar',3,'category','html2pdf',3],['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			<link rel="alternate" type="application/rss+xml" title="Feed de comentários de Thiago da Silva Resende - Desenvolvedor Web » Converter HTML em PDF com PHP (HTML2PDF)" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/feed/">
+<script type="text/javascript" src="./logo_files/jquery.js.download"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://thiagosr.com.br/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://thiagosr.com.br/wp-includes/wlwmanifest.xml"> 
+<link rel="next" title="Tabela MYSQL com o nome de todos os países em Português / Inglês" href="http://thiagosr.com.br/2011/02/tabela-mysql-com-o-nome-de-todos-os-paises-em-portugues-ingles/">
+<meta name="generator" content="WordPress 3.5.2">
+<link rel="canonical" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/">
+<link rel="shortlink" href="http://thiagosr.com.br/?p=1">
+<script type="text/javascript" charset="UTF-8" src="./logo_files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="./logo_files/util.js.download"></script><script type="text/javascript" charset="UTF-8" src="./logo_files/geocoder.js.download"></script></head>
+<body class="single single-post postid-1 single-format-standard">
+<!-- Wrapper --><div id="wrapper" class="wrapper">
+
+    <div class="menu-menu-container"><ul id="navigation-menu" class="menu"><li id="nav-menu-item-8" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"><a title="Perfil" href="http://thiagosr.com.br/" class="Perfil"><span>Perfil</span></a></li>
+<li id="nav-menu-item-20" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"><a title="CV" href="http://thiagosr.com.br/cv/" class="CV"><span>CV</span></a></li>
+<li id="nav-menu-item-18" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"><a title="Portfolio" href="http://thiagosr.com.br/portfolio/" class="Portfolio"><span>Portfolio</span></a></li>
+<li id="nav-menu-item-17" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"><a title="Blog" href="http://thiagosr.com.br/blog/" class="Blog"><span>Blog</span></a></li>
+<li id="nav-menu-item-24" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page"><a title="Contato" href="http://thiagosr.com.br/contacts/" class="Contato"><span>Contato</span></a></li>
+</ul></div>
+ <!-- Container --><div id="container">
+
+<!-- Blog -->
+<div id="blog">
+
+    <!-- Content Inner --><div class="content-inner">
+
+        <!-- Right Sidebar --><div class="right-sidebar">
+
+            <div id="search" class="block">
+                <form id="searchform" action="http://thiagosr.com.br/" method="get" role="search">
+                    <div class="block-content">
+                        <input type="text" name="s" class="input" placeholder="Pesquisar...">
+                        <input title="Pesquisar" type="submit" value="" name="search-button" class="input">
+                    </div>
+                </form>
+            </div>
+
+            <div id="categories" class="block">
+                <h2>Categorias</h2>
+
+                
+
+
+                <div class="block-content">
+                    <ul id="blog-menu">
+                                                    <li><a href="http://thiagosr.com.br/2010/10/category/html2pdf" class="first">HTML2PDF</a></li>
+                                                    <li><a href="http://thiagosr.com.br/2010/10/category/javascript" class="first">JavaScript</a></li>
+                                                    <li><a href="http://thiagosr.com.br/2010/10/category/jquery" class="first">jQuery</a></li>
+                                                    <li><a href="http://thiagosr.com.br/2010/10/category/jquery-plugin" class="first">jQuery Plugin</a></li>
+                                                    <li><a href="http://thiagosr.com.br/2010/10/category/jquery-weather" class="first">jQuery Weather</a></li>
+                                                    <li><a href="http://thiagosr.com.br/2010/10/category/mysql" class="first">MySql</a></li>
+                                                    <li><a href="http://thiagosr.com.br/2010/10/category/php" class="first">PHP</a></li>
+                                            </ul>
+                </div>
+            </div>
+            <ul>
+                <li id="categories-2" class="widget-container widget_categories"><h3 class="widget-title">Categorias</h3>		<ul>
+	<li class="cat-item cat-item-14"><a href="http://thiagosr.com.br/category/html2pdf/" title="Ver todos os artigos arquivados em HTML2PDF">HTML2PDF</a> (2)
+</li>
+	<li class="cat-item cat-item-21"><a href="http://thiagosr.com.br/category/javascript/" title="Ver todos os artigos arquivados em JavaScript">JavaScript</a> (1)
+</li>
+	<li class="cat-item cat-item-18"><a href="http://thiagosr.com.br/category/jquery/" title="Ver todos os artigos arquivados em jQuery">jQuery</a> (1)
+</li>
+	<li class="cat-item cat-item-19"><a href="http://thiagosr.com.br/category/jquery/jquery-plugin/" title="Ver todos os artigos arquivados em jQuery Plugin">jQuery Plugin</a> (1)
+</li>
+	<li class="cat-item cat-item-20"><a href="http://thiagosr.com.br/category/jquery/jquery-weather/" title="Ver todos os artigos arquivados em jQuery Weather">jQuery Weather</a> (1)
+</li>
+	<li class="cat-item cat-item-15"><a href="http://thiagosr.com.br/category/mysql/" title="Ver todos os artigos arquivados em MySql">MySql</a> (1)
+</li>
+	<li class="cat-item cat-item-13"><a href="http://thiagosr.com.br/category/php/" title="Ver todos os artigos arquivados em PHP">PHP</a> (2)
+</li>
+		</ul>
+</li><li id="meta-2" class="widget-container widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="http://thiagosr.com.br/wp-login.php">Iniciar sessão</a></li>
+			<li><a href="http://thiagosr.com.br/feed/" title="Sindicar este site utilizando RSS 2.0"><abbr title="Really Simple Syndication">RSS</abbr> dos artigos</a></li>
+			<li><a href="http://thiagosr.com.br/comments/feed/" title="Os mais recentes comentários a todos os artigos em RSS">Feed <abbr title="Really Simple Syndication">RSS</abbr> dos comentários.</a></li>
+			<li><a href="http://pt.wordpress.org/" title="Criado com WordPress, plataforma de publicação pessoal semântica de vanguarda.">WordPress.org</a></li>
+						</ul>
+</li>            </ul>
+
+        </div><!-- /Right Sidebar -->
+
+        <!-- Content --><div class="content">
+
+            <!-- Blog Uncategorized --><div id="uncategorized">
+                <div id="loadpage" style="display: none;"></div>
+                <div id="rollcontainer" style="position: relative; height: 15450px; left: 0px;">
+
+                <div class="blog-content">
+
+                    
+                    
+        <!-- Blog Post --><div id="blog-post" class="post-1 post type-post status-publish format-standard hentry category-html2pdf category-php">
+            <div class="blog-title"><h2>Converter HTML em PDF com PHP (HTML2PDF)</h2></div>
+            <div class="blog-image"><a class="popup" href="./logo_files/html2pdf.jpg" title="Converter HTML em PDF com PHP (HTML2PDF)"><div class="text-fiels-top"><div class="adipoli-wrapper attachment-post-thumbnail wp-post-image" style="width:530px; height:200px;"><img width="530" height="200" src="./logo_files/html2pdf.jpg" class="attachment-post-thumbnail wp-post-image" alt="html2pdf" style="display: none;"><div class="adipoli-before attachment-post-thumbnail wp-post-image" style="width: 530px; height: 200px; opacity: 0.5;"><img src="./logo_files/html2pdf.jpg"></div><div class="adipoli-after attachment-post-thumbnail wp-post-image" style="width: 530px; height: 200px; display: none;"></div></div></div><div class="blog-postdate">02<br>Outubro<br>2010</div></a></div>
+
+
+            <div class="meta"><span class="author"><span class="vcard"><a class="url fn n" target="_blank" href="https://www.google.com/+ThiagoSilvaResende?rel=author">Thiago</a></span></span><span class="tag">
+                                            <a href="http://thiagosr.com.br/category/html2pdf/" title="Ver todos os artigos em HTML2PDF" rel="category tag">HTML2PDF</a>, <a href="http://thiagosr.com.br/category/php/" title="Ver todos os artigos em PHP" rel="category tag">PHP</a>                    </span><a href="http://thiagosr.com.br/2010/10/blog" class="back">Voltar</a> </div>
+            <span class="comments-link"></span>
+
+            <div class="blog-body">
+                <p>Aprenda a converter HTML para PDF utilizando a classe HTML2PDF escrita em PHP.</p>
+<h3>O que é o HTML2PDF?</h3>
+<p>“HTML2PDF é um conversor de HTML para PDF escrito em PHP4 (utilizando FPDF), e PHP5 (utilizando TCPDF).”</p>
+<h3>1º passo: Baixar o HTML2PDF</h3>
+<p>Para este tutorial foi utilizado a versão disponível para PHP5.<br>
+<a href="http://www.html2pdf.fr/" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://www.html2pdf.fr/&#39;]);" target="_blank">Site oficial HTML2PDF</a><br>
+<a href="http://sourceforge.net/projects/phphtml2pdf/files/" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://sourceforge.net/projects/phphtml2pdf/files/&#39;]);" target="_blank">Site para download do HTML2PDF</a></p>
+<h3>2º passo: Criar diretórios e arquivos de exemplo</h3>
+<p>- Crie na raiz do servidor web o diretório: exemploHtml2Pdf.<br>
+- Crie na pasta exemploHtml2Pdf mais dois diretórios: css e img.<br>
+- Descompacte o arquivo baixado no 1º passo dentro da pasta: exemploHtml2Pdf.<br>
+- Renomeie a pasta que surgiu para html2pdf, para ficar com uma moneclatura melhor e de fácil acesso.<br>
+- Crie um arquivo PHP em branco com o nome exemploPdf.php dentro do diretório exemploHtml2Pdf.<br>
+- Crie um arquivo CSS em branco com o nome exemploPdf.css dentro do diretório exemploHtml2Pdf/css.<br>
+- Salve a seguinte imagem dentro do diretório: exemploHtml2Pdf/img:<br>
+<div class="adipoli-wrapper alignnone size-full wp-image-128" style="width:213px; height:70px;"><img src="./logo_files/logo.gif" alt="Logo Html2Pdf" width="213" height="70" class="alignnone size-full wp-image-128" style="display: none;"><div class="adipoli-before alignnone size-full wp-image-128" style="width: 213px; height: 70px; opacity: 0.5;"><img src="./logo_files/logo.gif"></div><div class="adipoli-after alignnone size-full wp-image-128" style="width: 213px; height: 70px; display: block;"><div class="adipoli-box" style="opacity: 1; left: 0px; top: 0px; width: 43px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) 0px 0px no-repeat;"></div><div class="adipoli-box" style="opacity: 1; left: 43px; top: 0px; width: 43px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) -43px 0px no-repeat;"></div><div class="adipoli-box" style="opacity: 0; left: 86px; top: 0px; width: 43px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) -86px 0px no-repeat;"></div><div class="adipoli-box" style="opacity: 1; left: 129px; top: 0px; width: 43px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) -129px 0px no-repeat;"></div><div class="adipoli-box" style="opacity: 1; left: 172px; top: 0px; width: 41px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) -172px 0px no-repeat;"></div><div class="adipoli-box" style="opacity: 0; left: 0px; top: 23px; width: 43px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) 0px -23px no-repeat;"></div><div class="adipoli-box" style="opacity: 0.7975; left: 43px; top: 23px; width: 43px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) -43px -23px no-repeat;"></div><div class="adipoli-box" style="opacity: 0.9975; left: 86px; top: 23px; width: 43px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) -86px -23px no-repeat;"></div><div class="adipoli-box" style="opacity: 0.2775; left: 129px; top: 23px; width: 43px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) -129px -23px no-repeat;"></div><div class="adipoli-box" style="opacity: 1; left: 172px; top: 23px; width: 41px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) -172px -23px no-repeat;"></div><div class="adipoli-box" style="opacity: 0.5775; left: 0px; top: 46px; width: 43px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) 0px -46px no-repeat;"></div><div class="adipoli-box" style="opacity: 0; left: 43px; top: 46px; width: 43px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) -43px -46px no-repeat;"></div><div class="adipoli-box" style="opacity: 0.9375; left: 86px; top: 46px; width: 43px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) -86px -46px no-repeat;"></div><div class="adipoli-box" style="opacity: 1; left: 129px; top: 46px; width: 43px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) -129px -46px no-repeat;"></div><div class="adipoli-box" style="opacity: 1; left: 172px; top: 46px; width: 41px; height: 23px; background: url(&quot;http://thiagosr.com.br/wp-content/uploads/logo.gif&quot;) -172px -46px no-repeat;"></div></div></div></p>
+<p>Ao termino teremos a seguinte estrutura:<br>
+</p><div id="attachment_131" class="wp-caption alignnone" style="width: 164px"><div class="adipoli-wrapper size-full wp-image-131" style="width:154px; height:160px;"><img src="./logo_files/estruturaDiretorio.gif" alt="Estrutura diretório exemplo." width="154" height="160" class="size-full wp-image-131" style="display: none;"><div class="adipoli-before size-full wp-image-131" style="width: 154px; height: 160px; opacity: 0.5;"><img src="./logo_files/estruturaDiretorio.gif"></div><div class="adipoli-after size-full wp-image-131" style="width: 154px; height: 160px; display: none;"></div></div><p class="wp-caption-text">Estrutura diretório exemplo.</p></div><p></p>
+<h3>3º passo: Exemplo1</h3>
+<p>css/exemploPdf.css<br>
+<script src="./logo_files/7159806.js.download"></script><link rel="stylesheet" href="./logo_files/gist-embed-4ac6018bcc05457cde2f66d2e7299d11.css"></p><div id="gist7159806" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-exemplopdf-css" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-css ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-exemplopdf-css-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-exemplopdf-css-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-e">#logo</span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-css-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-exemplopdf-css-LC2" class="blob-code blob-code-inner js-file-line">{</td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-css-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-exemplopdf-css-LC3" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1"><span class="pl-c1">border</span></span>:     <span class="pl-c1">1<span class="pl-k">px</span></span> <span class="pl-c1">solid</span> <span class="pl-c1">blue</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-css-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-exemplopdf-css-LC4" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1"><span class="pl-c1">width</span></span>:      <span class="pl-c1">213<span class="pl-k">px</span></span>;</td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-css-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-exemplopdf-css-LC5" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1"><span class="pl-c1">height</span></span>:     <span class="pl-c1">70<span class="pl-k">px</span></span>;</td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-css-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-exemplopdf-css-LC6" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1"><span class="pl-c1">background</span></span>: <span class="pl-c1">url</span>(<span class="pl-v">img/logo.gif</span>) <span class="pl-c1">no-repeat</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-css-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-exemplopdf-css-LC7" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-css-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-exemplopdf-css-LC8" class="blob-code blob-code-inner js-file-line"> </td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-css-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-exemplopdf-css-LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-e">#texto</span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-css-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-exemplopdf-css-LC10" class="blob-code blob-code-inner js-file-line">{</td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-css-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-exemplopdf-css-LC11" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1"><span class="pl-c1">font-family</span></span>: <span class="pl-c1">arial</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-css-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-exemplopdf-css-LC12" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1"><span class="pl-c1">font-weight</span></span>: <span class="pl-c1">bold</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-css-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-exemplopdf-css-LC13" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/thiagosilr/7159806/raw/e4436ea693db040db7fc1e3f8425a025f5bd09e4/exemploPdf.css" style="float:right">view raw</a>
+        <a href="https://gist.github.com/thiagosilr/7159806#file-exemplopdf-css">exemploPdf.css</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<p></p>
+<p>exemploPdf.php – Nesse arquivo está o HTML que iremos converter e a lógica para realizarmos a conversão. Acompanhe os comentários no código para melhor compreensão de cada linha.<br>
+<script src="./logo_files/7160044.js.download"></script><link rel="stylesheet" href="./logo_files/gist-embed-4ac6018bcc05457cde2f66d2e7299d11.css"></p><div id="gist7160044" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-exemplopdf-php" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-php ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-exemplopdf-php-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-exemplopdf-php-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-pse">&lt;?php</span><span class="pl-s1"></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-exemplopdf-php-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"><span class="pl-c">#</span> Aqui incluímos a classe html2pdf.</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-exemplopdf-php-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-k">include</span>(<span class="pl-s"><span class="pl-pds">'</span>html2pdf/html2pdf.class.php<span class="pl-pds">'</span></span>);</span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-exemplopdf-php-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"> </span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-exemplopdf-php-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"><span class="pl-c">/*</span> Guardamos na variável $html o html que queremos converter.</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-exemplopdf-php-LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"> * Linha 13 - Incluímos o nosso arquivo css (exemploPdf.css)</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-exemplopdf-php-LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"> * Linha 15 - Temos uma div de id = logo que formatamos a mesma </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-exemplopdf-php-LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"> *            com uma altura, largura, uma borda azul e uma imagem </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-exemplopdf-php-LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"> *            de background.</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-exemplopdf-php-LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"> * Linha 16 - Temos agora um span de id = texto que formatamos </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-exemplopdf-php-LC11" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"> *            usando a fonte arial em negrito. <span class="pl-c">*/</span></span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-exemplopdf-php-LC12" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-smi">$html</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span></span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-exemplopdf-php-LC13" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-s">&lt;link rel="stylesheet" type="text/css" href="css/exemploPdf.css" /&gt;</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-exemplopdf-php-LC14" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-s"> </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-exemplopdf-php-LC15" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-s">&lt;div id="logo"&gt;&lt;/div&gt;</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-exemplopdf-php-LC16" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-s">&lt;span id="texto"&gt;HTML2PDF&lt;/span&gt;<span class="pl-pds">'</span></span>;</span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-exemplopdf-php-LC17" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="file-exemplopdf-php-LC18" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"><span class="pl-c">#</span> Converte o html para pdf.</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="file-exemplopdf-php-LC19" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-k">try</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="file-exemplopdf-php-LC20" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">{</span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="file-exemplopdf-php-LC21" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">    <span class="pl-c"><span class="pl-c">/*</span> Aqui estamos instanciando um novo objeto que irá criar o </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="file-exemplopdf-php-LC22" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     * pdf. Então vamos aos parametros passados:</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="file-exemplopdf-php-LC23" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     * 1º parâmetro: Utilize “P” para exibir o documento no </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="file-exemplopdf-php-LC24" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *               formato retrato e “L” para o formato </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="file-exemplopdf-php-LC25" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *               paisagem. </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="file-exemplopdf-php-LC26" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     * 2º parâmetro: Formato da folha A4, A5....... </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="file-exemplopdf-php-LC27" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     * 3º parâmetro: Caso ocorra alguma exceção durante a </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="file-exemplopdf-php-LC28" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *               conversão. Em qual idioma é para </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="file-exemplopdf-php-LC29" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *               exibir o erro. No caso o idioma escolhido </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="file-exemplopdf-php-LC30" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *               foi o português “pt”. </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="file-exemplopdf-php-LC31" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     * 4º parâmetro: Informe TRUE caso o html de entrada esteja</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L32" class="blob-num js-line-number" data-line-number="32"></td>
+        <td id="file-exemplopdf-php-LC32" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *               no formato unicode e FALSE caso negativo. </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L33" class="blob-num js-line-number" data-line-number="33"></td>
+        <td id="file-exemplopdf-php-LC33" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     * 5º parâmetro: Codificação a ser utilizada. ISO-8859-15, UTF-8 ...... </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L34" class="blob-num js-line-number" data-line-number="34"></td>
+        <td id="file-exemplopdf-php-LC34" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     * 6º parâmetro: Margem do documento. Você pode informa um </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="file-exemplopdf-php-LC35" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *               único valor como no exemplo acima. </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L36" class="blob-num js-line-number" data-line-number="36"></td>
+        <td id="file-exemplopdf-php-LC36" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *               Outra forma é informa um array setando as </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L37" class="blob-num js-line-number" data-line-number="37"></td>
+        <td id="file-exemplopdf-php-LC37" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *               margens separadamente.: Exemplo: </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L38" class="blob-num js-line-number" data-line-number="38"></td>
+        <td id="file-exemplopdf-php-LC38" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     * $html2pdf = new HTML2PDF(</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L39" class="blob-num js-line-number" data-line-number="39"></td>
+        <td id="file-exemplopdf-php-LC39" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *   'P',</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L40" class="blob-num js-line-number" data-line-number="40"></td>
+        <td id="file-exemplopdf-php-LC40" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *   'A4',</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L41" class="blob-num js-line-number" data-line-number="41"></td>
+        <td id="file-exemplopdf-php-LC41" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *   'pt',</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L42" class="blob-num js-line-number" data-line-number="42"></td>
+        <td id="file-exemplopdf-php-LC42" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *   false,</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L43" class="blob-num js-line-number" data-line-number="43"></td>
+        <td id="file-exemplopdf-php-LC43" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *   'ISO-8859-15',</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L44" class="blob-num js-line-number" data-line-number="44"></td>
+        <td id="file-exemplopdf-php-LC44" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     *   array(5,5,5,8));</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L45" class="blob-num js-line-number" data-line-number="45"></td>
+        <td id="file-exemplopdf-php-LC45" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     * Sendo que a primeira posição do array representa a margem esquerda depois      </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L46" class="blob-num js-line-number" data-line-number="46"></td>
+        <td id="file-exemplopdf-php-LC46" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     * topo, direita e rodapé. <span class="pl-c">*/</span></span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L47" class="blob-num js-line-number" data-line-number="47"></td>
+        <td id="file-exemplopdf-php-LC47" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">    <span class="pl-smi">$html2pdf</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">HTML2PDF</span>(<span class="pl-s"><span class="pl-pds">'</span>P<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>A4<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>pt<span class="pl-pds">'</span></span>, <span class="pl-c1">true</span>, <span class="pl-s"><span class="pl-pds">'</span>UTF-8<span class="pl-pds">'</span></span>, <span class="pl-c1">2</span>);</span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L48" class="blob-num js-line-number" data-line-number="48"></td>
+        <td id="file-exemplopdf-php-LC48" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">     </span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L49" class="blob-num js-line-number" data-line-number="49"></td>
+        <td id="file-exemplopdf-php-LC49" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">    <span class="pl-c"><span class="pl-c">#</span> Passamos o html que queremos converte.</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L50" class="blob-num js-line-number" data-line-number="50"></td>
+        <td id="file-exemplopdf-php-LC50" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">    <span class="pl-smi">$html2pdf</span><span class="pl-k">-&gt;</span>writeHTML(<span class="pl-smi">$html</span>); </span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L51" class="blob-num js-line-number" data-line-number="51"></td>
+        <td id="file-exemplopdf-php-LC51" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">     </span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L52" class="blob-num js-line-number" data-line-number="52"></td>
+        <td id="file-exemplopdf-php-LC52" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">    <span class="pl-c"><span class="pl-c">/*</span> Exibe o pdf:</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L53" class="blob-num js-line-number" data-line-number="53"></td>
+        <td id="file-exemplopdf-php-LC53" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     * 1º parãmetro: Nome do arquivo pdf. O nome que você quer dar ao pdf gerado. </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L54" class="blob-num js-line-number" data-line-number="54"></td>
+        <td id="file-exemplopdf-php-LC54" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">     * 2º parâmetro: Tipo de saída: </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L55" class="blob-num js-line-number" data-line-number="55"></td>
+        <td id="file-exemplopdf-php-LC55" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">                     I: Abre o pdf gerado no navegador. </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L56" class="blob-num js-line-number" data-line-number="56"></td>
+        <td id="file-exemplopdf-php-LC56" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">                     D: Abre a janela para você realizar o download do pdf. </span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L57" class="blob-num js-line-number" data-line-number="57"></td>
+        <td id="file-exemplopdf-php-LC57" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c">                     F: Salva o pdf em alguma pasta do servidor. <span class="pl-c">*/</span></span></span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L58" class="blob-num js-line-number" data-line-number="58"></td>
+        <td id="file-exemplopdf-php-LC58" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">    <span class="pl-smi">$html2pdf</span><span class="pl-k">-&gt;</span>Output(<span class="pl-s"><span class="pl-pds">'</span>exemploPdf.pdf<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>I<span class="pl-pds">'</span></span>);</span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L59" class="blob-num js-line-number" data-line-number="59"></td>
+        <td id="file-exemplopdf-php-LC59" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">}</span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L60" class="blob-num js-line-number" data-line-number="60"></td>
+        <td id="file-exemplopdf-php-LC60" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-k">catch</span>(<span class="pl-c1">HTML2PDF_exception</span> <span class="pl-smi">$e</span>) </span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L61" class="blob-num js-line-number" data-line-number="61"></td>
+        <td id="file-exemplopdf-php-LC61" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">{ </span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L62" class="blob-num js-line-number" data-line-number="62"></td>
+        <td id="file-exemplopdf-php-LC62" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">	<span class="pl-c1">echo</span> <span class="pl-smi">$e</span>; </span></td>
+      </tr>
+      <tr>
+        <td id="file-exemplopdf-php-L63" class="blob-num js-line-number" data-line-number="63"></td>
+        <td id="file-exemplopdf-php-LC63" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">}</span></td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/thiagosilr/7160044/raw/2544dc0e2709d417c13e4bcf30a0de8d50907fda/exemploPdf.php" style="float:right">view raw</a>
+        <a href="https://gist.github.com/thiagosilr/7160044#file-exemplopdf-php">exemploPdf.php</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<p></p>
+<div class="colorAtencao">
+Obs1.: “Esta biblioteca foi feita para ajudar na criação de arquivos PDF, não diretamente converter uma página HTML. Você não pode usar , , . Leia com atenção os exemplos.”<p></p>
+<p>Obs2.: O html2pdf tem restrições em converter algumas tags HTML e alguns estilos de CSS. Para verificar quais são as tags e estilos permitidos. Basta abrir o arquivo que se encontra dentro do diretório “html2pdf\exemples\pdf\about.pdf”.
+</p></div>
+<p>Execute o arquivo exemploPdf.php. Se tudo ocorre sem problema teremos o seguinte resultado:<br>
+<div class="adipoli-wrapper alignnone size-full wp-image-137" style="width:500px; height:61px;"><img src="./logo_files/pdf-e1382728455228.jpg" alt="Resultado PDF" class="alignnone size-full wp-image-137" style="display: none;"><div class="adipoli-before alignnone size-full wp-image-137" style="width: 500px; height: 61px; opacity: 0.5;"><img src="./logo_files/pdf-e1382728455228.jpg"></div><div class="adipoli-after alignnone size-full wp-image-137" style="width: 500px; height: 61px; display: none;"></div></div></p>
+<h3>4º passo: Exemplo2</h3>
+<p>Vamos realizar uma pequena modificação. Vamos supor que não gostamos de ter utilizado a fonte Arial. Então vamos modificar o nosso CSS para outra fonte, agora utilizando a fonte Monotype Corsiva.</p>
+<p>Ao executarmos novamente o exemploPdf.php iremos deparar com o seguinte erro:<br>
+<span class="colorAtencao">TCPDF ERROR: Could not include font definition file: monotype corsiva</span></p>
+<p>O erro nos mostra que não foi possível gerar o PDF pois não foi encontrado o arquivo de definição da fonte monotype corsiva.</p>
+<p>Para resolver o problema teríamos que instalar a fonte monotype cosiva no HTML2PDF. Veja neste post <a href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/#">como instalar uma fonte True Type no HTML2PDF</a>.</p>
+<h3>Download exemplo</h3>
+<p>Dentro do arquivo você irá encontrar alem do exemplo acima, outros exemplos que foram criados para sanar duvidas dos leitores, veja:</p>
+<p><a href="https://github.com/thiagosilr/Convertendo-HTML-para-PDF-Html2Pdf/archive/master.zip" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;download&#39;,&#39;http://github.com/thiagosilr/Convertendo-HTML-para-PDF-Html2Pdf/archive/master.zip&#39;]);" title="Download exemploHtml2Pdf " target="_blank">Download exemplo Html2Pdf</a></p>
+<table>
+<tbody>
+<tr>
+<th>exemploPdf.php</th>
+<td>Exemplo do tutorial</td>
+</tr>
+<tr>
+<th>exemploTableLargura100Porcento.php</th>
+<td>Como colocar uma tabela com largura 100%</td>
+</tr>
+<tr>
+<th>exemploImagemGeradaDinamicamente.php</th>
+<td>Como&nbsp;incorporar&nbsp;no PDF uma&nbsp;imagem&nbsp;gerada dinamicamente por script PHP</td>
+</tr>
+<tr>
+<th>exemploHtmlExterno.php</th>
+<td>Como converter HTML passando apenas a URL do mesmo</td>
+</tr>
+<tr>
+<th>exemploQuebraDePagina.php</th>
+<td>Como realizar a quebra de página no HTML2PDF</td>
+</tr>
+<tr>
+<th>exemploEnviarPdfPorEmail.php</th>
+<td>Como enviar o PDF criado por e-mail. Esté exemplo utiliza a biblioteca PHPMailer</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h3>Referência</h3>
+<p><a href="http://www.html2pdf.fr/" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://www.html2pdf.fr&#39;]);" target="_blank">http://www.html2pdf.fr</a></p>
+            </div>
+            <div class="social-like">
+                <!-- Script Share Button Social Network -->
+<script>
+    function shareFB() {
+        window.open(
+            'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)+'&t='+encodeURIComponent(document.title),
+            'facebook-share-dialog',
+            'width=626,height=436');
+        return false;
+    }
+    function shareGP() {
+        window.open(
+            'https://plus.google.com/share?url='+encodeURIComponent(location.href),
+            'width=626,height=436');
+        return false;
+    }
+    function shareTW() {
+        window.open(
+            'http://twitter.com/share?url='+encodeURIComponent(location.href),
+            'width=626,height=436');
+        return false;
+    }
+    function shareLI() {
+        window.open(
+            'http://www.linkedin.com/shareArticle?url='+encodeURIComponent(location.href),
+            'width=626,height=436');
+        return false;
+    }
+    function sharePI() {
+        window.open(
+            'http://pinterest.com/pin/create/button/?url='+encodeURIComponent(location.href),
+            'width=626,height=436');
+        return false;
+    }
+    function shareDB() {
+        window.open(
+            'http://dribbble.com/',
+            'width=626,height=436');
+        return false;
+    }
+</script>                <div class="label">Compartilhar</div>
+                <div class="buttons">
+                    <a href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/" class="post-to-facebook-link" title="Compartilhar Facebook" onclick="shareFB()"></a>
+                    <a href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/" class="post-to-googleplus-link" title="Compartilhar Google+" onclick="shareGP()"></a>
+                    <a href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/" class="post-to-twitter-link" title="Compartilhar Twitter" onclick="shareTW()"></a>
+                    <a href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/" class="post-to-linkedin-link" title="Compartilhar Linkedin" onclick="shareLI()"></a>
+                    <a href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/" class="post-to-pinterest-link" title="Compartilhar Pinterest" onclick="sharePI()"></a>
+                    <a href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/" class="post-to-dribbble-link" title="Compartilhar Dribbble" onclick="shareDB()"></a>
+                </div>
+            </div>
+            <div id="comments">
+        
+
+
+
+            			<h3 id="comments-title">53 Comentários</h3>
+
+            
+			<ol class="commentlist">
+				
+                <li class="comment even thread-even depth-1" id="li-comment-1">
+                <div id="comment-1">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo avatar-default" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-58 photo avatar-default" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo avatar-default" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536.png"></div><div class="adipoli-after avatar avatar-58 photo avatar-default" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Roberta</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                3 de Novembro de 2011 at 13:29
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=1#respond" onclick="return addComment.moveForm(&quot;comment-1&quot;, &quot;1&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Muito bom seus exemplos, me ajudaram bastante.<br>
+Aproveitei e já adaptei para acesso a banco de dados, agora percebi que toda e qualquer formataçao deve ser em CSS.<br>
+<br>
+Roberta</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-5">
+                <div id="comment-5">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                3 de Novembro de 2011 at 14:35
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=5#respond" onclick="return addComment.moveForm(&quot;comment-5&quot;, &quot;5&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Roberta, fico feliz que o tutorial esteja te ajudando. Qualquer dúvida deixe seu comentário.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment even thread-odd thread-alt depth-1" id="li-comment-6">
+                <div id="comment-6">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo avatar-default" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-58 photo avatar-default" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo avatar-default" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536.png"></div><div class="adipoli-after avatar avatar-58 photo avatar-default" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago de Sena</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                15 de Março de 2012 at 8:43
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=6#respond" onclick="return addComment.moveForm(&quot;comment-6&quot;, &quot;6&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Parabéns Thiago seu tutorial me ajudou muito.<br>
+Sem dúvida é muito complicado encontrar bons tutoriais igual ao seu na internet.<br>
+Grato!</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-9">
+                <div id="comment-9">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                17 de Março de 2012 at 19:35
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=9#respond" onclick="return addComment.moveForm(&quot;comment-9&quot;, &quot;9&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Obrigado pelo comentário e não deixe de conferir a continuação, sobre como instalar fontes true type no HTML2PDF.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment even thread-even depth-1" id="li-comment-7">
+                <div id="comment-7">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo avatar-default" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-58 photo avatar-default" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo avatar-default" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536.png"></div><div class="adipoli-after avatar avatar-58 photo avatar-default" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">a programer</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                9 de Maio de 2012 at 11:56
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=7#respond" onclick="return addComment.moveForm(&quot;comment-7&quot;, &quot;7&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Thiago</p>
+<p>Nao estou conseguindo fazer com que uma table ocupe 100% da página, mesmo ela estando com widht=”100%”! Alguma observação?<br>
+todo documento vem gerado, mas ocupa apenas 50% da largura do arquivo</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-10">
+                <div id="comment-10">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                9 de Maio de 2012 at 14:31
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=10#respond" onclick="return addComment.moveForm(&quot;comment-10&quot;, &quot;10&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Eu consegui resolver da seguinte forma:<br>
+<br>
+- Primeiro define um id para minha table. E via css externo eu define width 100%.<br>
+- Depois para cada td eu define um style width que a soma de 100%.<br>
+<br>
+Eu atualizei o exemplo com esse método para deixar a table 100%. Baixe ele para você entender melhor o que eu fiz.<br>
+<br>
+Qualquer dúvida não deixe de comentar.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment even thread-odd thread-alt depth-1" id="li-comment-8">
+                <div id="comment-8">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo avatar-default" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-58 photo avatar-default" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo avatar-default" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536.png"></div><div class="adipoli-after avatar avatar-58 photo avatar-default" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Walter Aragão</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                10 de Maio de 2012 at 18:21
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=8#respond" onclick="return addComment.moveForm(&quot;comment-8&quot;, &quot;8&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Thiago , muito bom tutorial.<br>
+To precisando de um complemento só .. como defino um diretorio para salvar ? trocando para F ele está salvando no mesmo diretório da pasta, desde já grato!</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-11">
+                <div id="comment-11">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                10 de Maio de 2012 at 23:55
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=11#respond" onclick="return addComment.moveForm(&quot;comment-11&quot;, &quot;11&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Walter, obrigado pelo comentário.<br>
+<br>
+Vamos pegar o nosso exemplo. Se você tiver uma pasta chamada “pdf” na mesma pasta do arquivo “exemploPdf.php”, basta especificar a pasta antes do nome do arquivo.<br>
+<br>
+Ex.: $html2pdf-&gt;Output(‘pdf/exemploPdf.pdf’, ‘F’);<br>
+<br>
+Agora se a pasta “pdf” estiver a uma pasta atrás, você tem que voltar um nível e escolher a pasta desejada.<br>
+<br>
+Ex.: $html2pdf-&gt;Output(‘../pdf/exemploPdf.pdf’, ‘F’);</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even depth-3" id="li-comment-12">
+                <div id="comment-12">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Walter Aragão</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                14 de Maio de 2012 at 20:25
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=12#respond" onclick="return addComment.moveForm(&quot;comment-12&quot;, &quot;12&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Funcionou cara , muito obrigado…<br>
+agora só maios uma coisa , como faço para editar um PDF gerado. Na minha necessidade eu gero um contrato de prestação de serviços em pdf e salvo em uma pasta. Porem tem que ter a opção de editar o pdf gerado. Grato por mais essa ajuda campeão!</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-4" id="li-comment-13">
+                <div id="comment-13">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                15 de Maio de 2012 at 22:57
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=13#respond" onclick="return addComment.moveForm(&quot;comment-13&quot;, &quot;13&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Walter, você tem que editar o pdf? Se você gerar um novo pdf e salvar por cima, não resolve seu problema?</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even thread-even depth-1" id="li-comment-14">
+                <div id="comment-14">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">sesostris vieira</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                10 de Julho de 2012 at 16:55
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=14#respond" onclick="return addComment.moveForm(&quot;comment-14&quot;, &quot;14&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Olá Thiago.<br>
+Estou com um problema ao usar o html2pdf junto com imagens que são fornecidas por uma URL PHP. Explicando melhor, tenho uma rotina file.php que devolve uma imagem, dependendo do parâmetro que recebe. O HTML que quero converter em PHP chama esse file.php, assim:<br>
+<br>
+&lt;img src=”http://meuhost.com.br/file.php?id=15″/&gt;<br>
+<br>
+Se eu visualizo o HTML, a imagem aparece corretamente. Se eu passo o HTML para o html2pdf, recebo a mensagem<br>
+<br>
+Impossível carregar a imagem <a href="http://meuhost.com.br/file.php?id=15" rel="nofollow">http://meuhost.com.br/file.php?id=15</a><br>
+<br>
+Olhando o código, percebi que é usada a função getimagesize para pegar informações da imagem, mas essa função sempre retorna none se a imagem é gerada por um programa.<br>
+<br>
+Você sabe como contornar esse problema?</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-15">
+                <div id="comment-15">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                11 de Julho de 2012 at 0:41
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=15#respond" onclick="return addComment.moveForm(&quot;comment-15&quot;, &quot;15&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Realizei alguns testes e obtive sucesso. Atualizei até o exemplo com os testes que realizei, recomendo que baixe e verifique como fiz.<br>
+<br>
+Eu obtive a mensagem de erro (Impossível carregar a imagem…) somente quando coloquei o endereço relativo do script que gera a imagem dinâmica. Já o endereço completo não tive problema algum. Como no seu exemplo você está passando o endereço completo talvez seja algum problema com a versão do html2pdf que você está utilizando.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even thread-odd thread-alt depth-1" id="li-comment-16">
+                <div id="comment-16">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Ailton</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                10 de Agosto de 2012 at 14:20
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=16#respond" onclick="return addComment.moveForm(&quot;comment-16&quot;, &quot;16&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Olá Thiago,<br>
+<br>
+É o seguinte: Para que eu converta um arquivo que recebe uma parametrização de busca á base de dados tipo : noticias.php?id=1234 como é feito ? Se eu colocar a variavel id no parametro include vai funcionar ?<br>
+<br>
+Me responda pois quero saber se vai dar certo.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-17">
+                <div id="comment-17">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                10 de Agosto de 2012 at 15:55
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=17#respond" onclick="return addComment.moveForm(&quot;comment-17&quot;, &quot;17&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Ailton, é possível sim.<br>
+<br>
+A variável $html irá receber o conteúdo do HTML (noticias.php?id=1234) externo utilizando a função “file_get_contents”.<br>
+<br>
+Essa função lê todo o conteúdo de um arquivo para uma string.<br>
+<br>
+Eu criei um novo exemplo com a solução descrita acima. O novo exemplo está com o nome de exemploHtmlExterno.php.<br>
+<br>
+Obs.: Tome cuidado ao converter um arquivo HTML inteiro. “Esta biblioteca foi feita para ajudar na criação de arquivos PDF, não diretamente converter uma página HTML. Você não pode usar as tags html, head, body. Leia com atenção os exemplos.”</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even thread-even depth-1" id="li-comment-18">
+                <div id="comment-18">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Anônimo</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                17 de Janeiro de 2013 at 17:25
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=18#respond" onclick="return addComment.moveForm(&quot;comment-18&quot;, &quot;18&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Parabéns pelo tutorial!<br>
+<br>
+Como faço para resolver o problema com acentuações? Ex. Manutenção =&gt; ManutenÃ§Ã£o</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-19">
+                <div id="comment-19">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                18 de Janeiro de 2013 at 16:42
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=19#respond" onclick="return addComment.moveForm(&quot;comment-19&quot;, &quot;19&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Para solucionar o problema com acentuação você tem que alterar o quarto parâmetro ao instanciar o objeto HTML2PDF para TRUE.<br>
+<br>
+O que esse parâmetro significa: Informe TRUE caso o html de entrada esteja no formato unicode e FALSE caso negativo.<br>
+<br>
+Como o arquivo de exemplo esta codificado no formato unicode temos que fazer essa configuração.<br>
+<br>
+Ex.: html2pdf $html2pdf = new HTML2PDF(‘P’,'A4′,’pt’, true, ‘UTF-8′, 2);<br>
+Obs.: Correção realizada em todos os exemplo do post.<br>
+<br>
+Obrigado pelo comentário.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even thread-odd thread-alt depth-1" id="li-comment-20">
+                <div id="comment-20">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Paulo Henrique</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                14 de Fevereiro de 2013 at 0:26
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=20#respond" onclick="return addComment.moveForm(&quot;comment-20&quot;, &quot;20&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Olá,<br>
+<br>
+Fiz testes aqui mas ele não busca as classes de css do Twitter Bootstrap, gostaria de organizar a página utilizando o grid, mas ele simplesmente não puxa as classes, aplica somente o css que eu mesmo fiz. O que posso fazer?<br>
+<br>
+Att.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-21">
+                <div id="comment-21">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                15 de Fevereiro de 2013 at 10:02
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=21#respond" onclick="return addComment.moveForm(&quot;comment-21&quot;, &quot;21&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Paulo, já tive problemas em flutuar objetos utilizando o HTML2PDF. Como o Grid funciona utilizando float, esse é o motivo de não funcionar. Tive que voltar a utilizar nossa amiga tabela para resolver esse problema.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even thread-even depth-1" id="li-comment-22">
+                <div id="comment-22">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Tarize Ty</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                20 de Fevereiro de 2013 at 10:27
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=22#respond" onclick="return addComment.moveForm(&quot;comment-22&quot;, &quot;22&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Estamos tentando gerar um relatorio através do HTML2PDF com o PHP5, porém dá o seguinte erro: TCPDF ERROR: Some data has already been output, can’t send PDF file.<br>
+O que pode ter acontecido?</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-23">
+                <div id="comment-23">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                20 de Fevereiro de 2013 at 13:31
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=23#respond" onclick="return addComment.moveForm(&quot;comment-23&quot;, &quot;23&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Tarize obrigado pelo comentário.<br>
+<br>
+O erro ocorre se você imprimir qualquer texto na tela antes de mandar executar a conversão.<br>
+<br>
+Qualquer duvida pode perguntar.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even depth-3" id="li-comment-24">
+                <div id="comment-24">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Tarize Ribeiro</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                21 de Fevereiro de 2013 at 11:39
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=24#respond" onclick="return addComment.moveForm(&quot;comment-24&quot;, &quot;24&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Thiago já consegui resolver o problema<br>
+<br>
+mas mesmo assim obrigada pela sua ajuda e parabéns pelo blog</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+</ul>
+</li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-25">
+                <div id="comment-25">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Filipe Araújo</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                11 de Junho de 2013 at 11:54
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=25#respond" onclick="return addComment.moveForm(&quot;comment-25&quot;, &quot;25&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Thiago você sabe como faço quebra de página com essa biblioteca?<br>
+Valeu!!!</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even depth-2" id="li-comment-26">
+                <div id="comment-26">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                11 de Junho de 2013 at 23:15
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=26#respond" onclick="return addComment.moveForm(&quot;comment-26&quot;, &quot;26&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Filipe, para quebrar a página, basta envolver o conteúdo pretendido entre as tags<br>
+“page”.<br>
+<br>
+Fiz um novo exemplo(exemploQuebraDePagina.php) explicando como faz: <a href="https://github.com/thiagosilr/Convertendo-HTML-para-PDF-Html2Pdf/blob/master/exemploQuebraDePagina.php" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-comment&#39;,&#39;http://github.com/thiagosilr/Convertendo-HTML-para-PDF-Html2Pdf/blob/master/exemploQuebraDePagina.php&#39;]);" target="_blank" rel="nofollow">exemploQuebraDePagina.php</a></p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt thread-even depth-1" id="li-comment-27">
+                <div id="comment-27">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Rogério</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                24 de Junho de 2013 at 17:30
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=27#respond" onclick="return addComment.moveForm(&quot;comment-27&quot;, &quot;27&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Boa tarde Thiago Silva, parabéns pela dica…muito legal.<br>
+Estou tentando utilizar essa biblioteca porem estou recebendo o erro TCPDF ERROR: Some data has already been output, can’t send PDF file.<br>
+Vi que uma pessoa chamada Tarize teve o mesmo problema e conseguiu resolver, mas não disse como e você disse a ela que esse erro ocorria em decorrencia de ter algo escrito antes da execução da página. Já vi minha página e nada está escrito antes, apenas a execução do seu próprio exemplo. Será que o erro ocorre porque estou tentando utilizar essa função dentro do WordPress na forma de plugin?<br>
+Agradeço a ajuda.<br>
+Abraços!!!<br>
+<br>
+Atenciosamente,<br>
+<br>
+Rogério</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even depth-2" id="li-comment-28">
+                <div id="comment-28">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                24 de Junho de 2013 at 18:07
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=28#respond" onclick="return addComment.moveForm(&quot;comment-28&quot;, &quot;28&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Rogério, nunca testei com WordPress. Mas no primeiro momento uma forma de testar seria configurando um segundo parâmetro na função writeHTML para true. Assim ao invés dele tentar gerar o PDF irá mostrar o resultado em HTML mesmo, assim podemos verificar se o WordPress não está colocando nada antes.<br>
+<br>
+Fica assim:<br>
+$html2pdf-&gt;writeHTML($html, true);<br>
+<br>
+Vou fazer alguns testes no WordPress.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-29">
+                <div id="comment-29">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Rogério</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                25 de Junho de 2013 at 18:14
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=29#respond" onclick="return addComment.moveForm(&quot;comment-29&quot;, &quot;29&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Olá amigo Thiago, obrigado pela sua ajuda. Fiz conforme você me falou e a unica coisa que aparece foi ‘HTML2PDF’…sem as aspas.<br>
+Uma coisa que percebi foi que ele alterou o tipo das fontes do Wp mesmo eu tendo tirado o link para o css.<br>
+Eu tentei também gerar através de Javascript uma janela externa ao Wp para verificar se é possível gerar o PDF através dela, mas enrosquei com questões de permissão do Wp e estou tentando resolver isso, pois assim acho que vai funcionar.<br>
+Bem, caso você tenha alguma novidade eu vou ficar muito agradecido. Obrigado pelo tempo que você está dispondo para me ajudar.<br>
+Abraços!!!<br>
+Atenciosamente,<br>
+<br>
+Rogério</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even depth-2" id="li-comment-30">
+                <div id="comment-30">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                26 de Junho de 2013 at 9:54
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=30#respond" onclick="return addComment.moveForm(&quot;comment-30&quot;, &quot;30&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Rogério, realizei alguns testes e consegui gerar o PDF no WordPress. Faça o seguinte:</p>
+<p>- Dentro do diretório <strong>wp-content/plugins</strong> crie uma pasta chamada: <strong>pluginHtml2PdfWordpress</strong>.<br>
+- Dentro dela cole a pasta <strong>html2pdf</strong> que se encontra dentro do exemplo, que contem toda a biblioteca do HTML2PDF.<br>
+- Crie dentro da pasta <strong>pluginHtml2PdfWordpress</strong> o arquivo do plugin com o seguinte nome, <strong>pluginHtml2PdfWordpress.php</strong>, e com o seguinte conteúdo, <a href="https://gist.github.com/thiagosilr/5864334" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-comment&#39;,&#39;http://gist.github.com/thiagosilr/5864334&#39;]);" title="Exemplo plugin Html2Pdf WordPress" target="_blank" rel="nofollow">https://gist.github.com/thiagosilr/5864334</a><br>
+- Ative o plugin no WordPress.<br>
+<br>
+Agora crie uma página em branco sem nenhuma informação do WordPress. E faça como o exemplo do tutorial com apenas uma modificação, retire a linha três que inclui a biblioteca do HTML2PDF, por que a mesma já esta sendo chamada no plugin.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-31">
+                <div id="comment-31">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Rogério</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                26 de Junho de 2013 at 17:39
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=31#respond" onclick="return addComment.moveForm(&quot;comment-31&quot;, &quot;31&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Olá amigo Thiago…cara você ta me salvando a vida….o que você fez funcionou direitinho….quando crescer quero ser igualzinho…rsrs….<br>
+<br>
+Mas ainda to precisando da sua ajuda….estou com, aparentemente, dois problemas. O primeiro é que quando entro na página que vai gerar o PDF ela perde a formatação de fonte e espaçamento padrão do Wp, fica com formatação Arial em tudo, mesmo eu já tendo redefinido o css e até deixado de utiliza-lo. O segundo é que não estou conseguindo gerar o PDF para download, troquei a opção no $html2pdf-&gt;Output para D mas mesmo assim ele não me da a opção do download.<br>
+<br>
+Já aproveitando, sem querer aproveitar..rs, se eu quiser carregar um texto na minha página e só no final colocar um botão ou link que me da a opção de download, é possível?<br>
+<br>
+Amigo, agradeço demais sua ajuda.<br>
+Abraços!!!<br>
+Atenciosamente,<br>
+<br>
+Rogério</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even depth-2" id="li-comment-32">
+                <div id="comment-32">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                28 de Junho de 2013 at 17:35
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=32#respond" onclick="return addComment.moveForm(&quot;comment-32&quot;, &quot;32&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Obrigado pelos comentários Rogério.<br>
+<br>
+Algumas perguntas e reposta para poder te ajudar.<br>
+1 – O que está perdendo a formatação é o PDF ou a página que antecede a chamada para gerar o mesmo?<br>
+2 – Quando você trocou a configuração para D, esta retornando algum erro?<br>
+3 – “se eu quiser carregar um texto na minha página e só no final colocar um botão ou link que me da a opção de download, é possível?”. Sim, basta esse link chamar a página que irá realizar a conversão e sua saída estiver configurada como D.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-33">
+                <div id="comment-33">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Rogério</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                2 de Julho de 2013 at 23:32
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=33#respond" onclick="return addComment.moveForm(&quot;comment-33&quot;, &quot;33&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Olá Thiago, respondendo…<br>
+<br>
+1 – A própria página Administrativa do Wp é que perde a formatação. Estou gerando o texto que quero converter dentro da própria área administrativa e dali é que pensei em gerar o PDF.<br>
+<br>
+2 – Não me retornou erro nenhum….na verdade ele faz a mesma função do I, apenas exibe na tela o texto impresso e mais nada.<br>
+<br>
+3 – Não entendi muito bem. Você quer dizer que além de eu ter uma página que vai exibir meu texto ainda teria que ter outra para gerar o PDF?<br>
+<br>
+Obs: Faz diferença se a página que estou carregando os meus dados esta com extensão PHP? Ela teria que ser obrigatoriamente HTML?<br>
+<br>
+Mais uma vez obrigado pela inestimável ajuda.<br>
+Abraços!!!<br>
+Atenciosamente,<br>
+<br>
+Rogério</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even depth-2" id="li-comment-34">
+                <div id="comment-34">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                10 de Julho de 2013 at 9:43
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=34#respond" onclick="return addComment.moveForm(&quot;comment-34&quot;, &quot;34&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Rogério no seu caso o fluxo para gerar o PDF ficaria assim:<br>
+<br>
+- Uma página com o editor do WordPress para gerar o HTML. Esse formulário apontaria para uma nova página com target igual a _blank.<br>
+<br>
+- Nessa nova página sem CSS ou alguma formatação do WordPress estaria nosso script para conversão. Com a configuração igual a D para realizar o Download.<br>
+<br>
+Obs.: Verifique se você não esqueceu o segundo parâmetro da função writeHTML como true, por que assim o PDF não vai ser gerado.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-35">
+                <div id="comment-35">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Anônimo</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                24 de Julho de 2013 at 15:21
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=35#respond" onclick="return addComment.moveForm(&quot;comment-35&quot;, &quot;35&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Ainda não li tudo mas já quero parabenizar pela organização e pelos comentários..<br>
+<br>
+Geralmente as pessoas colocam os métodos, funções ou qualquer outra coisa e não comente dizendo para que e como usar os parâmetros ou como configurar mas você esta fazendo, muito obrigado.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even depth-2" id="li-comment-36">
+                <div id="comment-36">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                24 de Julho de 2013 at 15:32
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=36#respond" onclick="return addComment.moveForm(&quot;comment-36&quot;, &quot;36&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Fico feliz que o tutorial esteja te ajudando. Qualquer dúvida deixe seu comentário.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt thread-even depth-1" id="li-comment-37">
+                <div id="comment-37">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Anônimo</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                11 de Setembro de 2013 at 10:01
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=37#respond" onclick="return addComment.moveForm(&quot;comment-37&quot;, &quot;37&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Bom dia Thiago,<br>
+Excelente exemplo, me ajudou até certo ponto.<br>
+Você tem alguma função onde eu posso clicar em um botão submit e chamar essa função HTML2PDF para fazer o download da pagina?<br>
+<br>
+Agradeço um retorno.<br>
+<br>
+Obrigado</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even depth-2" id="li-comment-38">
+                <div id="comment-38">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                13 de Setembro de 2013 at 8:54
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=38#respond" onclick="return addComment.moveForm(&quot;comment-38&quot;, &quot;38&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Basta você chamar a página que gerar o PDF e no script trocar o segundo parâmetro da seguinte linha para o valor D. Ex.:<br>
+<br>
+$html2pdf-&gt;Output(‘exemploPdf.pdf’, ‘D’);<br>
+<br>
+O valor D abre a janela para você realizar o download do pdf.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-40">
+                <div id="comment-40">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Anônimo</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                4 de Outubro de 2013 at 15:18
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=40#respond" onclick="return addComment.moveForm(&quot;comment-40&quot;, &quot;40&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Thiago, boa tarde!<br>
+Primeiramente parabéns, muito bom este tutorial.. não conhecia esta ferramenta.<br>
+Está funcionando perfeito a geração do PDF, porém, queria estar perguntando se caso poderia estar gerando uma consulta em PHP com Mysql, e depois gerar um PDF sobre ela.. não consigo, porqe no tutorial está com página estática no caso.. seria possível??<br>
+<br>
+(já utilizei o FPDF e não consegui mexer muito bem nele)<br>
+<br>
+Agradeço a atenção desde já!.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even depth-2" id="li-comment-41">
+                <div id="comment-41">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                5 de Outubro de 2013 at 10:27
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=41#respond" onclick="return addComment.moveForm(&quot;comment-41&quot;, &quot;41&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Seguindo o exemplo, basta você realizar a consulta antes da variável $html e monta dinamicamente seu Html, concatenando as informações retornadas do banco de dados.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-42">
+                <div id="comment-42">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Anônimo</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                7 de Outubro de 2013 at 18:57
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=42#respond" onclick="return addComment.moveForm(&quot;comment-42&quot;, &quot;42&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Então, mais como faço essa concatenação?.. Tentei de diversas formas.. com ponto.. aspas simples.. aspas duplas.. é complicado..<br>
+Voc teria ai alguma outra forma??<br>
+<br>
+Agradeço desde já.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even depth-2" id="li-comment-45">
+                <div id="comment-45">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Thiago Silva Resende</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                7 de Outubro de 2013 at 23:56
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=45#respond" onclick="return addComment.moveForm(&quot;comment-45&quot;, &quot;45&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Criei um novo exemplo: <a href="https://github.com/thiagosilr/Convertendo-HTML-para-PDF-Html2Pdf/blob/master/exemploDadosMysql.php" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-comment&#39;,&#39;http://github.com/thiagosilr/Convertendo-HTML-para-PDF-Html2Pdf/blob/master/exemploDadosMysql.php&#39;]);" title="Exemplo dados Mysql Html2Pdf" target="_blank" rel="nofollow">exemploDadosMysql.php</a><br>
+<br>
+Nele mostro como realizar a conexão com o bando de dados e uma consulta simples. Depois monto o html dinamicamente</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-44">
+                <div id="comment-44">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Anônimo</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                10 de Outubro de 2013 at 19:55
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=44#respond" onclick="return addComment.moveForm(&quot;comment-44&quot;, &quot;44&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Brigado mais uma vez Thiago,<br>
+Sim, agora fico mais fácil saber como monta essa concatenação.. sabia que era possível, mais ficava limitado as funções que estão pré-definidas.. ou seja, da forma desejada, não estava conseguindo formular meu formulário do modo que queria..<br>
+<br>
+Agradeco a atenção.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment even thread-even depth-1" id="li-comment-55">
+                <div id="comment-55">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(2).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(2).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Ederson</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                23 de Março de 2014 at 16:27
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=55#respond" onclick="return addComment.moveForm(&quot;comment-55&quot;, &quot;55&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Olá Thiago, parabéns pelo Tutorial,<br>
+porém estou com um problema com a quebra de página.<br>
+Estou com um While que traz informações do Banco, enquanto ele exista ele imprime na tela.<br>
+Como identifico a hora de mudar de página, ou seja, está no limite da página e ele deve fazer a quebra?</p>
+<p>Obrigado. Abraço.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-71">
+                <div id="comment-71">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">thiago.dasilvaresende@gmail.com</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                22 de Julho de 2014 at 22:44
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=71#respond" onclick="return addComment.moveForm(&quot;comment-71&quot;, &quot;71&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Ederson,</p>
+<p>A quebra de página pode ser forçada ou deixar por conta da classe. No seu caso apenas insira o conteúdo que a classe irá realizar o calculo e quebrar as páginas.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment even thread-odd thread-alt depth-1" id="li-comment-107">
+                <div id="comment-107">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/c08e54c3fbddf29406e70c5c7ba54ac1.png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/c08e54c3fbddf29406e70c5c7ba54ac1.png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Tairo</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                5 de Setembro de 2014 at 13:13
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=107#respond" onclick="return addComment.moveForm(&quot;comment-107&quot;, &quot;107&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Olá Thiago, Bom dia<br>
+Parabéns pelo tutorial, o se é um dos melhores e mais completos.<br>
+Eu estou com um grande problema estou tentando converter para PDF um página que busca informações no banco, essa pagina foi feita com Bootstrap e o html2pdf me reporta essa mensagem<br>
+TCPDF ERROR: Could not include font definition file: ‘open sans’<br>
+Já tentei fazer o inclusão da fonte conforme o diz a documentação <a href="http://www.tcpdf.org/fonts.php" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-comment&#39;,&#39;http://www.tcpdf.org/fonts.php&#39;]);" rel="nofollow">http://www.tcpdf.org/fonts.php</a> , porém não estou conseguindo, você poderia me ajudar por favor. Obrigado.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-115">
+                <div id="comment-115">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">thiago.dasilvaresende@gmail.com</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                10 de Setembro de 2014 at 0:27
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=115#respond" onclick="return addComment.moveForm(&quot;comment-115&quot;, &quot;115&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Obrigado Tairo pelo comentário,</p>
+<p>Me desculpe pela demora, mas você tentou instalar a fonte utilizando o post que ensino a instalar, veja:<br>
+<a href="http://thiagosr.com.br/2011/04/instalando-fonte-true-type-no-html2pdf" rel="nofollow">http://thiagosr.com.br/2011/04/instalando-fonte-true-type-no-html2pdf</a></p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment even thread-even depth-1" id="li-comment-185">
+                <div id="comment-185">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(3).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(3).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Guilherme</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                6 de Novembro de 2014 at 16:29
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=185#respond" onclick="return addComment.moveForm(&quot;comment-185&quot;, &quot;185&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Boa tarde,</p>
+<p>Estou utilizando conforme você indicou, até ai beleza.</p>
+<p>Sabe dizer uma forma de utiliza-lo para imprimir uma tela do Full Calendar que está na tela?</p>
+<p>Tentei buscar o html da div do calendário e jogar para a biblioteca, mas não estou tendo sucesso, se você puder ajudar sobre isso, agradeceria.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-192">
+                <div id="comment-192">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">thiago.dasilvaresende@gmail.com</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                15 de Novembro de 2014 at 20:29
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=192#respond" onclick="return addComment.moveForm(&quot;comment-192&quot;, &quot;192&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Guilherme,</p>
+<p>Uma solução que encontrei foi pegar via javascript o HTML da página e enviar via AJAX para o script de conversão. O script iria realizar a tarefa e salvar o PDF em uma pasta, depois você abriria o mesmo.</p>
+<p>Mas realizando alguns teste não obtive sucesso devido ao Full Calendar conter algumas tags HTML e CSS que o Html2Pdf não suporta.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment even thread-odd thread-alt depth-1" id="li-comment-188">
+                <div id="comment-188">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(4).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(4).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Andressa</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                11 de Novembro de 2014 at 12:11
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=188#respond" onclick="return addComment.moveForm(&quot;comment-188&quot;, &quot;188&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Olá Thiago, inclui um iframe no html e me gerou um erro.</p>
+<p>A biblioteca tem alguma restrição com iframe?</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor odd alt depth-2" id="li-comment-191">
+                <div id="comment-191">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">thiago.dasilvaresende@gmail.com</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                15 de Novembro de 2014 at 19:33
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=191#respond" onclick="return addComment.moveForm(&quot;comment-191&quot;, &quot;191&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Andressa,</p>
+<p>A biblioteca não reconhece a tag iframe.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+
+                <li class="comment even thread-even depth-1" id="li-comment-412">
+                <div id="comment-412">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(5).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(5).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Guilherme</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                16 de Janeiro de 2017 at 18:24
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=412#respond" onclick="return addComment.moveForm(&quot;comment-412&quot;, &quot;412&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Olá, estou utilizando o html2pdf para gerar relatórios, os dados são carregados de um banco através de um while, até ai tudo bem. Todas as informações vem corretamente, mas notei que quando o numero de informações contidas na ultima página é baixo (5 linhas) o html2pdf gera uma outra página em branco, até ai tudo bem, era apenas não imprimir essa última página, mas como eu estou usando a paginação se eu não imprimir a última página em branco, a paginação da minha última página imprimida ficará mais ou menos assim (6 de 7 páginas).</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment odd alt depth-2" id="li-comment-414">
+                <div id="comment-414">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(5).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(5).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Guilherme</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                17 de Janeiro de 2017 at 11:36
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=414#respond" onclick="return addComment.moveForm(&quot;comment-414&quot;, &quot;414&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Consegui resolver meu problema.</p>
+<p>No corpo do documento havia uma div, e percebi que ele a gerava na última página, a qual ficava em branco, removi ela e ficou tudo certo, sendo assim aconselho que se utilizarem divs no corpo do documento e der algum erro de formatação certamente esse erro será causado pela div. </p>
+<p>Se a impressão for apenas uma listagem de itens usem apenas  sendo o uso do  e  essêncial se quiser que em toda página o cabeçalho da tabela apareça.</p>
+<p>Atenciosamente, Guilherme.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even depth-3" id="li-comment-416">
+                <div id="comment-416">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">thiago.dasilvaresende@gmail.com</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                17 de Janeiro de 2017 at 15:22
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=416#respond" onclick="return addComment.moveForm(&quot;comment-416&quot;, &quot;416&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Muito bom! Agradecido pelos seus comentários.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+</ul>
+</li>
+
+                <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-511">
+                <div id="comment-511">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/e2c9fbbc6adada945b44dd24cc588eea.jpeg" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/e2c9fbbc6adada945b44dd24cc588eea.jpeg"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">Dante</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                16 de Abril de 2017 at 0:07
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=511#respond" onclick="return addComment.moveForm(&quot;comment-511&quot;, &quot;511&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>É possível enviar o PDF gerado para um e-mail? Queria fazer algo assim, tipo um recibo online.<br>
+Será que tem jeito?<br>
+Ótimo tutorial.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                <ul class="children">
+
+                <li class="comment byuser comment-author-thiago-dasilvaresendegmail-com bypostauthor even depth-2" id="li-comment-519">
+                <div id="comment-519">
+
+                    <div class="comment">
+                        <div class="user-avatar"><div class="adipoli-wrapper avatar avatar-58 photo" style="width:58px; height:58px;"><img alt="" src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png" class="avatar avatar-58 photo" height="58" width="58" style="display: none;"><div class="adipoli-before avatar avatar-58 photo" style="width: 58px; height: 58px; opacity: 0.5;"><img src="./logo_files/ad516503a11cd5ca435acc9bb6523536(1).png"></div><div class="adipoli-after avatar avatar-58 photo" style="display:none;width:58px; height:58px;"></div></div></div>
+                        <div class="comment-meta">
+                            <div class="author"><cite class="fn">thiago.dasilvaresende@gmail.com</cite></div>
+                            <div>-</div>
+                            <div class="postdate">
+                                23 de Abril de 2017 at 19:06
+                                                            </div>
+                            <div class="pre-link-sep">-</div>
+                            <div class="link"><a class="comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/?replytocom=519#respond" onclick="return addComment.moveForm(&quot;comment-519&quot;, &quot;519&quot;, &quot;respond&quot;, &quot;1&quot;)">Responder</a></div>
+                        </div>
+                        <div class="comment-text">
+                            <p></p><p>Que ótimo que o tutorial ainda esteja ajudando bastante. Atualizei os exemplos e adicionei um novo que demonstra utilizando a biblioteca PHPMailer para enviar o e-mail com anexo. É bastante simples, basta salvar o mesmo no servidor utilizando a opção “F” na seguinte linha:<br>
+$html2pdf-&gt;Output($arquivo, ‘F’);</p>
+<p>Quando for anexar apontar para o endereço onde o mesmo foi salvo.</p>
+<p></p>
+                        </div>
+                    </div>
+
+                </div><!-- #comment  -->
+
+                </li>
+</ul>
+</li>
+			</ol>
+
+            
+
+<br><br>
+            								<div id="respond">
+				<h3 id="reply-title">Deixe seu comentário <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/#respond" style="display:none;">Cancelar resposta</a></small></h3>
+									<form action="http://thiagosr.com.br/wp-comments-post.php" method="post" id="commentform">
+																										<div id="comment-about"><input id="author" class="input" name="author" type="text" value="" size="30" aria-required="true" placeholder="Nome*">
+ <input id="email" class="input" name="email" type="text" value="" size="30" aria-required="true" placeholder="Email*">
+<input id="url" class="input" name="url" type="text" value="" size="30" placeholder="Website"></div>
+												<div id="comment-mess"><textarea class="textarea" name="comment" cols="45" rows="8" aria-required="true" placeholder="Comentário"></textarea></div>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Publicar">
+							<input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+											</form>
+							</div><!-- #respond -->
+			        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery('#commentform').submit(function () {
+                    _gaq.push(
+                            ['_setAccount', 'UA-18463116-2'],
+                            ['_trackEvent', 'comment', 'submit']
+                    );
+                });
+            });
+        </script>
+					
+
+
+            </div>
+                </div><!-- /Blog Post -->
+
+
+
+
+                </div>
+                </div>
+            </div><!-- /Blog Uncategorized -->
+
+        </div><!-- /Content -->
+
+    </div><!-- /Content Inner -->
+
+    <!-- Cleaner --><div class="clear"></div><!-- /Cleaner -->
+</div>
+<!-- /Blog -->
+
+
+
+<!-- Social Button --><div id="social">
+
+    <ul class="pos-button">
+                                            <li><a href="http://br.linkedin.com/in/thresende" class="linkedin" title="Linkedin" target="_blank"></a></li>
+                            <li><a href="https://github.com/thiagosilr" class="pinterest" title="GitHub" target="_blank"></a></li>
+                            <li class="last"><a href="https://pt.stackoverflow.com/users/56005/thiagosilr" class="dribbble" title="Stack Overflow" target="_blank"></a></li>
+            </ul>
+</div><!-- /Social Button -->
+<!-- Script Share Button Social Network -->
+<script>
+    function shareFB() {
+        window.open(
+            'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)+'&t='+encodeURIComponent(document.title),
+            'facebook-share-dialog',
+            'width=626,height=436');
+        return false;
+    }
+    function shareGP() {
+        window.open(
+            'https://plus.google.com/share?url='+encodeURIComponent(location.href),
+            'width=626,height=436');
+        return false;
+    }
+    function shareTW() {
+        window.open(
+            'http://twitter.com/share?url='+encodeURIComponent(location.href),
+            'width=626,height=436');
+        return false;
+    }
+    function shareLI() {
+        window.open(
+            'http://www.linkedin.com/shareArticle?url='+encodeURIComponent(location.href),
+            'width=626,height=436');
+        return false;
+    }
+    function sharePI() {
+        window.open(
+            'http://pinterest.com/pin/create/button/?url='+encodeURIComponent(location.href),
+            'width=626,height=436');
+        return false;
+    }
+    function shareDB() {
+        window.open(
+            'http://dribbble.com/',
+            'width=626,height=436');
+        return false;
+    }
+</script><!-- Action Button -->
+<div id="action">
+    <ul class="pos-button">
+        <li class="first"><a href="javascript:window.print(); void 0;" class="print" title="Imprimir"></a></li>
+
+        <li class="pop-up">
+            <a href="http://thiagosr.com.br/wp-content/themes/flexicv/curriculoThiagoSilvaResende.pdf" class="save" title="Salvar" target="_blank"></a>
+            <!--<ul class="save-pop-up">
+                <li class="first email"><a href="http://thiagosr.com.br/wp-content/uploads/minha-pampulha-1.jpg" ></a></li>
+                <li class="email"><a href=""></a></li>
+                <li class="last email"><a href=""></a></li>
+                <span></span>
+            </ul>-->
+        </li>
+
+        <li class="last pop-up">
+            <a href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/#action" class="share" title="Compartilhar"></a>
+            <ul class="link-pop-up">
+                <li class="first facebook"><a href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/#" onclick="shareFB()"></a></li>
+                <li class="google"><a href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/#" onclick="shareGP()"></a></li>
+                <li class="twitter"><a href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/#" onclick="shareTW()"></a></li>
+                <li class="linkedin"><a href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/#" onclick="shareLI()"></a></li>
+                <li class="pinterest"><a href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/#" onclick="sharePI()"></a></li>
+                <li class="dribble"><a href="http://thiagosr.com.br/2010/10/converter-html-em-pdf-com-php-html2pdf/#" onclick="shareDB()"></a></li>
+                <li class="last email"><a href="mailto:thiago.dasilvaresende@gmail.com"></a></li>
+                <span></span>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!-- /Action Button -->
+
+</div><!-- /Container -->
+
+
+
+<div id="footer">
+    <div style="display: none">  </div>
+    <div id="copyright"></div>
+</div><!-- /Footer -->
+
+
+<div id="sokolby-info" style="display: none">
+    <div class="copyright">uouapps <span>2013</span></div>
+    <div class="platform">wordpress <span>3.6.0</span></div>
+    <div class="product_name">FlexiCV</div>
+    <div class="version">v.2.3</div>
+    <div class="version_date">**/oct/2013</div>
+        <div class="plugins">WPML (not include)</div>
+    <div class="html_layout">v.1</div>
+    <div class="code_core">v.2.3</div>
+    <div class="developer">sokol_by, anhiel</div>
+</div><!-- /Footer -->
+
+
+
+</div><!-- /Wrapper -->
+
+<!-- Footer -->
+<script type="text/javascript" src="./logo_files/js"></script>
+<script type="text/javascript" src="./logo_files/jquery.ui.1.8.17.js.download"></script>
+<script type="text/javascript" src="./logo_files/jquery.easytabs.min.js.download"></script>
+<script type="text/javascript" src="./logo_files/jquery.isotope.min.js.download"></script>
+<script type="text/javascript" src="./logo_files/jquery.adipoli.min.js.download"></script>
+<script type="text/javascript" src="./logo_files/jquery.fancybox.pack.js.download"></script>
+<script type="text/javascript" src="./logo_files/jquery.gmap.min.js.download"></script>
+<script type="text/javascript" src="./logo_files/response.min.js.download"></script>
+<script type="text/javascript" src="./logo_files/jquery.prettyPhoto.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var flexicv_SETTINGS = {"ADIPOLI_START_EFFECT":"transparent","ADIPOLI_HOVER_EFFECT":"normal","MAP_ADRESS":"Brasil - MG - Betim","AJAXURL":"index.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./logo_files/custom.js.download"></script>
+<script type="text/javascript" src="./logo_files/comment-reply.min.js.download"></script>
+
+
+
+
+
+</body></html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function loadDoc() {
+  var i=1;
+  var allText =[];
+  var allTextLines = [];
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function()
+  {
+      allText = xhttp.responseText;
+      allTextLines = allText.split("\n");
+      n = allTextLines.length;
+      // document.write("Nro de CPF"+n);
+      for(i=0;i<=n-1;i++){
+         if (this.readyState == 4 && this.status == 200) {
+          document.write("'"+ allTextLines[i]+"',");
+          document.write("<br>");
+          // document.getElementById("demo").innerHTML = allTextLines[i]+"<br>";
+        }
+       }
+  };
+
+  xhttp.open("GET", "http://localhost/Utilitarios/CPFs_Curso.txt", true);
+
+  xhttp.send();
+}
+</script>
+</head>
+<body>
+
+<div id="demo">
+  <h2>Ler arquivo CSV</h2>
+  <button type="button" onclick="loadDoc()">Executar Script</button>
+</div>
+
+</body>
+</html> 
